@@ -19,27 +19,27 @@ export default function Hero() {
         <div className="flex items-center justify-center space-x-2 mb-6">
           <MapPin className="h-5 w-5 text-primary" />
           <span className="text-sm font-medium uppercase tracking-wider text-primary-foreground/90">
-            Chile Premium Real Estate
+            International Architecture Studio
           </span>
         </div>
         
         <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          Villas de Lujo
-          <span className="block text-primary">Excepcionales</span>
+          MADA
+          <span className="block text-primary">s.p.a.m.</span>
         </h1>
         
         <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Desarrollamos propiedades de lujo y proyectos industriales únicos en Chile, 
-          combinando diseño excepcional con la belleza natural del país.
+          An innovative architectural practice bridging Eastern and Western design philosophies, 
+          creating exceptional spaces that redefine contemporary architecture.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
           <Button 
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3"
-            data-testid="button-explore-villas"
+            data-testid="button-explore-portfolio"
           >
-            Explorar Villas
+            Explore Portfolio
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
           
@@ -47,9 +47,9 @@ export default function Hero() {
             variant="outline"
             size="lg"
             className="border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 font-semibold px-8 py-3"
-            data-testid="button-industrial-projects"
+            data-testid="button-our-team"
           >
-            Proyectos Industriales
+            Our Team
           </Button>
         </div>
         
@@ -57,17 +57,17 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-12">
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-primary mb-1">25+</div>
-            <div className="text-sm text-primary-foreground/80">Villas de Lujo</div>
+            <div className="text-sm text-primary-foreground/80">Years of Excellence</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-primary mb-1">15+</div>
-            <div className="text-sm text-primary-foreground/80">Proyectos Industriales</div>
+            <div className="text-2xl md:text-3xl font-bold text-primary mb-1">100+</div>
+            <div className="text-sm text-primary-foreground/80">Completed Projects</div>
           </div>
           <div className="text-center flex items-center space-x-2">
             <Award className="h-6 w-6 text-primary" />
             <div>
-              <div className="text-sm font-semibold text-primary-foreground">Premio Excelencia</div>
-              <div className="text-xs text-primary-foreground/80">Arquitectura 2024</div>
+              <div className="text-sm font-semibold text-primary-foreground">International Recognition</div>
+              <div className="text-xs text-primary-foreground/80">Architecture Awards</div>
             </div>
           </div>
         </div>

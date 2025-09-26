@@ -41,8 +41,8 @@ export default function ContactSection() {
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
-        title: "¡Consulta enviada exitosamente!",
-        description: "Nos pondremos en contacto contigo dentro de las próximas 24 horas.",
+        title: "Inquiry sent successfully!",
+        description: "We'll get back to you within the next 24 hours.",
       });
       
       // Reset form
@@ -60,26 +60,26 @@ export default function ContactSection() {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Teléfono",
-      content: "+56 2 2234 5678",
-      action: "tel:+56222345678"
+      title: "Phone",
+      content: "+86 21 6466 0618",
+      action: "tel:+862164660618"
     },
     {
       icon: Mail,
       title: "Email",
-      content: "contacto@villasdelujo.cl",
-      action: "mailto:contacto@villasdelujo.cl"
+      content: "info@madaspam.com",
+      action: "mailto:info@madaspam.com"
     },
     {
       icon: MapPin,
-      title: "Oficina Principal",
-      content: "Av. Providencia 1234, Providencia, Santiago",
+      title: "Shanghai Office",
+      content: "Shanghai, China",
       action: "#"
     },
     {
       icon: Clock,
-      title: "Horario de Atención",
-      content: "Lunes a Viernes: 9:00 - 18:00",
+      title: "Business Hours",
+      content: "Monday to Friday: 9:00 - 18:00",
       action: "#"
     }
   ];
@@ -89,10 +89,10 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Conversemos Sobre Tu Proyecto
+            Let's Discuss Your Project
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Estamos aquí para hacer realidad tu visión. Contáctanos para una consulta gratuita y personalizada.
+            We're here to bring your vision to life. Contact us for a free, personalized consultation.
           </p>
         </div>
 
@@ -101,19 +101,19 @@ export default function ContactSection() {
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
-                <CardTitle className="font-serif text-2xl">Consulta Gratuita</CardTitle>
+                <CardTitle className="font-serif text-2xl">Free Consultation</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Nombre Completo *</Label>
+                      <Label htmlFor="name">Full Name *</Label>
                       <Input
                         id="name"
                         type="text"
                         value={formData.name}
                         onChange={(e) => handleInputChange("name", e.target.value)}
-                        placeholder="Tu nombre"
+                        placeholder="Your name"
                         required
                         data-testid="input-name"
                       />
@@ -126,7 +126,7 @@ export default function ContactSection() {
                         type="email"
                         value={formData.email}
                         onChange={(e) => handleInputChange("email", e.target.value)}
-                        placeholder="tu@email.com"
+                        placeholder="your@email.com"
                         required
                         data-testid="input-email"
                       />
@@ -135,57 +135,57 @@ export default function ContactSection() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Teléfono</Label>
+                      <Label htmlFor="phone">Phone</Label>
                       <Input
                         id="phone"
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleInputChange("phone", e.target.value)}
-                        placeholder="+56 9 1234 5678"
+                        placeholder="+1 (555) 123-4567"
                         data-testid="input-phone"
                       />
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="projectType">Tipo de Proyecto *</Label>
+                      <Label htmlFor="projectType">Project Type *</Label>
                       <Select value={formData.projectType} onValueChange={(value) => handleInputChange("projectType", value)}>
                         <SelectTrigger data-testid="select-project-type">
-                          <SelectValue placeholder="Selecciona un tipo" />
+                          <SelectValue placeholder="Select a type" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="villa-luxury">Villa de Lujo</SelectItem>
-                          <SelectItem value="industrial">Proyecto Industrial</SelectItem>
-                          <SelectItem value="commercial">Proyecto Comercial</SelectItem>
-                          <SelectItem value="renovation">Renovación</SelectItem>
-                          <SelectItem value="consultation">Consultoría</SelectItem>
+                          <SelectItem value="residential">Residential Architecture</SelectItem>
+                          <SelectItem value="commercial">Commercial Project</SelectItem>
+                          <SelectItem value="urban-planning">Urban Planning</SelectItem>
+                          <SelectItem value="interior">Interior Design</SelectItem>
+                          <SelectItem value="consultation">Consultation</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="budget">Presupuesto Estimado</Label>
+                    <Label htmlFor="budget">Estimated Budget</Label>
                     <Select value={formData.budget} onValueChange={(value) => handleInputChange("budget", value)}>
                       <SelectTrigger data-testid="select-budget">
-                        <SelectValue placeholder="Selecciona un rango" />
+                        <SelectValue placeholder="Select a range" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="under-1m">Menos de $1M USD</SelectItem>
+                        <SelectItem value="under-1m">Under $1M USD</SelectItem>
                         <SelectItem value="1m-3m">$1M - $3M USD</SelectItem>
                         <SelectItem value="3m-5m">$3M - $5M USD</SelectItem>
                         <SelectItem value="5m-10m">$5M - $10M USD</SelectItem>
-                        <SelectItem value="over-10m">Más de $10M USD</SelectItem>
+                        <SelectItem value="over-10m">Over $10M USD</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Mensaje *</Label>
+                    <Label htmlFor="message">Message *</Label>
                     <Textarea
                       id="message"
                       value={formData.message}
                       onChange={(e) => handleInputChange("message", e.target.value)}
-                      placeholder="Cuéntanos sobre tu proyecto, ubicación preferida, características especiales, o cualquier pregunta que tengas..."
+                      placeholder="Tell us about your project, preferred location, special features, or any questions you have..."
                       rows={5}
                       required
                       data-testid="input-message"
@@ -199,7 +199,7 @@ export default function ContactSection() {
                     disabled={isSubmitting}
                     data-testid="button-submit"
                   >
-                    {isSubmitting ? "Enviando..." : "Enviar Consulta"}
+                    {isSubmitting ? "Sending..." : "Send Inquiry"}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </form>
@@ -211,7 +211,7 @@ export default function ContactSection() {
           <div className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle className="font-serif text-xl">Información de Contacto</CardTitle>
+                <CardTitle className="font-serif text-xl">Contact Information</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 {contactInfo.map((info, index) => {
@@ -238,10 +238,10 @@ export default function ContactSection() {
             <Card className="bg-primary text-primary-foreground">
               <CardContent className="p-6">
                 <h3 className="font-serif text-xl font-bold mb-3">
-                  ¿Necesitas Asesoría Inmediata?
+                  Need Immediate Consultation?
                 </h3>
                 <p className="text-sm mb-4 opacity-90">
-                  Nuestro equipo de expertos está disponible para responder tus preguntas sobre inversiones inmobiliarias de lujo.
+                  Our team of experts is available to answer your questions about architectural projects and design solutions.
                 </p>
                 <Button 
                   variant="secondary" 
@@ -249,7 +249,7 @@ export default function ContactSection() {
                   data-testid="button-immediate-consultation"
                 >
                   <Phone className="mr-2 h-4 w-4" />
-                  Llamar Ahora
+                  Call Now
                 </Button>
               </CardContent>
             </Card>

@@ -32,11 +32,11 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { href: "/", label: "Inicio" },
-    { href: "/villas", label: "Villas de Lujo" },
-    { href: "/industrial", label: "Proyectos Industriales" },
-    { href: "/about", label: "Nosotros" },
-    { href: "/contact", label: "Contacto" }
+    { href: "/", label: "Home" },
+    { href: "/portfolio", label: "Portfolio" },
+    { href: "/team", label: "Team" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" }
   ];
 
   return (
@@ -52,7 +52,7 @@ export default function Navigation() {
                 <span className="text-primary-foreground font-bold text-sm">VL</span>
               </div>
               <span className="font-serif text-xl font-bold text-foreground">
-                Villas de Lujo
+                MADA s.p.a.m.
               </span>
             </div>
           </Link>
@@ -85,7 +85,7 @@ export default function Navigation() {
               className="hidden md:flex"
               data-testid="button-contact"
             >
-              Consulta Gratuita
+              Free Consultation
             </Button>
 
             {/* Mobile menu button */}
@@ -119,7 +119,7 @@ export default function Navigation() {
               ))}
               <div className="px-3 py-2">
                 <Button className="w-full" data-testid="mobile-button-contact">
-                  Consulta Gratuita
+                  Free Consultation
                 </Button>
               </div>
             </div>

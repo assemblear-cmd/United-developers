@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import PropertyGrid from "@/components/PropertyGrid";
+import Portfolio from "@/components/Portfolio";
 import CompanyStats from "@/components/CompanyStats";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -11,7 +11,7 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <PropertyGrid />
+        <Portfolio />
         <CompanyStats />
         <ContactSection />
       </main>

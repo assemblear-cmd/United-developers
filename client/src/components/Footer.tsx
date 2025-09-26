@@ -20,26 +20,26 @@ export default function Footer() {
 
   const footerLinks = {
     company: [
-      { name: "Sobre Nosotros", href: "/about" },
-      { name: "Nuestro Equipo", href: "/team" },
-      { name: "Historia", href: "/history" },
-      { name: "Premios", href: "/awards" }
+      { name: "About Us", href: "/about" },
+      { name: "Our Team", href: "/team" },
+      { name: "History", href: "/history" },
+      { name: "Awards", href: "/awards" }
     ],
-    properties: [
-      { name: "Villas de Lujo", href: "/villas" },
-      { name: "Proyectos Industriales", href: "/industrial" },
-      { name: "En Construcción", href: "/construction" },
-      { name: "Vendidas", href: "/sold" }
+    projects: [
+      { name: "Architecture", href: "/portfolio" },
+      { name: "Urban Planning", href: "/portfolio" },
+      { name: "Interior Design", href: "/portfolio" },
+      { name: "Visual Design", href: "/portfolio" }
     ],
     services: [
-      { name: "Desarrollo Inmobiliario", href: "/development" },
-      { name: "Consultoría", href: "/consulting" },
-      { name: "Inversión", href: "/investment" },
-      { name: "Administración", href: "/management" }
+      { name: "Architectural Design", href: "/services" },
+      { name: "Consultation", href: "/consulting" },
+      { name: "Strategic Planning", href: "/planning" },
+      { name: "Project Management", href: "/management" }
     ],
     legal: [
-      { name: "Política de Privacidad", href: "/privacy" },
-      { name: "Términos de Servicio", href: "/terms" },
+      { name: "Privacy Policy", href: "/privacy" },
+      { name: "Terms of Service", href: "/terms" },
       { name: "Cookies", href: "/cookies" },
       { name: "Legal", href: "/legal" }
     ]
@@ -64,34 +64,34 @@ export default function Footer() {
                   <span className="text-primary-foreground font-bold text-sm">VL</span>
                 </div>
                 <span className="font-serif text-xl font-bold text-foreground">
-                  Villas de Lujo
+                  MADA s.p.a.m.
                 </span>
               </div>
               
               <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-                Desarrollamos propiedades excepcionales en Chile, combinando diseño arquitectónico de vanguardia con la belleza natural del país para crear espacios únicos de lujo y funcionalidad.
+                An innovative architectural practice bridging Eastern and Western design philosophies, creating exceptional spaces that redefine contemporary architecture across the Pacific Rim.
               </p>
               
               {/* Contact Info */}
               <div className="space-y-3 text-sm">
                 <div className="flex items-center space-x-3 text-muted-foreground">
                   <Phone className="h-4 w-4" />
-                  <span data-testid="footer-phone">+56 2 2234 5678</span>
+                  <span data-testid="footer-phone">+86 21 6466 0618</span>
                 </div>
                 <div className="flex items-center space-x-3 text-muted-foreground">
                   <Mail className="h-4 w-4" />
-                  <span data-testid="footer-email">contacto@villasdelujo.cl</span>
+                  <span data-testid="footer-email">info@madaspam.com</span>
                 </div>
                 <div className="flex items-start space-x-3 text-muted-foreground">
                   <MapPin className="h-4 w-4 mt-0.5" />
-                  <span data-testid="footer-address">Av. Providencia 1234, Providencia, Santiago</span>
+                  <span data-testid="footer-address">Shanghai, China</span>
                 </div>
               </div>
             </div>
 
             {/* Company Links */}
             <div>
-              <h3 className="font-semibold text-foreground mb-4">Empresa</h3>
+              <h3 className="font-semibold text-foreground mb-4">Company</h3>
               <ul className="space-y-3">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
@@ -107,11 +107,11 @@ export default function Footer() {
 
             {/* Properties Links */}
             <div>
-              <h3 className="font-semibold text-foreground mb-4">Propiedades</h3>
+              <h3 className="font-semibold text-foreground mb-4">Projects</h3>
               <ul className="space-y-3">
-                {footerLinks.properties.map((link, index) => (
+                {footerLinks.projects.map((link, index) => (
                   <li key={index}>
-                    <Link href={link.href} data-testid={`footer-link-properties-${index}`}>
+                    <Link href={link.href} data-testid={`footer-link-projects-${index}`}>
                       <span className="text-sm text-muted-foreground hover:text-primary transition-colors">
                         {link.name}
                       </span>
@@ -123,7 +123,7 @@ export default function Footer() {
 
             {/* Services Links */}
             <div>
-              <h3 className="font-semibold text-foreground mb-4">Servicios</h3>
+              <h3 className="font-semibold text-foreground mb-4">Services</h3>
               <ul className="space-y-3">
                 {footerLinks.services.map((link, index) => (
                   <li key={index}>
@@ -141,25 +141,25 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold text-foreground mb-4">Newsletter</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Recibe noticias sobre nuevas propiedades y proyectos exclusivos.
+                Receive news about new projects and architectural innovations.
               </p>
               
               <form onSubmit={handleNewsletter} className="space-y-3">
                 <Input
                   type="email"
-                  placeholder="tu@email.com"
+                  placeholder="your@email.com"
                   className="text-sm"
                   data-testid="input-newsletter"
                 />
                 <Button type="submit" size="sm" className="w-full" data-testid="button-newsletter">
-                  Suscribirse
+                  Subscribe
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </form>
 
               {/* Social Links */}
               <div className="mt-6">
-                <h4 className="font-medium text-foreground mb-3 text-sm">Síguenos</h4>
+                <h4 className="font-medium text-foreground mb-3 text-sm">Follow Us</h4>
                 <div className="flex space-x-3">
                   {socialLinks.map((social, index) => {
                     const IconComponent = social.icon;
@@ -187,7 +187,7 @@ export default function Footer() {
         <div className="py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2024 Villas de Lujo Chile. Todos los derechos reservados.
+              © 2024 MADA s.p.a.m. All rights reserved.
             </div>
             
             <div className="flex items-center space-x-6">
