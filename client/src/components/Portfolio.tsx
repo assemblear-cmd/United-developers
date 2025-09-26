@@ -3,9 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Square, ArrowRight, Building, Home, Factory, Palette } from "lucide-react";
-import villaImage from "@assets/generated_images/Villa_interior_luxury_b9aee9cd.png";
-import industrialImage from "@assets/generated_images/Industrial_project_showcase_6b8c3f5b.png";
-import heroImage from "@assets/generated_images/Luxury_Chilean_villa_hero_c78fe707.png";
+import villaImage from "@assets/stock_images/luxury_residential_v_fcfa0e39.jpg";
+import industrialImage from "@assets/stock_images/contemporary_office__a4a1a738.jpg";
+import heroImage from "@assets/stock_images/modern_architectural_53e85b78.jpg";
+import architecturalImage1 from "@assets/stock_images/modern_architectural_6a608d26.jpg";
+import architecturalImage2 from "@assets/stock_images/modern_architectural_d27ef126.jpg";
+import urbanImage from "@assets/stock_images/contemporary_office__b1c6c790.jpg";
+import residentialImage from "@assets/stock_images/luxury_residential_v_2a62c92a.jpg";
 
 interface ProjectCardProps {
   id: string;
@@ -149,18 +153,18 @@ function ProjectCard({
   );
 }
 
-// todo: remove mock functionality - replace with real MADA projects
-const madaProjects = [
+// todo: remove mock functionality - replace with real United Developers projects
+const unitedDevelopersProjects = [
   {
     id: "xixi-wetland",
     title: "Xixi Wetland Cultural Complex",
     location: "Hangzhou, China",
     year: "2018",
     type: "Architecture" as const,
-    image: villaImage,
+    image: architecturalImage1,
     area: "15,000 m²",
     status: "Award Winner" as const,
-    description: "A cultural complex that integrates contemporary architecture with natural wetland ecosystem, showcasing MADA's philosophy of harmonious development.",
+    description: "A cultural complex that integrates contemporary architecture with natural wetland ecosystem, showcasing United Developers' philosophy of harmonious development.",
     features: ["Sustainable Design", "Cultural Integration", "Wetland Preservation", "Contemporary Architecture"]
   },
   {
@@ -169,10 +173,10 @@ const madaProjects = [
     location: "Los Angeles, USA",
     year: "2010",
     type: "Architecture" as const,
-    image: heroImage,
+    image: architecturalImage2,
     area: "8,500 m²",
     status: "Completed" as const,
-    description: "Academic building reflecting MADA's cross-cultural design approach, bridging Eastern and Western architectural philosophies.",
+    description: "Academic building reflecting United Developers' cross-cultural design approach, bridging Eastern and Western architectural philosophies.",
     features: ["Academic Excellence", "Cross-Cultural Design", "Innovation Hub", "LEED Certified"]
   },
   {
@@ -181,10 +185,10 @@ const madaProjects = [
     location: "Shanghai, China",
     year: "2020",
     type: "Urban Planning" as const,
-    image: industrialImage,
+    image: urbanImage,
     area: "2.5 km²",
     status: "In Progress" as const,
-    description: "Comprehensive urban planning project demonstrating MADA's strategic approach to sustainable city development.",
+    description: "Comprehensive urban planning project demonstrating United Developers' strategic approach to sustainable city development.",
     features: ["Master Planning", "Smart City Design", "Green Infrastructure", "Mixed-Use Development"]
   },
   {
@@ -193,7 +197,7 @@ const madaProjects = [
     location: "Beijing, China",
     year: "2007",
     type: "Architecture" as const,
-    image: villaImage,
+    image: residentialImage,
     area: "450 m²",
     status: "Award Winner" as const,
     description: "Intimate residential project exploring traditional Chinese spatial concepts through contemporary architectural language.",
@@ -213,13 +217,13 @@ const madaProjects = [
   },
   {
     id: "corporate-identity",
-    title: "MADA Visual Identity System",
+    title: "United Developers Visual Identity System",
     location: "Shanghai, China",
     year: "2019",
     type: "Visual Design" as const,
     image: industrialImage,
     status: "Completed" as const,
-    description: "Comprehensive visual identity system reflecting MADA's architectural philosophy and international outlook.",
+    description: "Comprehensive visual identity system reflecting United Developers' architectural philosophy and international outlook.",
     features: ["Brand Identity", "Visual System", "International Appeal", "Architectural Integration"]
   }
 ];
@@ -228,7 +232,7 @@ export default function Portfolio() {
   const [filter, setFilter] = useState<"all" | "Urban Planning" | "Architecture" | "Interior Design" | "Visual Design">("all");
   const [statusFilter, setStatusFilter] = useState<"all" | "Completed" | "In Progress" | "Award Winner">("all");
 
-  const filteredProjects = madaProjects.filter(project => {
+  const filteredProjects = unitedDevelopersProjects.filter(project => {
     const typeMatch = filter === "all" || project.type === filter;
     const statusMatch = statusFilter === "all" || project.status === statusFilter;
     return typeMatch && statusMatch;
@@ -373,7 +377,7 @@ export default function Portfolio() {
             <p className="text-muted-foreground leading-relaxed mb-8">
               "Design is the search for a path under collectively established goals. Architecture's purpose is to solve problems, 
               and an architect's work is problem-solving. However, this tradition has degenerated into an obsession with 
-              problem-solving methods while forgetting the problems themselves. MADA's effort is to reform this practice."
+              problem-solving methods while forgetting the problems themselves. United Developers' effort is to reform this practice."
             </p>
             <p className="text-muted-foreground leading-relaxed">
               We believe that a problem never appears twice in exactly the same way. Therefore, we never simply accept a problem; 

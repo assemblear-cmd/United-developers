@@ -61,10 +61,10 @@ export default function Footer() {
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-sm">VL</span>
+                  <span className="text-primary-foreground font-bold text-sm">UD</span>
                 </div>
                 <span className="font-serif text-xl font-bold text-foreground">
-                  MADA s.p.a.m.
+                  United Developers
                 </span>
               </div>
               
@@ -80,7 +80,7 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center space-x-3 text-muted-foreground">
                   <Mail className="h-4 w-4" />
-                  <span data-testid="footer-email">info@madaspam.com</span>
+                  <span data-testid="footer-email">info@uniteddevelopers.com</span>
                 </div>
                 <div className="flex items-start space-x-3 text-muted-foreground">
                   <MapPin className="h-4 w-4 mt-0.5" />
@@ -187,7 +187,7 @@ export default function Footer() {
         <div className="py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2024 MADA s.p.a.m. All rights reserved.
+              © 2024 United Developers. All rights reserved.
             </div>
             
             <div className="flex items-center space-x-6">

@@ -67,8 +67,8 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      content: "info@madaspam.com",
-      action: "mailto:info@madaspam.com"
+      content: "info@uniteddevelopers.com",
+      action: "mailto:info@uniteddevelopers.com"
     },
     {
       icon: MapPin,

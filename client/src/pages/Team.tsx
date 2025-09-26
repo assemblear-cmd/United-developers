@@ -18,7 +18,7 @@ export default function Team() {
               Our Team
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Meet the visionary leaders and talented professionals who drive MADA s.p.a.m.'s 
+              Meet the visionary leaders and talented professionals who drive United Developers' 
               innovative approach to architecture and design.
             </p>
           </div>
@@ -59,7 +59,7 @@ export default function Team() {
                           Ma Qingyun
                         </h3>
                         <p className="text-lg text-primary font-medium" data-testid="text-ma-title">
-                          Founding Principal, MADA s.p.a.m.
+                          Founding Principal, United Developers
                         </p>
                       </div>
 
@@ -67,7 +67,7 @@ export default function Team() {
                         <div className="flex items-start space-x-3">
                           <Calendar className="h-5 w-5 text-primary mt-0.5" />
                           <div>
-                            <p className="font-medium text-foreground">Founded MADA s.p.a.m.</p>
+                            <p className="font-medium text-foreground">Founded United Developers</p>
                             <p className="text-sm text-muted-foreground">1999, Shanghai</p>
                           </div>
                         </div>
@@ -100,17 +100,17 @@ export default function Team() {
                       <div className="pt-4">
                         <h4 className="font-semibold text-foreground mb-3">About Ma Qingyun</h4>
                         <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                          Ma Qingyun is the founding principal of MADA s.p.a.m., established in Shanghai in 1999. 
+                          Ma Qingyun is the founding principal of United Developers, established in Shanghai in 1999. 
                           With an international perspective shaped by his multicultural team, Ma has led the firm 
                           to bridge Eastern and Western design philosophies through innovative architectural practice.
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                           As former Dean of the USC School of Architecture (2007-2017), Ma brought academic rigor 
-                          to MADA's practice while expanding the firm's influence across the Pacific Rim. His 
+                          to United Developers' practice while expanding the firm's influence across the Pacific Rim. His 
                           leadership philosophy emphasizes collective problem-solving and cultural synthesis.
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          Under his guidance, MADA has developed a unique approach that views clients as collaborators 
+                          Under his guidance, United Developers has developed a unique approach that views clients as collaborators 
                           in discovering and redefining architectural challenges, rather than simply solving predetermined problems.
                         </p>
                       </div>
@@ -142,7 +142,7 @@ export default function Team() {
               </h2>
               <div className="max-w-4xl mx-auto space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  MADA s.p.a.m. is an atypical practice group in Chinese architecture that emerged during 
+                  United Developers is an atypical practice group in Chinese architecture that emerged during 
                   a typical period of social transformation. We never form stereotypes as we continue to develop, 
                   and never lose our sensitivity in the process of maturation.
                 </p>

@@ -49,10 +49,10 @@ export default function Navigation() {
           <Link href="/" data-testid="link-home">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">VL</span>
+                <span className="text-primary-foreground font-bold text-sm">UD</span>
               </div>
               <span className="font-serif text-xl font-bold text-foreground">
-                MADA s.p.a.m.
+                United Developers
               </span>
             </div>
           </Link>

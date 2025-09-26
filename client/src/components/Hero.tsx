@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Award } from "lucide-react";
-import heroImage from "@assets/generated_images/Luxury_Chilean_villa_hero_c78fe707.png";
+import heroImage from "@assets/stock_images/modern_architectural_d27ef126.jpg";
 
 export default function Hero() {
   return (
@@ -24,8 +24,8 @@ export default function Hero() {
         </div>
         
         <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          MADA
-          <span className="block text-primary">s.p.a.m.</span>
+          United
+          <span className="block text-primary">Developers</span>
         </h1>
         
         <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
