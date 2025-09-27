@@ -240,7 +240,7 @@ export default function Portfolio() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Our Portfolio
+            Our Projects
           </h2>
         </div>
 
