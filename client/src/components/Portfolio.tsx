@@ -10,6 +10,11 @@ import architecturalImage1 from "@assets/stock_images/modern_architectural_6a608
 import architecturalImage2 from "@assets/stock_images/modern_architectural_d27ef126.jpg";
 import urbanImage from "@assets/stock_images/contemporary_office__b1c6c790.jpg";
 import residentialImage from "@assets/stock_images/luxury_residential_v_2a62c92a.jpg";
+import xianTvImage1 from "@assets/Screenshot_2025-09-26-21-28-59-212_cn.wps.xiaomi.abroad.lite-edit_1758934379116.jpg";
+import xianTvImage2 from "@assets/IMG_20250926_212722_1758934379201.jpg";
+import xianTvImage3 from "@assets/IMG_20250926_212654_1758934379250.jpg";
+import xianTvImage4 from "@assets/IMG_20250926_212613_1758934379302.jpg";
+import xianTvImage5 from "@assets/IMG_20250926_212548_1758934379341.jpg";
 
 interface ProjectCardProps {
   id: string;
@@ -214,6 +219,18 @@ const unitedDevelopersProjects = [
     status: "Completed" as const,
     description: "Museum design that reinterprets local architectural heritage while creating spaces for contemporary cultural expression.",
     features: ["Cultural Heritage", "Museum Design", "Historic Integration", "Contemporary Expression"]
+  },
+  {
+    id: "xian-tv-broadcast-center",
+    title: "Xi'an TV Broadcast Center",
+    location: "Xi'an, China",
+    year: "2009",
+    type: "Architecture" as const,
+    image: xianTvImage2,
+    area: "81,117 m²",
+    status: "Completed" as const,
+    description: "This project inherits the generosity, concise and stately characteristics of Han Tang culture of Xi'an, integrated as a whole and enhances the scale perception. Diversified programs are enclosed by a symbolic wall, suggesting the Land Art temperament of Xi'an Wall while metaphorically representing a Media City.",
+    features: ["Cultural Integration", "Media Center", "Exhibition Spaces", "Han Tang Architecture"]
   },
   {
     id: "corporate-identity",
