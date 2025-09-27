@@ -28,10 +28,6 @@ export default function Hero() {
           <span className="block text-primary">Developers</span>
         </h1>
         
-        <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-          An innovative architectural practice bridging Eastern and Western design philosophies, 
-          creating exceptional spaces that redefine contemporary architecture.
-        </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
           <Button 
@@ -56,19 +52,8 @@ export default function Hero() {
         {/* Stats */}
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-12">
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-primary mb-1">25+</div>
-            <div className="text-sm text-primary-foreground/80">Years of Excellence</div>
-          </div>
-          <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-primary mb-1">100+</div>
             <div className="text-sm text-primary-foreground/80">Completed Projects</div>
-          </div>
-          <div className="text-center flex items-center space-x-2">
-            <Award className="h-6 w-6 text-primary" />
-            <div>
-              <div className="text-sm font-semibold text-primary-foreground">International Recognition</div>
-              <div className="text-xs text-primary-foreground/80">Architecture Awards</div>
-            </div>
           </div>
         </div>
       </div>

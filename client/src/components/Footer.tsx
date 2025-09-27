@@ -68,9 +68,6 @@ export default function Footer() {
                 </span>
               </div>
               
-              <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-                An innovative architectural practice bridging Eastern and Western design philosophies, creating exceptional spaces that redefine contemporary architecture across the Pacific Rim.
-              </p>
               
               {/* Contact Info */}
               <div className="space-y-3 text-sm">

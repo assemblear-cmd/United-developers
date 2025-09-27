@@ -91,7 +91,7 @@ export default function Team() {
                         <div className="flex items-start space-x-3">
                           <Award className="h-5 w-5 text-primary mt-0.5" />
                           <div>
-                            <p className="font-medium text-foreground">International Recognition</p>
+                            <p className="font-medium text-foreground">Award Recognition</p>
                             <p className="text-sm text-muted-foreground">Multiple architecture awards and exhibitions</p>
                           </div>
                         </div>
@@ -185,7 +185,7 @@ export default function Team() {
                   <Award className="h-8 w-8 text-primary" />
                 </div>
                 <div className="text-2xl font-bold text-primary mb-1">25+</div>
-                <div className="text-sm text-muted-foreground">Years of Excellence</div>
+                <div className="text-sm text-muted-foreground">Project History</div>
               </div>
             </div>
           </div>

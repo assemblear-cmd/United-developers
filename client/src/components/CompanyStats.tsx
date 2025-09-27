@@ -12,7 +12,7 @@ export default function CompanyStats() {
     {
       icon: Home,
       number: "25+",
-      label: "Years of Excellence",
+      label: "Project Expertise",
       description: "Pioneering architectural practice since 1999"
     },
     {
