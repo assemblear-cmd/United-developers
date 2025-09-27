@@ -17,6 +17,7 @@ import xianTvImage4 from "@assets/IMG_20250926_212613_1758934379302.jpg";
 import xianTvImage5 from "@assets/IMG_20250926_212548_1758934379341.jpg";
 import xixianCbdImage from "@assets/IMG_20250926_225621_1759008587265.jpg";
 import jinqiaoGuopeiImage from "@assets/Screenshot_2025-09-27-15-36-36-976_cn.wps.xiaomi.abroad.lite-edit_1759009184273.jpg";
+import huyaoOfficeImage from "@assets/Screenshot_2025-09-27-18-45-22-455_cn.wps.xiaomi.abroad.lite-edit_1759009642993.jpg";
 
 interface ProjectCardProps {
   id: string;
@@ -185,16 +186,16 @@ const unitedDevelopersProjects = [
     features: ["Mixed-Use Commercial", "Urban Integration", "Elevated Infrastructure", "Cultural Landscape"]
   },
   {
-    id: "qingpu-masterplan",
-    title: "Qingpu District Urban Planning",
+    id: "huyao-office-building",
+    title: "Huyao Office Building",
     location: "Shanghai, China",
-    year: "2020",
-    type: "Urban Planning" as const,
-    image: urbanImage,
-    area: "2.5 km²",
-    status: "In Progress" as const,
-    description: "Comprehensive urban planning project demonstrating United Developers' strategic approach to sustainable city development.",
-    features: ["Master Planning", "Smart City Design", "Green Infrastructure", "Mixed-Use Development"]
+    year: "2021",
+    type: "Architecture" as const,
+    image: huyaoOfficeImage,
+    area: "Not specified",
+    status: "Completed" as const,
+    description: "Combines functionality, economy and artistry with rational and harmonious layout concepts to meet sustainable development requirements. Features integration of 'integrity, integration, openness' characteristics with compound functions and shared facilities. Design based on unit office settlements, outdoor platforms, roof gardens and central garden corridors, forming an enclosed building integrated with surrounding environment.",
+    features: ["Sustainable Design", "Functional Integration", "Garden Integration", "Environmental Harmony"]
   },
   {
     id: "father-house",
