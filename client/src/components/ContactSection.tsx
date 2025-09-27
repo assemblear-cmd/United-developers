@@ -93,7 +93,7 @@ export default function ContactSection() {
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
-                <CardTitle className="font-serif text-2xl">Free Consultation</CardTitle>
+                <CardTitle className="font-serif text-2xl">Contact Us</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">

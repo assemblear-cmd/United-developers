@@ -81,12 +81,6 @@ export default function Navigation() {
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
 
-            <Button 
-              className="hidden md:flex"
-              data-testid="button-contact"
-            >
-              Free Consultation
-            </Button>
 
             {/* Mobile menu button */}
             <Button
@@ -117,11 +111,6 @@ export default function Navigation() {
                   </div>
                 </Link>
               ))}
-              <div className="px-3 py-2">
-                <Button className="w-full" data-testid="mobile-button-contact">
-                  Free Consultation
-                </Button>
-              </div>
             </div>
           </div>
         )}
