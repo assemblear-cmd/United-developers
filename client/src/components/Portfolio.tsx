@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Square, ArrowRight, Building, Home, Factory, Palette } from "lucide-react";
+import { MapPin, Calendar, Square, ArrowRight, Building, Home } from "lucide-react";
 import villaImage from "@assets/stock_images/luxury_residential_v_fcfa0e39.jpg";
 import industrialImage from "@assets/stock_images/contemporary_office__a4a1a738.jpg";
 import heroImage from "@assets/stock_images/modern_architectural_53e85b78.jpg";

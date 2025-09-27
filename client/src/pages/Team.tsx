@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { MapPin, Award, Calendar, Building, GraduationCap, Users, Mail, Linkedin } from "lucide-react";
+import { MapPin, Award, Calendar, Building, GraduationCap, Mail, Linkedin } from "lucide-react";
 import executiveImage from "@assets/generated_images/Company_executive_portrait_41e926ea.png";
 
 export default function Team() {
