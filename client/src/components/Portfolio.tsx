@@ -16,6 +16,7 @@ import xianTvImage3 from "@assets/IMG_20250926_212654_1758934379250.jpg";
 import xianTvImage4 from "@assets/IMG_20250926_212613_1758934379302.jpg";
 import xianTvImage5 from "@assets/IMG_20250926_212548_1758934379341.jpg";
 import xixianCbdImage from "@assets/IMG_20250926_225621_1759008587265.jpg";
+import jinqiaoGuopeiImage from "@assets/Screenshot_2025-09-27-15-36-36-976_cn.wps.xiaomi.abroad.lite-edit_1759009184273.jpg";
 
 interface ProjectCardProps {
   id: string;
@@ -172,16 +173,16 @@ const unitedDevelopersProjects = [
     features: ["Master Planning", "Sustainable Development", "Green Infrastructure", "Mixed-Use Districts"]
   },
   {
-    id: "centennial-hall",
-    title: "USC Centennial Hall",
-    location: "Los Angeles, USA",
-    year: "2010",
+    id: "jinqiao-guopei-1851",
+    title: "Jinqiao Guopei 1851",
+    location: "Shanghai, China",
+    year: "2019",
     type: "Architecture" as const,
-    image: architecturalImage2,
-    area: "8,500 m²",
+    image: jinqiaoGuopeiImage,
+    area: "140,000 m²",
     status: "Completed" as const,
-    description: "Academic building reflecting United Developers' cross-cultural design approach, bridging Eastern and Western architectural philosophies.",
-    features: ["Academic Excellence", "Cross-Cultural Design", "Innovation Hub", "LEED Certified"]
+    description: "Mixed-use commercial complex that maximizes land, public, and commercial resources. The design creates a visual symbol of an international metropolis through high-complexity function configuration and multi-dimensional spatial interleaving. Features integration with elevated infrastructure and Jiangnan garden elements.",
+    features: ["Mixed-Use Commercial", "Urban Integration", "Elevated Infrastructure", "Cultural Landscape"]
   },
   {
     id: "qingpu-masterplan",
