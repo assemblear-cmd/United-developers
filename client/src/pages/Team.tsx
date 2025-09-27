@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { MapPin, Award, Calendar, Building, GraduationCap, Mail, Linkedin } from "lucide-react";
-import executiveImage from "@assets/generated_images/Company_executive_portrait_41e926ea.png";
+import { Building, Mail, Linkedin } from "lucide-react";
+import executiveImage from "@assets/IMG_20250926_233927_1758940891271.jpg";
 
 export default function Team() {
   return (
@@ -27,11 +27,6 @@ export default function Team() {
         {/* Founder Section */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
-                Founder & Principal
-              </h2>
-            </div>
 
             <div className="max-w-4xl mx-auto">
               <Card className="overflow-hidden">
@@ -44,11 +39,6 @@ export default function Team() {
                       className="w-full h-full object-cover min-h-[400px]"
                       data-testid="img-ma-portrait"
                     />
-                    <div className="absolute bottom-4 left-4">
-                      <Badge className="bg-black/70 text-white border-none">
-                        Founder & Principal
-                      </Badge>
-                    </div>
                   </div>
 
                   {/* Content Section */}
@@ -58,56 +48,17 @@ export default function Team() {
                         <h3 className="font-serif text-3xl font-bold text-foreground mb-2" data-testid="text-ma-name">
                           Ma Qingyun
                         </h3>
-                        <p className="text-lg text-primary font-medium" data-testid="text-ma-title">
-                          Founding Principal, United Developers
-                        </p>
                       </div>
 
-                      <div className="space-y-4">
-                        <div className="flex items-start space-x-3">
-                          <Calendar className="h-5 w-5 text-primary mt-0.5" />
-                          <div>
-                            <p className="font-medium text-foreground">Founded United Developers</p>
-                            <p className="text-sm text-muted-foreground">1999, Shanghai</p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start space-x-3">
-                          <GraduationCap className="h-5 w-5 text-primary mt-0.5" />
-                          <div>
-                            <p className="font-medium text-foreground">Dean, USC School of Architecture</p>
-                            <p className="text-sm text-muted-foreground">2007-2017, University of Southern California</p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start space-x-3">
-                          <MapPin className="h-5 w-5 text-primary mt-0.5" />
-                          <div>
-                            <p className="font-medium text-foreground">Global Practice</p>
-                            <p className="text-sm text-muted-foreground">Shanghai, Los Angeles, Beijing</p>
-                          </div>
-                        </div>
-
-                        <div className="flex items-start space-x-3">
-                          <Award className="h-5 w-5 text-primary mt-0.5" />
-                          <div>
-                            <p className="font-medium text-foreground">Award Recognition</p>
-                            <p className="text-sm text-muted-foreground">Multiple architecture awards and exhibitions</p>
-                          </div>
-                        </div>
-                      </div>
 
                       <div className="pt-4">
                         <h4 className="font-semibold text-foreground mb-3">About Ma Qingyun</h4>
                         <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                          Ma Qingyun is the founding principal of United Developers, established in Shanghai in 1999. 
                           With an international perspective shaped by his multicultural team, Ma has led the firm 
                           to bridge Eastern and Western design philosophies through innovative architectural practice.
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                          As former Dean of the USC School of Architecture (2007-2017), Ma brought academic rigor 
-                          to United Developers' practice while expanding the firm's influence across the Pacific Rim. His 
-                          leadership philosophy emphasizes collective problem-solving and cultural synthesis.
+                          His leadership philosophy emphasizes collective problem-solving and cultural synthesis.
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed">
                           Under his guidance, United Developers has developed a unique approach that views clients as collaborators 
@@ -116,13 +67,27 @@ export default function Team() {
                       </div>
 
                       <div className="flex space-x-3 pt-4">
-                        <Button variant="outline" size="sm" data-testid="button-ma-contact">
-                          <Mail className="h-4 w-4 mr-2" />
-                          Contact
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          asChild
+                          data-testid="button-ma-contact"
+                        >
+                          <a href="mailto:info@uniteddevelopers.com">
+                            <Mail className="h-4 w-4 mr-2" />
+                            Contact
+                          </a>
                         </Button>
-                        <Button variant="outline" size="sm" data-testid="button-ma-linkedin">
-                          <Linkedin className="h-4 w-4 mr-2" />
-                          LinkedIn
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          asChild
+                          data-testid="button-ma-linkedin"
+                        >
+                          <a href="https://linkedin.com/company/united-developers" target="_blank" rel="noopener noreferrer">
+                            <Linkedin className="h-4 w-4 mr-2" />
+                            LinkedIn
+                          </a>
                         </Button>
                       </div>
                     </div>
