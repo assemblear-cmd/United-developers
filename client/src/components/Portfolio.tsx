@@ -21,7 +21,7 @@ interface ProjectCardProps {
   title: string;
   location: string;
   year: string;
-  type: "Urban Planning" | "Architecture" | "Interior Design" | "Visual Design";
+  type: "Urban Planning" | "Architecture";
   image: string;
   area?: string;
   status: "Completed" | "In Progress" | "Award Winner";
@@ -49,8 +49,6 @@ function ProjectCard({
     switch (type) {
       case "Urban Planning": return Building;
       case "Architecture": return Home;
-      case "Interior Design": return Palette;
-      case "Visual Design": return Factory;
       default: return Building;
     }
   };
@@ -231,22 +229,11 @@ const unitedDevelopersProjects = [
     status: "Completed" as const,
     description: "This project inherits the generosity, concise and stately characteristics of Han Tang culture of Xi'an, integrated as a whole and enhances the scale perception. Diversified programs are enclosed by a symbolic wall, suggesting the Land Art temperament of Xi'an Wall while metaphorically representing a Media City.",
     features: ["Cultural Integration", "Media Center", "Exhibition Spaces", "Han Tang Architecture"]
-  },
-  {
-    id: "corporate-identity",
-    title: "United Developers Visual Identity System",
-    location: "Shanghai, China",
-    year: "2019",
-    type: "Visual Design" as const,
-    image: industrialImage,
-    status: "Completed" as const,
-    description: "Comprehensive visual identity system reflecting United Developers' architectural philosophy and international outlook.",
-    features: ["Brand Identity", "Visual System", "International Appeal", "Architectural Integration"]
   }
 ];
 
 export default function Portfolio() {
-  const [filter, setFilter] = useState<"all" | "Urban Planning" | "Architecture" | "Interior Design" | "Visual Design">("all");
+  const [filter, setFilter] = useState<"all" | "Urban Planning" | "Architecture">("all");
   const [statusFilter, setStatusFilter] = useState<"all" | "Completed" | "In Progress" | "Award Winner">("all");
 
   const filteredProjects = unitedDevelopersProjects.filter(project => {
@@ -293,22 +280,6 @@ export default function Portfolio() {
                 data-testid="button-filter-planning"
               >
                 Urban Planning
-              </Button>
-              <Button
-                variant={filter === "Interior Design" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setFilter("Interior Design")}
-                data-testid="button-filter-interior"
-              >
-                Interior
-              </Button>
-              <Button
-                variant={filter === "Visual Design" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setFilter("Visual Design")}
-                data-testid="button-filter-visual"
-              >
-                Visual
               </Button>
             </div>
           </div>
@@ -381,23 +352,6 @@ export default function Portfolio() {
           </div>
         )}
 
-        {/* Philosophy section */}
-        <div className="mt-16 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="font-serif text-2xl font-bold text-foreground mb-6">
-              Our Design Philosophy
-            </h3>
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              "Design is the search for a path under collectively established goals. Architecture's purpose is to solve problems, 
-              and an architect's work is problem-solving. However, this tradition has degenerated into an obsession with 
-              problem-solving methods while forgetting the problems themselves. United Developers' effort is to reform this practice."
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              We believe that a problem never appears twice in exactly the same way. Therefore, we never simply accept a problem; 
-              instead, we discover, analyze, and define it.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

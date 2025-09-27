@@ -133,63 +133,6 @@ export default function Team() {
           </div>
         </section>
 
-        {/* Team Philosophy */}
-        <section className="py-16 bg-muted/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl font-bold text-foreground mb-6">
-                Our Team Philosophy
-              </h2>
-              <div className="max-w-4xl mx-auto space-y-6">
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  United Developers is an atypical practice group in Chinese architecture that emerged during 
-                  a typical period of social transformation. We never form stereotypes as we continue to develop, 
-                  and never lose our sensitivity in the process of maturation.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  This is attributed to our multi-disciplinary, multi-faceted and multi-layered engagement 
-                  with architecture and the social and human conditions in which it is embedded. Our team 
-                  members come from all over the world, bringing diverse perspectives to every project.
-                </p>
-              </div>
-            </div>
-
-            {/* Team Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Users className="h-8 w-8 text-primary" />
-                </div>
-                <div className="text-2xl font-bold text-primary mb-1">50+</div>
-                <div className="text-sm text-muted-foreground">Team Members</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <MapPin className="h-8 w-8 text-primary" />
-                </div>
-                <div className="text-2xl font-bold text-primary mb-1">15+</div>
-                <div className="text-sm text-muted-foreground">Countries Represented</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Building className="h-8 w-8 text-primary" />
-                </div>
-                <div className="text-2xl font-bold text-primary mb-1">3</div>
-                <div className="text-sm text-muted-foreground">Global Offices</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Award className="h-8 w-8 text-primary" />
-                </div>
-                <div className="text-2xl font-bold text-primary mb-1">25+</div>
-                <div className="text-sm text-muted-foreground">Project History</div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Services */}
         <section className="py-16">
@@ -203,7 +146,7 @@ export default function Team() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="text-center hover-elevate transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -224,25 +167,6 @@ export default function Team() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover-elevate transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Building className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">Interior Design</h3>
-                  <p className="text-sm text-muted-foreground">Thoughtful interior spaces that reflect architectural vision</p>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center hover-elevate transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Building className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">Visual Design</h3>
-                  <p className="text-sm text-muted-foreground">Comprehensive visual identity and media strategy</p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>

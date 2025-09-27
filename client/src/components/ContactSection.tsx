@@ -87,14 +87,6 @@ export default function ContactSection() {
   return (
     <section className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Let's Discuss Your Project
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're here to bring your vision to life. Contact us for a free, personalized consultation.
-          </p>
-        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Form */}
@@ -235,24 +227,6 @@ export default function ContactSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-primary text-primary-foreground">
-              <CardContent className="p-6">
-                <h3 className="font-serif text-xl font-bold mb-3">
-                  Need Immediate Consultation?
-                </h3>
-                <p className="text-sm mb-4 opacity-90">
-                  Our team of experts is available to answer your questions about architectural projects and design solutions.
-                </p>
-                <Button 
-                  variant="secondary" 
-                  className="w-full"
-                  data-testid="button-immediate-consultation"
-                >
-                  <Phone className="mr-2 h-4 w-4" />
-                  Call Now
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
