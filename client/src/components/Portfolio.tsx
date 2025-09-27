@@ -211,18 +211,6 @@ const unitedDevelopersProjects = [
     features: ["Urban Planning", "Ecological Sustainability", "Rural-Urban Integration", "Cross-Industry Innovation"]
   },
   {
-    id: "ningbo-museum",
-    title: "Ningbo Historic Museum",
-    location: "Ningbo, China",
-    year: "2016",
-    type: "Architecture" as const,
-    image: heroImage,
-    area: "12,000 m²",
-    status: "Completed" as const,
-    description: "Museum design that reinterprets local architectural heritage while creating spaces for contemporary cultural expression.",
-    features: ["Cultural Heritage", "Museum Design", "Historic Integration", "Contemporary Expression"]
-  },
-  {
     id: "xian-tv-broadcast-center",
     title: "Xi'an TV Broadcast Center",
     location: "Xi'an, China",
