@@ -18,6 +18,7 @@ import xianTvImage5 from "@assets/IMG_20250926_212548_1758934379341.jpg";
 import xixianCbdImage from "@assets/IMG_20250926_225621_1759008587265.jpg";
 import jinqiaoGuopeiImage from "@assets/Screenshot_2025-09-27-15-36-36-976_cn.wps.xiaomi.abroad.lite-edit_1759009184273.jpg";
 import huyaoOfficeImage from "@assets/Screenshot_2025-09-27-18-45-22-455_cn.wps.xiaomi.abroad.lite-edit_1759009642993.jpg";
+import shenshanZoneImage from "@assets/Screenshot_2025-09-27-18-49-24-999_cn.wps.xiaomi.abroad.lite-edit_1759009870282.jpg";
 
 interface ProjectCardProps {
   id: string;
@@ -198,16 +199,16 @@ const unitedDevelopersProjects = [
     features: ["Sustainable Design", "Functional Integration", "Garden Integration", "Environmental Harmony"]
   },
   {
-    id: "father-house",
-    title: "Father's House",
-    location: "Beijing, China",
-    year: "2007",
-    type: "Architecture" as const,
-    image: residentialImage,
-    area: "450 m²",
-    status: "Award Winner" as const,
-    description: "Intimate residential project exploring traditional Chinese spatial concepts through contemporary architectural language.",
-    features: ["Residential Design", "Traditional Elements", "Modern Interpretation", "Spatial Innovation"]
+    id: "shenshan-central-area",
+    title: "Shenzhen-Shantou Special Cooperation Zone Central Area Planning",
+    location: "Shenzhen, China",
+    year: "2022",
+    type: "Urban Planning" as const,
+    image: shenshanZoneImage,
+    area: "Central Area",
+    status: "In Progress" as const,
+    description: "Pioneering new urban development paradigms that balance countryside preservation, ecological sustainability, and industry innovation. As chief urban and rural planner, the project aims to create a new urban development model that protects pastoral areas, maintains ecology, and promotes cross-industry innovation through integrated design approaches.",
+    features: ["Urban Planning", "Ecological Sustainability", "Rural-Urban Integration", "Cross-Industry Innovation"]
   },
   {
     id: "ningbo-museum",
