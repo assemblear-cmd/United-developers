@@ -49,17 +49,16 @@ export default function Team() {
 
                       <div className="pt-4">
                         <h4 className="font-semibold text-foreground mb-3">About Ma Qingyun</h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                          With an international perspective shaped by his multicultural team, Ma has led the firm 
-                          to bridge Eastern and Western design philosophies through innovative architectural practice.
-                        </p>
-                        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                          His leadership philosophy emphasizes collective problem-solving and cultural synthesis.
-                        </p>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          Under his guidance, United Developers has developed a unique approach that views clients as collaborators 
-                          in discovering and redefining architectural challenges, rather than simply solving predetermined problems.
-                        </p>
+                        <ul className="space-y-3 text-sm text-muted-foreground">
+                          <li>• Founder of MADA s.p.a.m., an atypical practice group in Chinese architecture that emerged during a period of social transformation</li>
+                          <li>• Established architectural design office in Shanghai in 1999, with international team members from around the world</li>
+                          <li>• Appointed as Dean of the School of Architecture at the University of Southern California in 2007</li>
+                          <li>• Opened Los Angeles office to promote architectural practices and academic platforms in the Pacific Rim region</li>
+                          <li>• Led architectural projects across multiple Chinese cities including Beijing, Shanghai, Shenzhen, Hangzhou, Ningbo, Chengdu, Xi'an and Tianjin</li>
+                          <li>• Pioneered multi-disciplinary, multi-faceted approach to architecture and social-cultural integration</li>
+                          <li>• Developed philosophy that architecture is a path finder for collectively defined goals, emphasizing problem discovery over problem-solving</li>
+                          <li>• Champions the belief that no problem appears twice in exactly the same way, leading to unique solutions for each project</li>
+                        </ul>
                       </div>
 
                     </div>
