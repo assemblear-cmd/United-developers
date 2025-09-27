@@ -16,17 +16,7 @@ export default function Hero() {
       
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <div className="flex items-center justify-center space-x-2 mb-6">
-          <MapPin className="h-5 w-5 text-primary" />
-          <span className="text-sm font-medium uppercase tracking-wider text-primary-foreground/90">
-            International Architecture Studio
-          </span>
-        </div>
         
-        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          United
-          <span className="block text-primary">Developers</span>
-        </h1>
         
         
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
@@ -39,23 +29,8 @@ export default function Hero() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
           
-          <Button 
-            variant="outline"
-            size="lg"
-            className="border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 font-semibold px-8 py-3"
-            data-testid="button-our-team"
-          >
-            Our Team
-          </Button>
         </div>
         
-        {/* Stats */}
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-12">
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-primary mb-1">100+</div>
-            <div className="text-sm text-primary-foreground/80">Completed Projects</div>
-          </div>
-        </div>
       </div>
       
       {/* Scroll Indicator */}
