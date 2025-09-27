@@ -1,8 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import Portfolio from "@/components/Portfolio";
-import CompanyStats from "@/components/CompanyStats";
-import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -11,9 +8,6 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <Portfolio />
-        <CompanyStats />
-        <ContactSection />
       </main>
       <Footer />
     </div>
