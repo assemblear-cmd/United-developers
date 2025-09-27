@@ -19,17 +19,6 @@ export default function Hero() {
         
         
         
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
-          <Button 
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3"
-            data-testid="button-explore-portfolio"
-          >
-            Explore Portfolio
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          
-        </div>
         
       </div>
       
