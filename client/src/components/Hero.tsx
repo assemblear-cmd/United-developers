@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Award } from "lucide-react";
-import heroImage from "@assets/stock_images/modern_architectural_d27ef126.jpg";
+import heroImage from "@assets/IMG-20250926-WA0010_1758934077255.jpg";
 
 export default function Hero() {
   return (
