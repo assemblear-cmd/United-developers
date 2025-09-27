@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Building, Mail, Linkedin } from "lucide-react";
+import { Building } from "lucide-react";
 import executiveImage from "@assets/IMG_20250926_233927_1758940891271.jpg";
 
 export default function Team() {
@@ -17,10 +17,6 @@ export default function Team() {
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
               Our Team
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Meet the visionary leaders and talented professionals who drive United Developers' 
-              innovative approach to architecture and design.
-            </p>
           </div>
         </section>
 
@@ -66,30 +62,6 @@ export default function Team() {
                         </p>
                       </div>
 
-                      <div className="flex space-x-3 pt-4">
-                        <Button 
-                          variant="outline" 
-                          size="sm" 
-                          asChild
-                          data-testid="button-ma-contact"
-                        >
-                          <a href="mailto:info@uniteddevelopers.com">
-                            <Mail className="h-4 w-4 mr-2" />
-                            Contact
-                          </a>
-                        </Button>
-                        <Button 
-                          variant="outline" 
-                          size="sm" 
-                          asChild
-                          data-testid="button-ma-linkedin"
-                        >
-                          <a href="https://linkedin.com/company/united-developers" target="_blank" rel="noopener noreferrer">
-                            <Linkedin className="h-4 w-4 mr-2" />
-                            LinkedIn
-                          </a>
-                        </Button>
-                      </div>
                     </div>
                   </CardContent>
                 </div>
