@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Award } from "lucide-react";
 import heroImage from "@assets/IMG-20250926-WA0010_1758934077255.jpg";
-import CubeNavigation from "./CubeNavigation";
 
 export default function Hero() {
   return (
@@ -15,12 +14,6 @@ export default function Hero() {
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
       
-      {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <div className="flex justify-center items-center">
-          <CubeNavigation />
-        </div>
-      </div>
       
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
