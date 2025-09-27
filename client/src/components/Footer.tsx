@@ -30,19 +30,8 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Company Info */}
+            {/* Contact Info */}
             <div>
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-sm">UD</span>
-                </div>
-                <span className="font-serif text-xl font-bold text-foreground">
-                  United Developers
-                </span>
-              </div>
-              
-              
-              {/* Contact Info */}
               <div className="space-y-3 text-sm">
                 <div className="flex items-center space-x-3 text-muted-foreground">
                   <Phone className="h-4 w-4" />
@@ -84,7 +73,7 @@ export default function Footer() {
         <div className="py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2024 United Developers. All rights reserved.
+              © 2024. All rights reserved.
             </div>
             
             <div className="flex items-center space-x-6">
