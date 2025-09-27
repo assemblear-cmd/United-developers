@@ -15,6 +15,7 @@ import xianTvImage2 from "@assets/IMG_20250926_212722_1758934379201.jpg";
 import xianTvImage3 from "@assets/IMG_20250926_212654_1758934379250.jpg";
 import xianTvImage4 from "@assets/IMG_20250926_212613_1758934379302.jpg";
 import xianTvImage5 from "@assets/IMG_20250926_212548_1758934379341.jpg";
+import xixianCbdImage from "@assets/IMG_20250926_225621_1759008587265.jpg";
 
 interface ProjectCardProps {
   id: string;
@@ -159,16 +160,16 @@ function ProjectCard({
 // todo: remove mock functionality - replace with real United Developers projects
 const unitedDevelopersProjects = [
   {
-    id: "xixi-wetland",
-    title: "Xixi Wetland Cultural Complex",
-    location: "Hangzhou, China",
-    year: "2018",
-    type: "Architecture" as const,
-    image: architecturalImage1,
-    area: "15,000 m²",
-    status: "Award Winner" as const,
-    description: "A cultural complex that integrates contemporary architecture with natural wetland ecosystem, showcasing United Developers' philosophy of harmonious development.",
-    features: ["Sustainable Design", "Cultural Integration", "Wetland Preservation", "Contemporary Architecture"]
+    id: "xixian-cbd",
+    title: "Xixian CBD",
+    location: "Xi'an, China",
+    year: "2013",
+    type: "Urban Planning" as const,
+    image: xixianCbdImage,
+    area: "3.82 million m²",
+    status: "Completed" as const,
+    description: "Comprehensive master plan for sustainable urban development that balances conservation with modern urbanization. The design preserves 47% farmland and 5% wetlands while creating efficient urban districts connected by innovative green infrastructure including a signature 'Green Bridge' over existing rail lines.",
+    features: ["Master Planning", "Sustainable Development", "Green Infrastructure", "Mixed-Use Districts"]
   },
   {
     id: "centennial-hall",
