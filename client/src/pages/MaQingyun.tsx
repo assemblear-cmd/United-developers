@@ -25,10 +25,10 @@ function AwardItem({ year, title, organization, description, category }: AwardIt
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case "international": return "bg-blue-500/10 text-blue-700 dark:text-blue-300";
-      case "academic": return "bg-purple-500/10 text-purple-700 dark:text-purple-300";
-      case "industry": return "bg-green-500/10 text-green-700 dark:text-green-300";
-      case "olympic": return "bg-yellow-500/10 text-yellow-700 dark:text-yellow-300";
+      case "international": return "bg-primary/10 text-primary";
+      case "academic": return "bg-secondary/10 text-secondary-foreground";
+      case "industry": return "bg-accent/10 text-accent-foreground";
+      case "olympic": return "bg-muted/20 text-muted-foreground";
       default: return "bg-primary/10 text-primary";
     }
   };
