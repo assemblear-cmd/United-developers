@@ -50,8 +50,6 @@ export default function Team() {
                       <div className="pt-4">
                         <h4 className="font-semibold text-foreground mb-3">About Ma Qingyun</h4>
                         <ul className="space-y-3 text-sm text-muted-foreground">
-                          <li>• Founder of MADA s.p.a.m., an atypical practice group in Chinese architecture that emerged during a period of social transformation</li>
-                          <li>• Established architectural design office in Shanghai in 1999, with international team members from around the world</li>
                           <li>• Appointed as Dean of the School of Architecture at the University of Southern California in 2007</li>
                           <li>• Opened Los Angeles office to promote architectural practices and academic platforms in the Pacific Rim region</li>
                           <li>• Led architectural projects across multiple Chinese cities including Beijing, Shanghai, Shenzhen, Hangzhou, Ningbo, Chengdu, Xi'an and Tianjin</li>
@@ -69,18 +67,48 @@ export default function Team() {
           </div>
         </section>
 
-        {/* Team Members Section */}
+        {/* Artem Golestian Section */}
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
-                Team Members
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Our international team brings diverse expertise and perspectives to every project.
-              </p>
-            </div>
+            <div className="max-w-4xl mx-auto">
+              <Card className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  {/* Image Section */}
+                  <div className="relative">
+                    <img 
+                      src={artemImage}
+                      alt="Artem Golestian"
+                      className="w-full h-full object-cover min-h-[400px]"
+                      data-testid="img-artem-portrait"
+                    />
+                  </div>
 
+                  {/* Content Section */}
+                  <CardContent className="p-8 lg:p-12">
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="font-serif text-3xl font-bold text-foreground mb-2" data-testid="text-artem-name">
+                          Artem Golestian
+                        </h3>
+                        <p className="text-muted-foreground mb-3" data-testid="text-artem-role">
+                          Design Director
+                        </p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          Leading creative vision and design strategy across our portfolio, specializing in 
+                          urban planning and conceptual design with international experience.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Team Members Section */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {/* Sergei Stepanov */}
               <Card className="overflow-hidden hover-elevate transition-all duration-300">
@@ -105,36 +133,12 @@ export default function Team() {
                   </p>
                 </CardContent>
               </Card>
-
-              {/* Artem Golestian */}
-              <Card className="overflow-hidden hover-elevate transition-all duration-300">
-                <div className="aspect-square">
-                  <img 
-                    src={artemImage}
-                    alt="Artem Golestian"
-                    className="w-full h-full object-cover"
-                    data-testid="img-artem-portrait"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="font-serif text-xl font-bold text-foreground mb-2" data-testid="text-artem-name">
-                    Artem Golestian
-                  </h3>
-                  <p className="text-muted-foreground mb-3" data-testid="text-artem-role">
-                    Design Director
-                  </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Leading creative vision and design strategy across our portfolio, specializing in 
-                    urban planning and conceptual design with international experience.
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
 
         {/* Services */}
-        <section className="py-16">
+        <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
