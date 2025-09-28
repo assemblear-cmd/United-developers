@@ -1,7 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Building } from "lucide-react";
+import { Link } from "wouter";
 import executiveImage from "@assets/IMG_20250926_233927_1758940891271.jpg";
 import sergeiImage from "@assets/IMG_20250927_190540_361_1759012338591.jpg";
 import artemImage from "@assets/Screenshot_2025-09-27-22-37-30-363_com.instagram.android-edit_1759023474746.jpg";
@@ -57,6 +59,14 @@ export default function Team() {
                           <li>• Developed philosophy that architecture is a path finder for collectively defined goals, emphasizing problem discovery over problem-solving</li>
                           <li>• Champions the belief that no problem appears twice in exactly the same way, leading to unique solutions for each project</li>
                         </ul>
+                      </div>
+
+                      <div className="pt-4">
+                        <Link href="/ma-qingyun">
+                          <Button variant="outline" data-testid="button-ma-read-more">
+                            Read More
+                          </Button>
+                        </Link>
                       </div>
 
                     </div>
