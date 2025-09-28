@@ -36,6 +36,7 @@ export default function Navigation() {
     { href: "/portfolio", label: "Portfolio" },
     { href: "/team", label: "Team" },
     { href: "/ma-qingyun", label: "Ma Qingyun" },
+    { href: "/casablanca", label: "Casablanca" },
     { href: "/contact", label: "Contact" }
   ];
 
