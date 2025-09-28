@@ -37,6 +37,7 @@ export default function Navigation() {
     { href: "/team", label: "Team" },
     { href: "/ma-qingyun", label: "Ma Qingyun" },
     { href: "/casablanca", label: "Casablanca" },
+    { href: "/xixian", label: "Xixian CBD" },
     { href: "/contact", label: "Contact" }
   ];
 
