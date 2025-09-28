@@ -33,9 +33,8 @@ export default function Navigation() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/portfolio", label: "Portfolio" },
+    { href: "/portfolio", label: "Projects" },
     { href: "/team", label: "Team" },
-    { href: "/casablanca", label: "Casablanca" },
     { href: "/xixian", label: "Xixian CBD" },
     { href: "/contact", label: "Contact" }
   ];
