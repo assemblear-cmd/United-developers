@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Square, ArrowRight, Building, Home } from "lucide-react";
+import { useLocation } from "wouter";
 import villaImage from "@assets/stock_images/luxury_residential_v_fcfa0e39.jpg";
 import industrialImage from "@assets/stock_images/contemporary_office__a4a1a738.jpg";
 import heroImage from "@assets/stock_images/modern_architectural_53e85b78.jpg";
@@ -19,6 +20,7 @@ import xixianCbdImage from "@assets/IMG_20250926_225621_1759008587265.jpg";
 import jinqiaoGuopeiImage from "@assets/Screenshot_2025-09-27-15-36-36-976_cn.wps.xiaomi.abroad.lite-edit_1759009184273.jpg";
 import huyaoOfficeImage from "@assets/Screenshot_2025-09-27-18-45-22-455_cn.wps.xiaomi.abroad.lite-edit_1759009642993.jpg";
 import shenshanZoneImage from "@assets/Screenshot_2025-09-27-18-49-24-999_cn.wps.xiaomi.abroad.lite-edit_1759009870282.jpg";
+import casablancaImage from "@assets/IMG-20250918-WA0002_1759023615741.jpg";
 
 interface ProjectCardProps {
   id: string;
@@ -45,8 +47,16 @@ function ProjectCard({
   description,
   features
 }: ProjectCardProps) {
+  const [, setLocation] = useLocation();
+  
   const handleViewDetails = () => {
-    console.log(`Viewing details for project ${id}`);
+    if (id === "casablanca-planning") {
+      setLocation("/casablanca");
+    } else if (id === "xixian-cbd") {
+      setLocation("/xixian");
+    } else {
+      console.log(`Viewing details for project ${id}`);
+    }
   };
 
   const getTypeIcon = (type: string) => {
@@ -162,6 +172,18 @@ function ProjectCard({
 
 // todo: remove mock functionality - replace with real United Developers projects
 const unitedDevelopersProjects = [
+  {
+    id: "casablanca-planning",
+    title: "Casablanca Area Planning",
+    location: "Casablanca Valley, Morocco",
+    year: "2024",
+    type: "Urban Planning" as const,
+    image: casablancaImage,
+    area: "500 hectares",
+    status: "Award Winner" as const,
+    description: "A visionary development where contemporary architecture meets centuries-old viticultural traditions. Elevated pavilions punctuate vineyard rows while the village core weaves contemporary sensibilities through traditional morphology.",
+    features: ["Vineyard Urbanism", "Agricultural Integration", "Contemporary Architecture", "Cultural Continuity"]
+  },
   {
     id: "xixian-cbd",
     title: "Xixian CBD",
