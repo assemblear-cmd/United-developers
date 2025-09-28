@@ -1,6 +1,8 @@
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Award, Calendar, Globe, Trophy, Star, Building, MapPin, User, GraduationCap } from "lucide-react";
+import { Award, Globe, Trophy, Star, Building, MapPin, User, GraduationCap } from "lucide-react";
 
 interface AwardItemProps {
   year: string;
@@ -159,7 +161,10 @@ export default function MaQingyun() {
   };
 
   return (
-    <section className="py-16 bg-background">
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <main className="pt-16">
+        <section className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -367,7 +372,10 @@ export default function MaQingyun() {
             </CardContent>
           </Card>
         </div>
-      </div>
-    </section>
+        </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }

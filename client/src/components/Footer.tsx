@@ -13,7 +13,7 @@ export default function Footer() {
       { name: "About Us", href: "/about" },
       { name: "Our Team", href: "/team" },
       { name: "History", href: "/history" },
-      { name: "Awards", href: "/awards" }
+      { name: "Ma Qingyun", href: "/ma-qingyun" }
     ],
     legal: [
       { name: "Privacy Policy", href: "/privacy" },

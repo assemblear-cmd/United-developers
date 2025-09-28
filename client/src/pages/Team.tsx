@@ -1,8 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Building } from "lucide-react";
 import executiveImage from "@assets/IMG_20250926_233927_1758940891271.jpg";
 import sergeiImage from "@assets/IMG_20250927_190540_361_1759012338591.jpg";
