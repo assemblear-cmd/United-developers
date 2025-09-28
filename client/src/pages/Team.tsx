@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Building } from "lucide-react";
 import executiveImage from "@assets/IMG_20250926_233927_1758940891271.jpg";
+import sergeiImage from "@assets/IMG_20250927_190540_361_1759012338591.jpg";
+import artemImage from "@assets/Screenshot_2025-09-27-22-37-30-363_com.instagram.android-edit_1759023474746.jpg";
 
 export default function Team() {
   return (
@@ -69,6 +71,69 @@ export default function Team() {
           </div>
         </section>
 
+        {/* Team Members Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
+                Team Members
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Our international team brings diverse expertise and perspectives to every project.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Sergei Stepanov */}
+              <Card className="overflow-hidden hover-elevate transition-all duration-300">
+                <div className="aspect-square">
+                  <img 
+                    src={sergeiImage}
+                    alt="Sergei Stepanov"
+                    className="w-full h-full object-cover"
+                    data-testid="img-sergei-portrait"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-2" data-testid="text-sergei-name">
+                    Sergei Stepanov
+                  </h3>
+                  <p className="text-muted-foreground mb-3" data-testid="text-sergei-role">
+                    Senior Architect
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Bringing innovative design solutions and technical expertise to our architectural projects, 
+                    with a focus on sustainable design and modern construction methodologies.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Artem Golestian */}
+              <Card className="overflow-hidden hover-elevate transition-all duration-300">
+                <div className="aspect-square">
+                  <img 
+                    src={artemImage}
+                    alt="Artem Golestian"
+                    className="w-full h-full object-cover"
+                    data-testid="img-artem-portrait"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-2" data-testid="text-artem-name">
+                    Artem Golestian
+                  </h3>
+                  <p className="text-muted-foreground mb-3" data-testid="text-artem-role">
+                    Design Director
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Leading creative vision and design strategy across our portfolio, specializing in 
+                    urban planning and conceptual design with international experience.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
 
         {/* Services */}
         <section className="py-16">
