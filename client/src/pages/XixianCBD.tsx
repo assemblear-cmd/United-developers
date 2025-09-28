@@ -167,13 +167,15 @@ export default function XixianCBD() {
             
             <div className="grid md:grid-cols-3 gap-8">
               {projectImages.map((image, index) => (
-                <Card key={index} className="overflow-hidden bg-card/70 backdrop-blur-sm hover-elevate" data-testid={`card-image-${index}`}>
+                <Card key={index} className="overflow-hidden bg-card/70 backdrop-blur-sm" data-testid={`card-image-${index}`}>
                   <div className="aspect-[4/3] overflow-hidden">
                     <img 
                       src={image.src} 
                       alt={image.alt}
                       className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                       data-testid={`img-project-${index}`}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <CardContent className="p-6">
