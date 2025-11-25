@@ -315,19 +315,20 @@ export default function Portfolio() {
                 onClick={() => setStatusFilter("Award Winner")}
                 data-testid="button-status-awards"
               >
-                Awards
-              </Button>
-              <Button
-                variant={statusFilter === "Completed" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setStatusFilter("Completed")}
-                data-testid="button-status-completed"
-              >
-                Completed
+                Finished
               </Button>
             </div>
           </div>
         </div>
+
+        <Button
+          variant={statusFilter === "In Progress" ? "default" : "outline"}
+          size="sm"
+          onClick={() => setStatusFilter("In Progress")}
+          data-testid="button-status-in-progress"
+        >
+          In progress
+        </Button>
 
         {/* Results count */}
         <div className="mb-8">
