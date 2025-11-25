@@ -1,15 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Award } from "lucide-react";
-import heroImage from "@assets/IMG-20250926-WA0010_1758934077255.jpg";
 import { Link } from "wouter";
 
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F9bc73f76cce94e1e99ad8571b672300f?format=webp&width=800')` }}
       />
       
       {/* Dark Overlay */}
