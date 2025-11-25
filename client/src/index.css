@@ -205,7 +205,7 @@
 }
 
 .dark body {
-  background-image: url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fe937e330364c428ea58d72af6814a2cd?format=webp&width=800');
+  background-image: url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fe937e330364c428ea58d72af6814a2cd');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
