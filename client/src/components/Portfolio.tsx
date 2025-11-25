@@ -270,32 +270,42 @@ export default function Portfolio() {
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
           <div className="flex items-center space-x-2">
             <span className="text-sm font-medium text-muted-foreground">Type:</span>
-            <div className="flex space-x-2 flex-wrap">
-              <Button
-                variant={filter === "all" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setFilter("all")}
-                data-testid="button-filter-all"
-              >
-                All
-              </Button>
-              <Button
-                variant={filter === "Commercial" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setFilter("Commercial")}
-                data-testid="button-filter-commercial"
-              >
-                Commercial
-              </Button>
-              <Button
-                variant={filter === "Urban Planning" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setFilter("Urban Planning")}
-                data-testid="button-filter-planning"
-              >
-                Urban Planning
-              </Button>
-            </div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  data-testid="button-filter-all"
+                  className="flex items-center gap-2"
+                >
+                  All
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem
+                  onClick={() => setFilter("all")}
+                  data-testid="filter-option-all"
+                  className={filter === "all" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  All
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setFilter("Commercial")}
+                  data-testid="filter-option-commercial"
+                  className={filter === "Commercial" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  Commercial
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setFilter("Urban Planning")}
+                  data-testid="filter-option-planning"
+                  className={filter === "Urban Planning" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  Urban Planning
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           <div className="flex items-center space-x-2">
