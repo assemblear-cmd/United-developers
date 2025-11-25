@@ -24,8 +24,8 @@ export default function Hero() {
   }, []);
 
   const backgroundImage = isDark
-    ? 'https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fe937e330364c428ea58d72af6814a2cd?format=webp&width=800'
-    : 'https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F9bc73f76cce94e1e99ad8571b672300f?format=webp&width=800';
+    ? 'https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fe937e330364c428ea58d72af6814a2cd'
+    : 'https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F9bc73f76cce94e1e99ad8571b672300f';
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
