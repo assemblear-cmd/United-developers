@@ -1,9 +1,16 @@
 import { useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Square, ArrowRight, Building, Home } from "lucide-react";
+import { MapPin, Calendar, Square, ArrowRight, Building, Home, ChevronDown } from "lucide-react";
 import { useLocation } from "wouter";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import villaImage from "@assets/stock_images/luxury_residential_v_fcfa0e39.jpg";
 import industrialImage from "@assets/stock_images/contemporary_office__a4a1a738.jpg";
 import heroImage from "@assets/stock_images/modern_architectural_53e85b78.jpg";
