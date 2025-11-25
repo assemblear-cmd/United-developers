@@ -331,9 +331,6 @@ export default function Portfolio() {
 
         {/* Results count */}
         <div className="mb-8">
-          <p className="text-center text-muted-foreground">
-            Showing <span className="font-semibold" data-testid="text-results-count">{filteredProjects.length}</span> {filteredProjects.length === 1 ? 'project' : 'projects'}
-          </p>
         </div>
 
         {/* Projects Grid */}
