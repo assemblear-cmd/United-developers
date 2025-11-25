@@ -324,7 +324,7 @@ export default function Portfolio() {
                   data-testid="button-status-all"
                   className="flex items-center gap-2"
                 >
-                  All
+                  {statusFilter === "all" ? "All" : statusFilter}
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
