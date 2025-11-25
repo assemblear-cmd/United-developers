@@ -175,7 +175,7 @@ const unitedDevelopersProjects = [
   {
     id: "casablanca-planning",
     title: "Casablanca Valley",
-    location: "Casablanca Valley, Morocco",
+    location: "Casablanca, Chile",
     year: "2024",
     type: "Urban Planning" as const,
     image: casablancaImage,
