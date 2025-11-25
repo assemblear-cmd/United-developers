@@ -284,7 +284,7 @@ export default function Portfolio() {
                   data-testid="button-filter-all"
                   className="flex items-center gap-2"
                 >
-                  All
+                  {filter === "all" ? "All" : filter}
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
