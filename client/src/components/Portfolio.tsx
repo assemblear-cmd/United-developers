@@ -27,7 +27,7 @@ interface ProjectCardProps {
   title: string;
   location: string;
   year: string;
-  type: "Urban Planning" | "Architecture";
+  type: "Urban Planning" | "Commercial";
   image: string;
   area?: string;
   status: "Completed" | "In Progress" | "Award Winner";
@@ -62,7 +62,7 @@ function ProjectCard({
   const getTypeIcon = (type: string) => {
     switch (type) {
       case "Urban Planning": return Building;
-      case "Architecture": return Home;
+      case "Commercial": return Home;
       default: return Building;
     }
   };
@@ -174,7 +174,7 @@ function ProjectCard({
 const unitedDevelopersProjects = [
   {
     id: "casablanca-planning",
-    title: "Casablanca Area Planning",
+    title: "Casablanca Valley",
     location: "Casablanca Valley, Morocco",
     year: "2024",
     type: "Urban Planning" as const,
@@ -201,7 +201,7 @@ const unitedDevelopersProjects = [
     title: "Jinqiao Guopei 1851",
     location: "Shanghai, China",
     year: "2019",
-    type: "Architecture" as const,
+    type: "Commercial" as const,
     image: jinqiaoGuopeiImage,
     area: "140,000 m²",
     status: "Completed" as const,
@@ -213,7 +213,7 @@ const unitedDevelopersProjects = [
     title: "Huyao Office Building",
     location: "Shanghai, China",
     year: "2021",
-    type: "Architecture" as const,
+    type: "Commercial" as const,
     image: huyaoOfficeImage,
     area: "Not specified",
     status: "Completed" as const,
@@ -237,7 +237,7 @@ const unitedDevelopersProjects = [
     title: "Xi'an TV Broadcast Center",
     location: "Xi'an, China",
     year: "2009",
-    type: "Architecture" as const,
+    type: "Commercial" as const,
     image: xianTvImage2,
     area: "81,117 m²",
     status: "Completed" as const,
@@ -247,7 +247,7 @@ const unitedDevelopersProjects = [
 ];
 
 export default function Portfolio() {
-  const [filter, setFilter] = useState<"all" | "Urban Planning" | "Architecture">("all");
+  const [filter, setFilter] = useState<"all" | "Urban Planning" | "Commercial">("all");
   const [statusFilter, setStatusFilter] = useState<"all" | "Completed" | "In Progress" | "Award Winner">("all");
 
   const filteredProjects = unitedDevelopersProjects.filter(project => {
@@ -280,12 +280,12 @@ export default function Portfolio() {
                 All
               </Button>
               <Button
-                variant={filter === "Architecture" ? "default" : "outline"}
+                variant={filter === "Commercial" ? "default" : "outline"}
                 size="sm"
-                onClick={() => setFilter("Architecture")}
-                data-testid="button-filter-architecture"
+                onClick={() => setFilter("Commercial")}
+                data-testid="button-filter-commercial"
               >
-                Architecture
+                Commercial
               </Button>
               <Button
                 variant={filter === "Urban Planning" ? "default" : "outline"}
