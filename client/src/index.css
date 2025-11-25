@@ -204,6 +204,13 @@
   --shadow-2xl: 0px 2px 0px 0px hsl(0 0% 0% / 0.50);
 }
 
+.dark body {
+  background-image: url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fa6d4a5b657e6421998b3a928a42bb4c5?format=webp&width=800');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 @layer base {
   * {
     @apply border-border;
