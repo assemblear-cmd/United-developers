@@ -89,9 +89,9 @@ function ProjectCard({
             <TypeIcon className="h-3 w-3" />
             <span>{type}</span>
           </Badge>
-          <Badge 
-            variant={status === "Completed" ? "secondary" : status === "In Progress" ? "outline" : "default"}
-            className="text-xs font-medium"
+          <Badge
+            variant={status === "Completed" ? "secondary" : status === "In Progress" ? "default" : "default"}
+            className={`text-xs font-medium ${status === "In Progress" ? "bg-black/70 text-white" : ""}`}
             data-testid={`badge-status-${id}`}
           >
             {status}
@@ -180,7 +180,7 @@ const unitedDevelopersProjects = [
     type: "Urban Planning" as const,
     image: casablancaImage,
     area: "500 hectares",
-    status: "Award Winner" as const,
+    status: "In Progress" as const,
     description: "A visionary development where contemporary architecture meets centuries-old viticultural traditions. Elevated pavilions punctuate vineyard rows while the village core weaves contemporary sensibilities through traditional morphology.",
     features: ["Vineyard Urbanism", "Agricultural Integration", "Contemporary Architecture", "Cultural Continuity"]
   },
