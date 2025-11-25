@@ -248,7 +248,7 @@ const unitedDevelopersProjects = [
 
 export default function Portfolio() {
   const [filter, setFilter] = useState<"all" | "Urban Planning" | "Commercial">("all");
-  const [statusFilter, setStatusFilter] = useState<"all" | "Completed" | "In Progress" | "Award Winner">("all");
+  const [statusFilter, setStatusFilter] = useState<"all" | "Completed" | "In Progress">("all");
 
   const filteredProjects = unitedDevelopersProjects.filter(project => {
     const typeMatch = filter === "all" || project.type === filter;
