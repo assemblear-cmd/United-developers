@@ -321,15 +321,6 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <Button
-          variant={statusFilter === "In Progress" ? "default" : "outline"}
-          size="sm"
-          onClick={() => setStatusFilter("In Progress")}
-          data-testid="button-status-in-progress"
-        >
-          In progress
-        </Button>
-
         {/* Results count */}
         <div className="mb-8">
           <p className="text-center text-muted-foreground">
