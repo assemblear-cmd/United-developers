@@ -35,7 +35,6 @@ export default function Navigation() {
     { href: "/", label: "Home" },
     { href: "/portfolio", label: "Projects" },
     { href: "/team", label: "Team" },
-    { href: "/xixian", label: "Xixian CBD" },
     { href: "/contact", label: "Contact" }
   ];
 
