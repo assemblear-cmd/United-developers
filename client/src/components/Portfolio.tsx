@@ -317,32 +317,42 @@ export default function Portfolio() {
 
           <div className="flex items-center space-x-2">
             <span className="text-sm font-medium text-muted-foreground">Status:</span>
-            <div className="flex space-x-2">
-              <Button
-                variant={statusFilter === "all" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setStatusFilter("all")}
-                data-testid="button-status-all"
-              >
-                All
-              </Button>
-              <Button
-                variant={statusFilter === "Completed" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setStatusFilter("Completed")}
-                data-testid="button-status-completed"
-              >
-                Completed
-              </Button>
-              <Button
-                variant={statusFilter === "In Progress" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setStatusFilter("In Progress")}
-                data-testid="button-status-in-progress"
-              >
-                In progress
-              </Button>
-            </div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  data-testid="button-status-all"
+                  className="flex items-center gap-2"
+                >
+                  All
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem
+                  onClick={() => setStatusFilter("all")}
+                  data-testid="status-option-all"
+                  className={statusFilter === "all" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  All
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setStatusFilter("Completed")}
+                  data-testid="status-option-completed"
+                  className={statusFilter === "Completed" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  Completed
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setStatusFilter("In Progress")}
+                  data-testid="status-option-in-progress"
+                  className={statusFilter === "In Progress" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  In progress
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
 
