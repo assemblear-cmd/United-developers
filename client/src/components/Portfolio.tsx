@@ -315,7 +315,7 @@ export default function Portfolio() {
                 onClick={() => setStatusFilter("Award Winner")}
                 data-testid="button-status-awards"
               >
-                Finished
+                Completed
               </Button>
               <Button
                 variant={statusFilter === "In Progress" ? "default" : "outline"}
