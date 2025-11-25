@@ -317,6 +317,14 @@ export default function Portfolio() {
               >
                 Finished
               </Button>
+              <Button
+                variant={statusFilter === "In Progress" ? "default" : "outline"}
+                size="sm"
+                onClick={() => setStatusFilter("In Progress")}
+                data-testid="button-status-in-progress"
+              >
+                In progress
+              </Button>
             </div>
           </div>
         </div>
