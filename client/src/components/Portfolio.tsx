@@ -310,10 +310,10 @@ export default function Portfolio() {
                 All
               </Button>
               <Button
-                variant={statusFilter === "Award Winner" ? "default" : "outline"}
+                variant={statusFilter === "Completed" ? "default" : "outline"}
                 size="sm"
-                onClick={() => setStatusFilter("Award Winner")}
-                data-testid="button-status-awards"
+                onClick={() => setStatusFilter("Completed")}
+                data-testid="button-status-completed"
               >
                 Completed
               </Button>
