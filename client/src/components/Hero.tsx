@@ -20,9 +20,6 @@ export default function Hero() {
         <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
           United Developers
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-          International Architecture Studio crafting exceptional spaces across continents
-        </p>
         
         {/* New Casablanca Button */}
         <div className="mt-12">
