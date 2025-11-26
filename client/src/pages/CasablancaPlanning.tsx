@@ -158,7 +158,7 @@ export default function CasablancaPlanning() {
             onClick={() => setIsLightboxOpen(false)}
           >
             <div
-              className="relative max-w-5xl w-full max-h-[90vh]"
+              className="relative max-w-5xl w-full max-h-[90vh] md:max-h-[85vh] landscape:max-h-[95vh]"
               onClick={(e) => e.stopPropagation()}
             >
               <img
@@ -167,19 +167,34 @@ export default function CasablancaPlanning() {
                 className="w-full h-full object-contain"
               />
 
-              {/* Mobile Navigation Buttons */}
+              {/* Navigation Buttons - Mobile */}
               <button
                 onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
-                className="md:hidden absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-1.5 transition-colors"
+                className="md:hidden absolute left-1 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-1 transition-colors z-10"
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
 
               <button
                 onClick={() => setCarouselIndex((prev) => (prev + 1) % projectImages.length)}
-                className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-1.5 transition-colors"
+                className="md:hidden absolute right-1 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-1 transition-colors z-10"
               >
                 <ChevronRight className="h-4 w-4" />
+              </button>
+
+              {/* Navigation Buttons - Desktop */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
+                className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors z-10"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev + 1) % projectImages.length)}
+                className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors z-10"
+              >
+                <ChevronRight className="h-5 w-5" />
               </button>
             </div>
           </div>
