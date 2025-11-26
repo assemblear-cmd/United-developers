@@ -41,11 +41,6 @@ export default function CasablancaPlanning() {
       title: "Terraced Development"
     },
     { 
-      src: vineyard3, 
-      alt: "Geometric concrete structures in vineyard setting",
-      title: "Architectural Elements"
-    },
-    { 
       src: sitePlan, 
       alt: "Aerial site plan showing Vinopolis development layout",
       title: "Master Plan"
