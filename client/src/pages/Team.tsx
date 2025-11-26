@@ -135,11 +135,10 @@ export default function Team() {
                     Sergei Stepanov
                   </h3>
                   <p className="text-muted-foreground mb-3" data-testid="text-sergei-role">
-                    Senior Architect
+                    System Architect
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Bringing innovative design solutions and technical expertise to our architectural projects, 
-                    with a focus on sustainable design and modern construction methodologies.
+                    Data Mag
                   </p>
                 </CardContent>
               </Card>
