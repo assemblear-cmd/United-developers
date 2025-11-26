@@ -110,8 +110,8 @@ function ProjectCard({
 
       <CardContent className="p-6 flex flex-col h-full">
         <div className="flex-grow">
-          <div className="flex items-start justify-between mb-3">
-            <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary transition-colors" data-testid={`text-title-${id}`}>
+          <div className="h-14 mb-3">
+            <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2" data-testid={`text-title-${id}`}>
               {title}
             </h3>
           </div>
