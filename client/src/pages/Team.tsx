@@ -50,14 +50,42 @@ export default function Team() {
 
 
                       <div className="pt-4">
-                        <h4 className="font-semibold text-foreground mb-3">About Ma Qingyun</h4>
+                        <p className="font-semibold text-foreground mb-3">About Ma Qingyun</p>
                         <ul className="space-y-3 text-sm text-muted-foreground">
-                          <li>• Appointed as Dean of the School of Architecture at the University of Southern California in 2007</li>
-                          <li>• Opened Los Angeles office to promote architectural practices and academic platforms in the Pacific Rim region</li>
+                          <li>
+                            <p>
+                              • China's most influential architect, according to the{" "}
+                              <a
+                                href="http://ft.com/content/82412506-3cf8-11df-bbcf-00144feabdc0"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                              >
+                                Financial Times
+                              </a>
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              •{" "}
+                              <a
+                                href="https://china.usc.edu/qingyun-ma-named-dean-usc-school-architecture"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                              >
+                                Appointed
+                              </a>
+                              {" "}as Dean of the School of Architecture at the University of Southern California in 2007
+                            </p>
+                          </li>
                           <li>• Led architectural projects across multiple Chinese cities including Beijing, Shanghai, Shenzhen, Hangzhou, Ningbo, Chengdu, Xi'an and Tianjin</li>
-                          <li>• Pioneered multi-disciplinary, multi-faceted approach to architecture and social-cultural integration</li>
-                          <li>• Developed philosophy that architecture is a path finder for collectively defined goals, emphasizing problem discovery over problem-solving</li>
-                          <li>• Champions the belief that no problem appears twice in exactly the same way, leading to unique solutions for each project</li>
+                          <li>
+                            <p>
+                              •{" "}
+                              <span>
+                                Opened Los Angeles office to promote architectural practices and academic platforms in the Pacific Rim region
+                              </span>
+                            </p>
+                          </li>
                         </ul>
                       </div>
 
@@ -101,11 +129,10 @@ export default function Team() {
                           Artem Golestian
                         </h3>
                         <p className="text-muted-foreground mb-3" data-testid="text-artem-role">
-                          Design Director
+                          Architect
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          Leading creative vision and design strategy across our portfolio, specializing in 
-                          urban planning and conceptual design with international experience.
+                          Partner, Architect,
                         </p>
                       </div>
                     </div>
