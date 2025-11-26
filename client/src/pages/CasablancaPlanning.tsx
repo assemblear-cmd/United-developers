@@ -89,103 +89,25 @@ export default function CasablancaPlanning() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6" data-testid="text-page-title">
-                Casablanca Area Planning
+                Casablanca Valley
               </h1>
               <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                A visionary development where contemporary architecture 
-                meets centuries-old viticultural traditions
+                Where contemporary architecture meets viticultural traditions
               </p>
             </div>
           </div>
         </section>
 
-        {/* Project Description */}
-        <section className="py-16 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <Card className="bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-12">
-                  <div className="text-center mb-12">
-                    <h2 className="font-serif text-3xl font-semibold text-foreground mb-6">
-                      Vineyard Urbanism
-                    </h2>
-                    <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-8"></div>
-                  </div>
-                  
-                  <div className="space-y-8 text-muted-foreground leading-relaxed">
-                    <p className="text-lg">
-                      The Casablanca Valley development represents a paradigm shift in 
-                      agricultural urbanism—where architectural intervention becomes 
-                      landscape stewardship. Each structure emerges from the earth 
-                      as a celebration of the terroir, creating spaces for both 
-                      cultivation and contemplation.
-                    </p>
-                    
-                    <p>
-                      Elevated pavilions punctuate the vineyard rows like modern 
-                      follies, offering panoramic views while minimizing their 
-                      footprint on productive soil. The village core weaves 
-                      contemporary sensibilities through traditional morphology, 
-                      creating intimate streetscapes that honor local building culture.
-                    </p>
-                    
-                    <p>
-                      This is architecture as choreography—a careful dance between 
-                      built form and agricultural rhythm, where every gesture serves 
-                      both aesthetic aspiration and functional necessity. The result 
-                      is a place that feels inevitable, as if the landscape itself 
-                      had always intended these forms to emerge.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Project Features */}
-        <section className="py-16 bg-muted/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Design Principles
-              </h2>
-              <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {projectFeatures.map((feature, index) => (
-                <Card key={index} className="text-center bg-card/70 backdrop-blur-sm hover-elevate">
-                  <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <feature.icon className="h-8 w-8 text-primary" />
-                    </div>
-                    <h3 className="font-serif text-xl font-semibold text-foreground mb-4">
-                      {feature.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Image Gallery */}
         <section className="py-20 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Project Visualization
+                Gallery
               </h2>
               <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-8"></div>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Explore the architectural vision through detailed renderings 
-                and planning documentation
-              </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
