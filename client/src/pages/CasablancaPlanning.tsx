@@ -199,6 +199,54 @@ export default function CasablancaPlanning() {
           </div>
         </section>
 
+        {/* Lightbox Modal */}
+        {isLightboxOpen && (
+          <div
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+            onClick={() => setIsLightboxOpen(false)}
+          >
+            <div
+              className="relative max-w-5xl w-full max-h-[90vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setIsLightboxOpen(false)}
+                className="absolute top-4 right-4 z-10 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors"
+              >
+                <X className="h-6 w-6" />
+              </button>
+
+              {/* Main Image */}
+              <img
+                src={projectImages[carouselIndex].src}
+                alt={projectImages[carouselIndex].alt}
+                className="w-full h-full object-contain"
+              />
+
+              {/* Image Counter */}
+              <div className="absolute bottom-4 left-4 bg-black/60 text-white px-4 py-2 rounded text-sm">
+                {carouselIndex + 1} / {projectImages.length}
+              </div>
+
+              {/* Navigation */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev + 1) % projectImages.length)}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Project Specifications */}
         <section className="py-16 bg-muted/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
