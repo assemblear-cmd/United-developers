@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import { useState } from "react";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Building, Compass, Mountain, ChevronLeft, ChevronRight } from "lucide-react";
+import { MapPin, Building, Compass, Mountain, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Import project images
@@ -17,6 +17,7 @@ import modernVillage from "@assets/IMG-20250926-WA0004_1759023616106.jpg";
 
 export default function CasablancaPlanning() {
   const [carouselIndex, setCarouselIndex] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   const projectImages = [
     { 
@@ -143,7 +144,7 @@ export default function CasablancaPlanning() {
 
                   {/* Center Large Image */}
                   <div className="col-span-2">
-                    <Card className="overflow-hidden w-full h-full bg-card/70 backdrop-blur-sm">
+                    <Card className="overflow-hidden w-full h-full bg-card/70 backdrop-blur-sm cursor-pointer hover:opacity-90 transition-opacity" onClick={() => setIsLightboxOpen(true)}>
                       <div className="aspect-video overflow-hidden">
                         <img
                           src={projectImages[carouselIndex].src}
@@ -152,11 +153,6 @@ export default function CasablancaPlanning() {
                           data-testid={`carousel-main-${carouselIndex}`}
                         />
                       </div>
-                      <CardContent className="p-6">
-                        <h3 className="font-serif text-lg font-semibold text-foreground">
-                          {projectImages[carouselIndex].title}
-                        </h3>
-                      </CardContent>
                     </Card>
                   </div>
                 </div>
