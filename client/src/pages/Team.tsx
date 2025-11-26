@@ -138,7 +138,8 @@ export default function Team() {
                     System Architect
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Data Mag
+                    Partner, Data Master, Service Developer, and
+                    Technology Project Architect.
                   </p>
                 </CardContent>
               </Card>
