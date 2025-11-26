@@ -214,7 +214,6 @@ const unitedDevelopersProjects = [
     year: "2022",
     type: "Urban Planning" as const,
     image: shenshanZoneImage,
-    area: "Central Area",
     status: "In Progress" as const,
     description: "Pioneering new urban development paradigms that balance countryside preservation, ecological sustainability, and industry innovation. As chief urban and rural planner, the project aims to create a new urban development model that protects pastoral areas, maintains ecology, and promotes cross-industry innovation through integrated design approaches.",
     features: ["Urban Planning", "Ecological Sustainability", "Rural-Urban Integration", "Cross-Industry Innovation"]
