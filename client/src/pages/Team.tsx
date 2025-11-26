@@ -66,7 +66,18 @@ export default function Team() {
                           </li>
                           <li>
                             <p>
-                              <p><span style={{fontSize: "14px"}}>• </span><u style={{fontSize: "14px"}}>Appointed</u>&nbsp;as Dean of the School of Architecture at the University of Southern California in 2007</p>
+                              <p>
+                                <span style={{fontSize: "14px"}}>• </span>
+                                <a
+                                  href="https://china.usc.edu/qingyun-ma-named-dean-usc-school-architecture"
+                                  rel="noopener noreferrer"
+                                  target="_blank"
+                                  style={{fontSize: "14px"}}
+                                >
+                                  Appointed
+                                </a>
+                                &nbsp;as Dean of the School of Architecture at the University of Southern California in 2007
+                              </p>
                             </p>
                           </li>
                           <li>• Led urban planning projects in Beijing, Shanghai, Shenzhen, Hangzhou, Ningbo, Chengdu, Xi'an and Tianjin</li>
