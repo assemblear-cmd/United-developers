@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import { useState } from "react";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Building, Compass, Mountain, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { MapPin, Building, Compass, Mountain, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Import project images
