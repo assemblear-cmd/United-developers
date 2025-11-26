@@ -60,32 +60,16 @@ export default function Team() {
                                 rel="noopener noreferrer"
                                 target="_blank"
                               >
-                                Financial Times
+                                <p><u>Financial Times</u></p>
                               </a>
                             </p>
                           </li>
                           <li>
                             <p>
-                              •{" "}
-                              <a
-                                href="https://china.usc.edu/qingyun-ma-named-dean-usc-school-architecture"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                              >
-                                Appointed
-                              </a>
-                              {" "}as Dean of the School of Architecture at the University of Southern California in 2007
+                              <p><span style={{fontSize: "14px"}}>• </span><u style={{fontSize: "14px"}}>Appointed</u>&nbsp;as Dean of the School of Architecture at the University of Southern California in 2007</p>
                             </p>
                           </li>
-                          <li>• Led architectural projects across multiple Chinese cities including Beijing, Shanghai, Shenzhen, Hangzhou, Ningbo, Chengdu, Xi'an and Tianjin</li>
-                          <li>
-                            <p>
-                              •{" "}
-                              <span>
-                                Opened Los Angeles office to promote architectural practices and academic platforms in the Pacific Rim region
-                              </span>
-                            </p>
-                          </li>
+                          <li>• Led urban planning projects in Beijing, Shanghai, Shenzhen, Hangzhou, Ningbo, Chengdu, Xi'an and Tianjin</li>
                         </ul>
                       </div>
 
