@@ -1,7 +1,9 @@
 import Navigation from "@/components/Navigation";
+import { useState } from "react";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Building, Compass, Mountain } from "lucide-react";
+import { MapPin, Building, Compass, Mountain, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 // Import project images
 import vineyard1 from "@assets/IMG-20250918-WA0002_1759023615741.jpg";
