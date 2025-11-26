@@ -109,7 +109,7 @@ export default function CasablancaPlanning() {
               <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-8"></div>
             </div>
 
-            <div className="flex items-center justify-center gap-4 sm:gap-8 w-4/5 sm:w-full max-w-5xl mx-auto">
+            <div className="flex items-center justify-center gap-2 sm:gap-8 w-full max-w-5xl mx-auto">
               {/* Left Navigation Button */}
               <Button
                 onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
