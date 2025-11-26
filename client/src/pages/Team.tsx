@@ -17,7 +17,7 @@ export default function Team() {
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Our Team
+              Team
             </h1>
           </div>
         </section>
