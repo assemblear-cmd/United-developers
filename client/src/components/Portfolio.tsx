@@ -124,21 +124,20 @@ function ProjectCard({
           <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-description-${id}`}>
             {description}
           </p>
+        </div>
 
-          {/* Project details */}
-          <div className="flex items-center space-x-4 mb-4 text-sm text-muted-foreground">
-            <div className="flex items-center space-x-1">
-              <Calendar className="h-4 w-4" />
-              <span data-testid={`text-year-detail-${id}`}>{year}</span>
-            </div>
-            {area && (
-              <div className="flex items-center space-x-1">
-                <Square className="h-4 w-4" />
-                <span data-testid={`text-area-${id}`}>{area}</span>
-              </div>
-            )}
+        {/* Project details - aligned at bottom before button */}
+        <div className="flex items-center space-x-4 mb-4 text-sm text-muted-foreground">
+          <div className="flex items-center space-x-1">
+            <Calendar className="h-4 w-4" />
+            <span data-testid={`text-year-detail-${id}`}>{year}</span>
           </div>
-
+          {area && (
+            <div className="flex items-center space-x-1">
+              <Square className="h-4 w-4" />
+              <span data-testid={`text-area-${id}`}>{area}</span>
+            </div>
+          )}
         </div>
 
         {/* Action button */}
