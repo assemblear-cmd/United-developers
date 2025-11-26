@@ -147,7 +147,7 @@ function ProjectCard({
           onClick={handleViewDetails}
           data-testid={`button-view-details-${id}`}
         >
-          View Project Details
+          View Project
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardContent>
