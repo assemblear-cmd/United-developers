@@ -49,8 +49,7 @@ function ProjectCard({
   image,
   area,
   status,
-  description,
-  features
+  description
 }: ProjectCardProps) {
   const [, setLocation] = useLocation();
   
