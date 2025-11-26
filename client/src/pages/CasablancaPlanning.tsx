@@ -114,75 +114,33 @@ export default function CasablancaPlanning() {
               </h2>
               <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-8"></div>
             </div>
-            
-            <div className="flex items-center gap-8">
+
+            <div className="flex items-center justify-center gap-8 max-w-5xl mx-auto">
               {/* Left Navigation Button */}
               <Button
                 onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
                 variant="ghost"
                 size="icon"
-                className="text-foreground hover:bg-muted"
+                className="flex-shrink-0 text-foreground hover:bg-muted h-12 w-12"
               >
-                <ChevronLeft className="h-6 w-6" />
+                <ChevronLeft className="h-8 w-8" />
               </Button>
 
-              {/* Main Carousel Container */}
-              <div className="flex-1">
-                <div className="grid grid-cols-3 gap-4">
-                  {/* Left Small Image */}
-                  <div className="col-span-1 flex items-center">
-                    <Card className="overflow-hidden w-full bg-card/70 backdrop-blur-sm cursor-pointer hover:shadow-lg transition-shadow" onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}>
-                      <div className="aspect-square overflow-hidden">
-                        <img
-                          src={projectImages[(carouselIndex - 1 + projectImages.length) % projectImages.length].src}
-                          alt="Previous"
-                          className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                        />
-                      </div>
-                    </Card>
+              {/* Main Image */}
+              <div className="flex-1 min-w-0">
+                <Card className="overflow-hidden bg-card/70 backdrop-blur-sm cursor-pointer hover:opacity-90 transition-opacity w-full" onClick={() => setIsLightboxOpen(true)}>
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={projectImages[carouselIndex].src}
+                      alt={projectImages[carouselIndex].alt}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      data-testid={`carousel-main-${carouselIndex}`}
+                    />
                   </div>
-
-                  {/* Center Large Image */}
-                  <div className="col-span-2">
-                    <Card className="overflow-hidden w-full h-full bg-card/70 backdrop-blur-sm cursor-pointer hover:opacity-90 transition-opacity" onClick={() => setIsLightboxOpen(true)}>
-                      <div className="aspect-video overflow-hidden">
-                        <img
-                          src={projectImages[carouselIndex].src}
-                          alt={projectImages[carouselIndex].alt}
-                          className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                          data-testid={`carousel-main-${carouselIndex}`}
-                        />
-                      </div>
-                    </Card>
-                  </div>
-                </div>
-
-                {/* Row 2: Right small images */}
-                <div className="grid grid-cols-3 gap-4 mt-4">
-                  <div className="col-span-1"></div>
-                  <div className="col-span-2 grid grid-cols-2 gap-4">
-                    {/* Right Small Image 1 */}
-                    <Card className="overflow-hidden bg-card/70 backdrop-blur-sm cursor-pointer hover:shadow-lg transition-shadow" onClick={() => setCarouselIndex((carouselIndex + 1) % projectImages.length)}>
-                      <div className="aspect-square overflow-hidden">
-                        <img
-                          src={projectImages[(carouselIndex + 1) % projectImages.length].src}
-                          alt="Next"
-                          className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                        />
-                      </div>
-                    </Card>
-
-                    {/* Right Small Image 2 */}
-                    <Card className="overflow-hidden bg-card/70 backdrop-blur-sm cursor-pointer hover:shadow-lg transition-shadow" onClick={() => setCarouselIndex((carouselIndex + 2) % projectImages.length)}>
-                      <div className="aspect-square overflow-hidden">
-                        <img
-                          src={projectImages[(carouselIndex + 2) % projectImages.length].src}
-                          alt="Next Next"
-                          className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                        />
-                      </div>
-                    </Card>
-                  </div>
+                </Card>
+                {/* Image Counter */}
+                <div className="text-center mt-4 text-sm text-muted-foreground">
+                  {carouselIndex + 1} / {projectImages.length}
                 </div>
               </div>
 
@@ -191,9 +149,9 @@ export default function CasablancaPlanning() {
                 onClick={() => setCarouselIndex((prev) => (prev + 1) % projectImages.length)}
                 variant="ghost"
                 size="icon"
-                className="text-foreground hover:bg-muted"
+                className="flex-shrink-0 text-foreground hover:bg-muted h-12 w-12"
               >
-                <ChevronRight className="h-6 w-6" />
+                <ChevronRight className="h-8 w-8" />
               </Button>
             </div>
           </div>
