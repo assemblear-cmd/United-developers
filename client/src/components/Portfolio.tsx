@@ -170,7 +170,7 @@ const unitedDevelopersProjects = [
     area: "500 hectares",
     status: "In Progress" as const,
     description: "A visionary development where contemporary architecture meets centuries-old viticultural traditions. Elevated pavilions punctuate vineyard rows while the village core weaves contemporary sensibilities through traditional morphology.",
-    features: ["Vineyard Urbanism", "Agricultural Integration", "Contemporary Architecture", "Cultural Continuity"]
+    features: []
   },
   {
     id: "xixian-cbd",
@@ -182,7 +182,7 @@ const unitedDevelopersProjects = [
     area: "3.82 million m²",
     status: "Completed" as const,
     description: "Comprehensive master plan for sustainable urban development that balances conservation with modern urbanization. The design preserves 47% farmland and 5% wetlands while creating efficient urban districts connected by innovative green infrastructure including a signature 'Green Bridge' over existing rail lines.",
-    features: ["Master Planning", "Sustainable Development", "Green Infrastructure", "Mixed-Use Districts"]
+    features: []
   },
   {
     id: "jinqiao-guopei-1851",
@@ -194,7 +194,7 @@ const unitedDevelopersProjects = [
     area: "140,000 m²",
     status: "Completed" as const,
     description: "Mixed-use commercial complex that maximizes land, public, and commercial resources. The design creates a visual symbol of an international metropolis through high-complexity function configuration and multi-dimensional spatial interleaving. Features integration with elevated infrastructure and Jiangnan garden elements.",
-    features: ["Mixed-Use Commercial", "Urban Integration", "Elevated Infrastructure", "Cultural Landscape"]
+    features: []
   },
   {
     id: "huyao-office-building",
@@ -205,7 +205,7 @@ const unitedDevelopersProjects = [
     image: huyaoOfficeImage,
     status: "Completed" as const,
     description: "Combines functionality, economy and artistry with rational and harmonious layout concepts to meet sustainable development requirements. Features integration of 'integrity, integration, openness' characteristics with compound functions and shared facilities. Design based on unit office settlements, outdoor platforms, roof gardens and central garden corridors, forming an enclosed building integrated with surrounding environment.",
-    features: ["Sustainable Design", "Functional Integration", "Garden Integration", "Environmental Harmony"]
+    features: []
   },
   {
     id: "shenshan-central-area",
@@ -216,7 +216,7 @@ const unitedDevelopersProjects = [
     image: shenshanZoneImage,
     status: "In Progress" as const,
     description: "Pioneering new urban development paradigms that balance countryside preservation, ecological sustainability, and industry innovation. As chief urban and rural planner, the project aims to create a new urban development model that protects pastoral areas, maintains ecology, and promotes cross-industry innovation through integrated design approaches.",
-    features: ["Urban Planning", "Ecological Sustainability", "Rural-Urban Integration", "Cross-Industry Innovation"]
+    features: []
   },
   {
     id: "xian-tv-broadcast-center",
@@ -228,7 +228,7 @@ const unitedDevelopersProjects = [
     area: "81,117 m²",
     status: "Completed" as const,
     description: "This project inherits the generosity, concise and stately characteristics of Han Tang culture of Xi'an, integrated as a whole and enhances the scale perception. Diversified programs are enclosed by a symbolic wall, suggesting the Land Art temperament of Xi'an Wall while metaphorically representing a Media City.",
-    features: ["Cultural Integration", "Media Center", "Exhibition Spaces", "Han Tang Architecture"]
+    features: []
   }
 ];
 
