@@ -166,6 +166,21 @@ export default function CasablancaPlanning() {
                 alt={projectImages[carouselIndex].alt}
                 className="w-full h-full object-contain"
               />
+
+              {/* Mobile Navigation Buttons */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
+                className="md:hidden absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-1.5 transition-colors"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev + 1) % projectImages.length)}
+                className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-1.5 transition-colors"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
             </div>
           </div>
         )}
