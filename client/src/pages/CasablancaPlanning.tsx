@@ -109,15 +109,15 @@ export default function CasablancaPlanning() {
               <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-8"></div>
             </div>
 
-            <div className="flex items-center justify-center gap-8 max-w-5xl mx-auto">
+            <div className="flex items-center justify-center gap-4 sm:gap-8 w-4/5 sm:w-full max-w-5xl mx-auto">
               {/* Left Navigation Button */}
               <Button
                 onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
                 variant="ghost"
                 size="icon"
-                className="flex-shrink-0 text-foreground hover:bg-muted h-12 w-12"
+                className="flex-shrink-0 text-foreground hover:bg-muted h-10 w-10 sm:h-12 sm:w-12"
               >
-                <ChevronLeft className="h-8 w-8" />
+                <ChevronLeft className="h-6 w-6 sm:h-8 sm:w-8" />
               </Button>
 
               {/* Main Image */}
