@@ -203,7 +203,6 @@ const unitedDevelopersProjects = [
     year: "2021",
     type: "Commercial" as const,
     image: huyaoOfficeImage,
-    area: "Not specified",
     status: "Completed" as const,
     description: "Combines functionality, economy and artistry with rational and harmonious layout concepts to meet sustainable development requirements. Features integration of 'integrity, integration, openness' characteristics with compound functions and shared facilities. Design based on unit office settlements, outdoor platforms, roof gardens and central garden corridors, forming an enclosed building integrated with surrounding environment.",
     features: ["Sustainable Design", "Functional Integration", "Garden Integration", "Environmental Harmony"]
