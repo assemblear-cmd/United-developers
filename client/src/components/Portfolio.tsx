@@ -141,26 +141,6 @@ function ProjectCard({
             )}
           </div>
 
-          {/* Features */}
-          <div className="mb-6">
-            <div className="flex flex-wrap gap-2">
-              {features.slice(0, 3).map((feature, index) => (
-                <Badge
-                  key={index}
-                  variant="outline"
-                  className="text-xs"
-                  data-testid={`badge-feature-${id}-${index}`}
-                >
-                  {feature}
-                </Badge>
-              ))}
-              {features.length > 3 && (
-                <Badge variant="outline" className="text-xs">
-                  +{features.length - 3} more
-                </Badge>
-              )}
-            </div>
-          </div>
         </div>
 
         {/* Action button */}
