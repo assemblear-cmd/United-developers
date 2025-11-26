@@ -76,18 +76,18 @@ function ProjectCard({
   const TypeIcon = getTypeIcon(type);
 
   return (
-    <Card className="group overflow-hidden hover-elevate transition-all duration-300" data-testid={`card-project-${id}`}>
+    <Card className="group overflow-hidden hover-elevate transition-all duration-300 flex flex-col h-full" data-testid={`card-project-${id}`}>
       <div className="relative overflow-hidden">
-        <img 
+        <img
           src={image}
           alt={title}
           className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
           data-testid={`img-project-${id}`}
         />
-        
+
         {/* Overlay badges */}
         <div className="absolute top-4 left-4 flex space-x-2">
-          <Badge 
+          <Badge
             variant="default"
             className="text-xs font-medium flex items-center space-x-1"
             data-testid={`badge-type-${id}`}
@@ -103,67 +103,69 @@ function ProjectCard({
             {status}
           </Badge>
         </div>
-        
+
         {/* Year overlay */}
         <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-md">
           <span className="font-semibold text-sm" data-testid={`text-year-${id}`}>{year}</span>
         </div>
       </div>
-      
-      <CardContent className="p-6">
-        <div className="flex items-start justify-between mb-3">
-          <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary transition-colors" data-testid={`text-title-${id}`}>
-            {title}
-          </h3>
-        </div>
-        
-        <div className="flex items-center text-muted-foreground mb-3">
-          <MapPin className="h-4 w-4 mr-1" />
-          <span className="text-sm" data-testid={`text-location-${id}`}>{location}</span>
-        </div>
-        
-        <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-description-${id}`}>
-          {description}
-        </p>
-        
-        {/* Project details */}
-        <div className="flex items-center space-x-4 mb-4 text-sm text-muted-foreground">
-          <div className="flex items-center space-x-1">
-            <Calendar className="h-4 w-4" />
-            <span data-testid={`text-year-detail-${id}`}>{year}</span>
+
+      <CardContent className="p-6 flex flex-col flex-grow justify-between">
+        <div>
+          <div className="flex items-start justify-between mb-3">
+            <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary transition-colors" data-testid={`text-title-${id}`}>
+              {title}
+            </h3>
           </div>
-          {area && (
+
+          <div className="flex items-center text-muted-foreground mb-3">
+            <MapPin className="h-4 w-4 mr-1" />
+            <span className="text-sm" data-testid={`text-location-${id}`}>{location}</span>
+          </div>
+
+          <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-description-${id}`}>
+            {description}
+          </p>
+
+          {/* Project details */}
+          <div className="flex items-center space-x-4 mb-4 text-sm text-muted-foreground">
             <div className="flex items-center space-x-1">
-              <Square className="h-4 w-4" />
-              <span data-testid={`text-area-${id}`}>{area}</span>
+              <Calendar className="h-4 w-4" />
+              <span data-testid={`text-year-detail-${id}`}>{year}</span>
             </div>
-          )}
-        </div>
-        
-        {/* Features */}
-        <div className="mb-6">
-          <div className="flex flex-wrap gap-2">
-            {features.slice(0, 3).map((feature, index) => (
-              <Badge 
-                key={index}
-                variant="outline" 
-                className="text-xs"
-                data-testid={`badge-feature-${id}-${index}`}
-              >
-                {feature}
-              </Badge>
-            ))}
-            {features.length > 3 && (
-              <Badge variant="outline" className="text-xs">
-                +{features.length - 3} more
-              </Badge>
+            {area && (
+              <div className="flex items-center space-x-1">
+                <Square className="h-4 w-4" />
+                <span data-testid={`text-area-${id}`}>{area}</span>
+              </div>
             )}
           </div>
+
+          {/* Features */}
+          <div className="mb-6">
+            <div className="flex flex-wrap gap-2">
+              {features.slice(0, 3).map((feature, index) => (
+                <Badge
+                  key={index}
+                  variant="outline"
+                  className="text-xs"
+                  data-testid={`badge-feature-${id}-${index}`}
+                >
+                  {feature}
+                </Badge>
+              ))}
+              {features.length > 3 && (
+                <Badge variant="outline" className="text-xs">
+                  +{features.length - 3} more
+                </Badge>
+              )}
+            </div>
+          </div>
         </div>
-        
+
         {/* Action button */}
-        <Button 
-          variant="outline" 
+        <Button
+          variant="outline"
           className="w-full"
           onClick={handleViewDetails}
           data-testid={`button-view-details-${id}`}
