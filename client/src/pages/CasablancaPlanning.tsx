@@ -10,7 +10,6 @@ import vineyard1 from "@assets/IMG-20250918-WA0002_1759023615741.jpg";
 import vineyard2 from "@assets/IMG-20250926-WA0010_1759023615877.jpg";
 import villageStreet from "@assets/IMG-20250926-WA0011_1759023615917.jpg";
 import hillsideView from "@assets/IMG-20250926-WA0009_1759023615953.jpg";
-import vineyard3 from "@assets/IMG-20250926-WA0010_1759023615998.jpg";
 import sitePlan from "@assets/IMG-20250926-WA0012_1759023616037.jpg";
 import hillsideArchitecture from "@assets/IMG-20250926-WA0005_1759023616070.jpg";
 import modernVillage from "@assets/IMG-20250926-WA0004_1759023616106.jpg";
