@@ -16,6 +16,8 @@ import hillsideArchitecture from "@assets/IMG-20250926-WA0005_1759023616070.jpg"
 import modernVillage from "@assets/IMG-20250926-WA0004_1759023616106.jpg";
 
 export default function CasablancaPlanning() {
+  const [carouselIndex, setCarouselIndex] = useState(0);
+
   const projectImages = [
     { 
       src: vineyard1, 
