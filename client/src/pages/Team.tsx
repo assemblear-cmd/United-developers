@@ -138,8 +138,7 @@ export default function Team() {
                     System Architect
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Partner, Data Master, Service Developer, and
-                    Technology Project Architect.
+                    Partner, Data Master, Project Manager
                   </p>
                 </CardContent>
               </Card>
