@@ -38,7 +38,6 @@ interface ProjectCardProps {
   area?: string;
   status: "Completed" | "In Progress" | "Award Winner";
   description: string;
-  features: string[];
 }
 
 function ProjectCard({
