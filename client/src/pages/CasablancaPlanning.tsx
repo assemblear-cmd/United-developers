@@ -143,9 +143,9 @@ export default function CasablancaPlanning() {
                 onClick={() => setCarouselIndex((prev) => (prev + 1) % projectImages.length)}
                 variant="ghost"
                 size="icon"
-                className="flex-shrink-0 text-foreground hover:bg-muted h-12 w-12"
+                className="flex-shrink-0 text-foreground hover:bg-muted h-10 w-10 sm:h-12 sm:w-12"
               >
-                <ChevronRight className="h-8 w-8" />
+                <ChevronRight className="h-6 w-6 sm:h-8 sm:w-8" />
               </Button>
             </div>
           </div>
