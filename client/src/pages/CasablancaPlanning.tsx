@@ -166,27 +166,21 @@ export default function CasablancaPlanning() {
                 <ul className="space-y-3 ml-6">
                   <li>
                     <p>
-                      <p>
-                        <span style={{ fontWeight: "400" }}>Wine </span>– premium wines shaped by the
-                        cool-climate terroir of Casablanca;
-                      </p>
+                      <span style={{ fontWeight: "400" }}>Wine </span>– premium wines shaped by the
+                      cool-climate terroir of Casablanca;
                     </p>
                   </li>
                   <li>
                     <p>
-                      <p>
-                        <span style={{ fontWeight: "400" }}>Place </span>– carefully designed spaces for
-                        tasting, culture, sports and nature;
-                      </p>
+                      <span style={{ fontWeight: "400" }}>Place </span>– carefully designed spaces for
+                      tasting, culture, sports and nature;
                     </p>
                   </li>
                   <li>
                     <p>
-                      <p>
-                        <span style={{ fontWeight: "400" }}>Community </span>– an international
-                        neighborhood for residents, long-stay guests and
-                        retirement-style living.
-                      </p>
+                      <span style={{ fontWeight: "400" }}>Community </span>– an international
+                      neighborhood for residents, long-stay guests and
+                      retirement-style living.
                     </p>
                   </li>
                 </ul>
