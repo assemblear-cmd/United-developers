@@ -167,7 +167,7 @@ export default function CasablancaPlanning() {
                   <li>
                     <p>
                       <p>
-                        <strong>Wine </strong>– premium wines shaped by the
+                        <span style={{ fontWeight: "400" }}>Wine </span>– premium wines shaped by the
                         cool-climate terroir of Casablanca;
                       </p>
                     </p>
@@ -175,7 +175,7 @@ export default function CasablancaPlanning() {
                   <li>
                     <p>
                       <p>
-                        <strong>Place </strong>– carefully designed spaces for
+                        <span style={{ fontWeight: "400" }}>Place </span>– carefully designed spaces for
                         tasting, culture, sports and nature;
                       </p>
                     </p>
@@ -183,7 +183,7 @@ export default function CasablancaPlanning() {
                   <li>
                     <p>
                       <p>
-                        <strong>Community </strong>– an international
+                        <span style={{ fontWeight: "400" }}>Community </span>– an international
                         neighborhood for residents, long-stay guests and
                         retirement-style living.
                       </p>
