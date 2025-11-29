@@ -55,7 +55,7 @@ export default function Team() {
                             <p>
                               �� <p>
                                 <div style={{ display: "inline", fontWeight: "400" }}>
-                                  •{" "}
+                                  ��{" "}
                                 </div>
                                 China's most influential architect, according to the
                               </p>
@@ -72,7 +72,7 @@ export default function Team() {
                             <p>
                               <p>
                                 <div style={{ display: "inline", fontWeight: "400" }}>
-                                  •{" "}
+                                  •
                                 </div>
                                 <u>Appointed</u>
                                 &nbsp;as Dean of the School of Architecture at the University of Southern California in 2007
