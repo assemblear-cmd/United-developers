@@ -25,14 +25,29 @@ export default function CasablancaPlanning() {
       title: "Vineyard Pavilions"
     },
     {
-      src: villageStreet,
-      alt: "Traditional village street with contemporary interventions",
-      title: "Village Core"
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fbd34e83a64a74cdb81946ca5301305de?format=webp&width=800",
+      alt: "Concrete pavilion structure in vineyard landscape at sunset",
+      title: "Concrete Pavilion"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F8d024611b9164176bc343eb4a0f26fcc?format=webp&width=800",
+      alt: "Architectural visualization of interior space with landscaped view",
+      title: "Interior Space"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F8a85e7d6225e4f5dafb3fd32eb6b484a?format=webp&width=800",
+      alt: "Interior design with bookshelves and modern furnishings",
+      title: "Library Interior"
     },
     {
       src: hillsideView,
       alt: "Terraced hillside development with mountain backdrop",
       title: "Terraced Development"
+    },
+    {
+      src: villageStreet,
+      alt: "Traditional village street with contemporary interventions",
+      title: "Village Core"
     },
     {
       src: hillsideArchitecture,
@@ -45,24 +60,9 @@ export default function CasablancaPlanning() {
       title: "Contemporary Village"
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fbd34e83a64a74cdb81946ca5301305de?format=webp&width=800",
-      alt: "Concrete pavilion structure in vineyard landscape at sunset",
-      title: "Concrete Pavilion"
-    },
-    {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F8a85e7d6225e4f5dafb3fd32eb6b484a?format=webp&width=800",
-      alt: "Interior design with bookshelves and modern furnishings",
-      title: "Library Interior"
-    },
-    {
       src: vineyard2,
       alt: "Modern architectural structures integrated with wine cultivation",
       title: "Landscape Integration"
-    },
-    {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F8d024611b9164176bc343eb4a0f26fcc?format=webp&width=800",
-      alt: "Architectural visualization of interior space with landscaped view",
-      title: "Interior Space"
     },
     {
       src: sitePlan,
