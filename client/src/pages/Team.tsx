@@ -143,11 +143,11 @@ export default function Team() {
               <Card className="overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   {/* Image Section */}
-                  <div className="relative">
+                  <div className="relative aspect-square">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F80804d17aa734b21ad197be78d43330d?format=webp&width=800"
                       alt="Diego Baloian"
-                      className="w-full h-full object-cover min-h-[300px]"
+                      className="w-full h-full object-cover"
                       data-testid="img-diego-portrait"
                     />
                   </div>
