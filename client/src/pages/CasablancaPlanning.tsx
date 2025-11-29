@@ -49,10 +49,35 @@ export default function CasablancaPlanning() {
       alt: "Contemporary hillside architecture with stone and glass",
       title: "Hillside Architecture"
     },
-    { 
-      src: modernVillage, 
+    {
+      src: modernVillage,
       alt: "Modern village development with traditional materials",
       title: "Contemporary Village"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F8d024611b9164176bc343eb4a0f26fcc?format=webp&width=800",
+      alt: "Architectural visualization of interior space with landscaped view",
+      title: "Interior Space"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F8a85e7d6225e4f5dafb3fd32eb6b484a?format=webp&width=800",
+      alt: "Interior design with bookshelves and modern furnishings",
+      title: "Library Interior"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fbd34e83a64a74cdb81946ca5301305de?format=webp&width=800",
+      alt: "Concrete pavilion structure in vineyard landscape at sunset",
+      title: "Concrete Pavilion"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F578e43410e034d55bcaff53aad765e30?format=webp&width=800",
+      alt: "Aerial view of project site showing 195 hectares of land",
+      title: "Site Aerial View"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F22635bb69b9d469cb18d5d58263e4146?format=webp&width=800",
+      alt: "Nighttime architectural structure with illuminated interior in vineyard landscape",
+      title: "Nighttime View"
     }
   ];
 
