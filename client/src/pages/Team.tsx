@@ -174,31 +174,39 @@ export default function Team() {
           </div>
         </section>
 
-        {/* Team Members Section */}
-        <section className="py-16">
+        {/* Sergei Stepanov Section */}
+        <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Sergei Stepanov */}
-              <Card className="overflow-hidden hover-elevate transition-all duration-300">
-                <div className="relative">
-                  <img
-                    src={sergeiImage}
-                    alt="Sergei Stepanov"
-                    className="w-full h-full object-cover min-h-[300px]"
-                    data-testid="img-sergei-portrait"
-                  />
+            <div className="max-w-4xl mx-auto">
+              <Card className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  {/* Image Section */}
+                  <div className="relative">
+                    <img
+                      src={sergeiImage}
+                      alt="Sergei Stepanov"
+                      className="w-full h-full object-cover min-h-[300px]"
+                      data-testid="img-sergei-portrait"
+                    />
+                  </div>
+
+                  {/* Content Section */}
+                  <CardContent className="p-6 lg:p-8">
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="font-serif text-3xl font-bold text-foreground mb-2" data-testid="text-sergei-name">
+                          Sergei Stepanov
+                        </h3>
+                        <p className="text-muted-foreground mb-3" data-testid="text-sergei-role">
+                          System Architect
+                        </p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          Partner
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="font-serif text-xl font-bold text-foreground mb-2" data-testid="text-sergei-name">
-                    Sergei Stepanov
-                  </h3>
-                  <p className="text-muted-foreground mb-3" data-testid="text-sergei-role">
-                    System Architect
-                  </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Partner
-                  </p>
-                </CardContent>
               </Card>
             </div>
           </div>
