@@ -71,8 +71,10 @@ export default function Team() {
                           <li>
                             <p>
                               <p>
-                                <span style={{ fontSize: "14px" }}>• </span>
-                                <u style={{fontSize: "14px"}}>Appointed</u>
+                                <div style={{ display: "inline", fontWeight: "400" }}>
+                                  •{" "}
+                                </div>
+                                <u>Appointed</u>
                                 &nbsp;as Dean of the School of Architecture at the University of Southern California in 2007
                               </p>
                             </p>
