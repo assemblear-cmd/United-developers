@@ -60,6 +60,8 @@ export default function Team() {
                                 China's most influential architect, according to the
                               </p>
                               <a
+                                rel="noopener noreferrer"
+                                target="_blank"
                                 href="http://ft.com/content/82412506-3cf8-11df-bbcf-00144feabdc0"
                                 rel="noopener noreferrer"
                                 target="_blank"
