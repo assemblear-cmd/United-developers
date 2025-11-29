@@ -123,7 +123,9 @@ export default function CasablancaPlanning() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8">
-                Jade Valley Casablanca – where wine, architecture and landscape become a way of life
+                <p>
+                  Vinopolis – where wine, architecture and landscape become a way of life
+                </p>
               </h2>
 
               <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
