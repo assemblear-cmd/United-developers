@@ -118,6 +118,36 @@ export default function CasablancaPlanning() {
           </div>
         </section>
 
+        {/* Project Description */}
+        <section className="py-20 bg-muted/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8">
+                Jade Valley Casablanca – where wine, architecture and landscape become a way of life
+              </h2>
+
+              <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
+                <p>
+                  Jade Valley Casablanca is an international wine-and-lifestyle project located on the plateau between Santiago and the Pacific Ocean, in the heart of Chile's renowned Casablanca Valley. Led by the Jade Valley wine family and architect Qingyun Ma, the project goes far beyond a classic winery: it is a place where vineyards, contemporary architecture and the Chilean landscape are woven into a cohesive environment for living, visiting and investing.
+                </p>
+
+                <p>
+                  Guided by the philosophy of Vinopolis® – "the ideal city of wine", Jade Valley Casablanca brings together three layers of experience:
+                </p>
+
+                <ul className="space-y-3 ml-6">
+                  <li><strong>Wine</strong> – premium wines shaped by the cool-climate terroir of Casablanca;</li>
+                  <li><strong>Place</strong> – carefully designed spaces for tasting, culture, sports and nature;</li>
+                  <li><strong>Community</strong> – an emerging international neighborhood for residents, long-stay guests and retirement-style living.</li>
+                </ul>
+
+                <p>
+                  Located within easy reach of both Santiago and Viña del Mar, Jade Valley Casablanca is envisioned as a new hub on Chile's wine map: a destination where people come not only to taste wine, but to build a long-term relationship with the territory – through architecture, culture and a slower, more grounded way of life.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Image Gallery */}
         <section className="py-20 bg-background">
