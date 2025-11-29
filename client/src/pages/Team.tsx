@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import executiveImage from "@assets/IMG_20250926_233927_1758940891271.jpg";
 import sergeiImage from "@assets/IMG_20250927_190540_361_1759012338591.jpg";
 import artemImage from "@assets/Screenshot_2025-09-27-22-37-30-363_com.instagram.android-edit_1759023474746.jpg";
+import diegoImage from "@assets/photo_2025-11-28 23.12.25.jpeg";
 
 export default function Team() {
   return (
