@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Building, Compass, Mountain, ChevronLeft, ChevronRight } from "lucide-react";
