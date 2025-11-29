@@ -50,7 +50,6 @@ export default function Team() {
 
 
                       <div className="pt-4">
-                        <p className="font-semibold text-foreground mb-3">About Ma Qingyun</p>
                         <ul className="space-y-3 text-sm text-muted-foreground">
                           <li>
                             <p>
