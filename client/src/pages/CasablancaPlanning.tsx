@@ -146,7 +146,7 @@ export default function CasablancaPlanning() {
                 </ul>
 
                 <p>
-                  Located within easy reach of both Santiago and Viña del Mar, Jade Valley Casablanca is envisioned as a new hub on Chile's wine map: a destination where people come not only to taste wine, but to build a long-term relationship with the territory – through architecture, culture and a slower, more grounded way of life.
+                  Located within easy reach of both Santiago and Viña del Mar, Vinopolis is envisioned as a new hub on Chile's wine map: a destination where people come not only to taste wine, but to build a long-term relationship with the territory – through architecture, culture and a slower, more grounded way of life.
                 </p>
               </div>
             </div>
