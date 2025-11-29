@@ -68,6 +68,11 @@ export default function CasablancaPlanning() {
       src: sitePlan,
       alt: "Aerial site plan showing Vinopolis development layout",
       title: "Master Plan"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fb1b2c64a505c46a79143bc4839a7bb57?format=webp&width=800",
+      alt: "Nighttime architectural structures with illuminated pavilions in vineyard landscape",
+      title: "Evening Pavilions"
     }
   ];
 
