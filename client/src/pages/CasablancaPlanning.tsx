@@ -130,9 +130,7 @@ export default function CasablancaPlanning() {
 
               <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  <p>
-                    Vinopolis is an international wine-and-lifestyle project located on the plateau between Santiago and the Pacific Ocean, in the heart of Chile's renowned Casablanca Valley. Led by the Jade Valley wine family and architect Qingyun Ma, the project goes far beyond a classic winery: it is a place where vineyards, contemporary architecture and the Chilean landscape are woven into a cohesive environment for living, visiting and investing.
-                  </p>
+                  Vinopolis is an international wine-and-lifestyle project located on the plateau between Santiago and the Pacific Ocean, in the heart of Chile's renowned Casablanca Valley. Led by the Jade Valley wine family and architect Qingyun Ma, the project goes far beyond a classic winery: it is a place where vineyards, contemporary architecture and the Chilean landscape are woven into a cohesive environment for living, visiting and investing.
                 </p>
 
                 <p>
