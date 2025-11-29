@@ -19,33 +19,23 @@ export default function CasablancaPlanning() {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   const projectImages = [
-    { 
-      src: vineyard1, 
+    {
+      src: vineyard1,
       alt: "Elevated concrete pavilions over vineyard landscape at sunset",
       title: "Vineyard Pavilions"
     },
-    { 
-      src: vineyard2, 
-      alt: "Modern architectural structures integrated with wine cultivation",
-      title: "Landscape Integration"
-    },
-    { 
-      src: villageStreet, 
+    {
+      src: villageStreet,
       alt: "Traditional village street with contemporary interventions",
       title: "Village Core"
     },
-    { 
-      src: hillsideView, 
+    {
+      src: hillsideView,
       alt: "Terraced hillside development with mountain backdrop",
       title: "Terraced Development"
     },
-    { 
-      src: sitePlan, 
-      alt: "Aerial site plan showing Vinopolis development layout",
-      title: "Master Plan"
-    },
-    { 
-      src: hillsideArchitecture, 
+    {
+      src: hillsideArchitecture,
       alt: "Contemporary hillside architecture with stone and glass",
       title: "Hillside Architecture"
     },
@@ -55,9 +45,9 @@ export default function CasablancaPlanning() {
       title: "Contemporary Village"
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F8d024611b9164176bc343eb4a0f26fcc?format=webp&width=800",
-      alt: "Architectural visualization of interior space with landscaped view",
-      title: "Interior Space"
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fbd34e83a64a74cdb81946ca5301305de?format=webp&width=800",
+      alt: "Concrete pavilion structure in vineyard landscape at sunset",
+      title: "Concrete Pavilion"
     },
     {
       src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F8a85e7d6225e4f5dafb3fd32eb6b484a?format=webp&width=800",
@@ -65,19 +55,19 @@ export default function CasablancaPlanning() {
       title: "Library Interior"
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fbd34e83a64a74cdb81946ca5301305de?format=webp&width=800",
-      alt: "Concrete pavilion structure in vineyard landscape at sunset",
-      title: "Concrete Pavilion"
+      src: vineyard2,
+      alt: "Modern architectural structures integrated with wine cultivation",
+      title: "Landscape Integration"
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F578e43410e034d55bcaff53aad765e30?format=webp&width=800",
-      alt: "Aerial view of project site showing 195 hectares of land",
-      title: "Site Aerial View"
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F8d024611b9164176bc343eb4a0f26fcc?format=webp&width=800",
+      alt: "Architectural visualization of interior space with landscaped view",
+      title: "Interior Space"
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F22635bb69b9d469cb18d5d58263e4146?format=webp&width=800",
-      alt: "Nighttime architectural structure with illuminated interior in vineyard landscape",
-      title: "Nighttime View"
+      src: sitePlan,
+      alt: "Aerial site plan showing Vinopolis development layout",
+      title: "Master Plan"
     }
   ];
 
