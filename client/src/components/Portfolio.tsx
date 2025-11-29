@@ -166,7 +166,7 @@ const unitedDevelopersProjects = [
     image: casablancaImage,
     area: "500 hectares",
     status: "In Progress" as const,
-    description: "A visionary development where contemporary architecture meets centuries-old viticultural traditions. Elevated pavilions punctuate vineyard rows while the village core weaves contemporary sensibilities through traditional morphology.",
+    description: "International wine and lifestyle project that combines the best Chilean terroir, Chinese winemaking heritage, and contemporary architecture. On the plateau between Santiago and Viña del Mar, we are creating a vibrant space for living, relaxing, and meeting—from tastings and gastronomic events to sports and cultural activities.",
     features: []
   },
   {
