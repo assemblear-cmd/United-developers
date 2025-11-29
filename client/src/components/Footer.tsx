@@ -11,9 +11,8 @@ export default function Footer() {
   const footerLinks = {
     company: [
       { name: "About Us", href: "/about" },
-      { name: "Our Team", href: "/team" },
-      { name: "History", href: "/history" },
-      { name: "Ma Qingyun", href: "/ma-qingyun" }
+      { name: "Team", href: "/team" },
+      { name: "History", href: "/history" }
     ],
     legal: [
       { name: "Privacy Policy", href: "/privacy" },
