@@ -147,13 +147,13 @@ export default function Team() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F80804d17aa734b21ad197be78d43330d?format=webp&width=800"
                       alt="Diego Baloian"
-                      className="w-full h-full object-cover min-h-[400px]"
+                      className="w-full h-full object-cover min-h-[300px]"
                       data-testid="img-diego-portrait"
                     />
                   </div>
 
                   {/* Content Section */}
-                  <CardContent className="p-8 lg:p-12">
+                  <CardContent className="p-6 lg:p-8">
                     <div className="space-y-6">
                       <div>
                         <h3 className="font-serif text-3xl font-bold text-foreground mb-2" data-testid="text-diego-name">
