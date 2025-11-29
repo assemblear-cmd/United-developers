@@ -11,7 +11,7 @@ import {
   SelectTrigger, 
   SelectValue 
 } from "@/components/ui/select";
-import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export default function ContactSection() {
@@ -61,8 +61,8 @@ export default function ContactSection() {
     {
       icon: Phone,
       title: "Phone",
-      content: "+86 21 6466 0618",
-      action: "tel:+862164660618"
+      content: "+56 9721393752",
+      action: "tel:+56972139375"
     },
     {
       icon: Mail,
@@ -72,14 +72,8 @@ export default function ContactSection() {
     },
     {
       icon: MapPin,
-      title: "Shanghai Office",
-      content: "Shanghai, China",
-      action: "#"
-    },
-    {
-      icon: Clock,
-      title: "Business Hours",
-      content: "Monday to Friday: 9:00 - 18:00",
+      title: "Santiago",
+      content: "Santiago, Chile",
       action: "#"
     }
   ];
