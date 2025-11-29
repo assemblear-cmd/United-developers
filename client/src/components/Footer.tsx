@@ -42,7 +42,7 @@ export default function Footer() {
                 </div>
                 <div className="flex items-start space-x-3 text-muted-foreground">
                   <MapPin className="h-4 w-4 mt-0.5" />
-                  <span data-testid="footer-address">Shanghai, China</span>
+                  <span data-testid="footer-address"><p>Chile, Santiago</p></span>
                 </div>
               </div>
             </div>
