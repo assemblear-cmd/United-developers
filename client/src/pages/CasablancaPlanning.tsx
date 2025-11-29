@@ -136,7 +136,7 @@ export default function CasablancaPlanning() {
                 </p>
 
                 <p>
-                  Guided by the philosophy of Vinopolis® – "the ideal city of wine", Jade Valley Casablanca brings together three layers of experience:
+                  Guided by the philosophy of Vinopolis® – "the ideal city of wine", Vinopolis brings together three layers of experience:
                 </p>
 
                 <ul className="space-y-3 ml-6">
