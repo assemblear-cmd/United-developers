@@ -50,7 +50,10 @@ export default function Navigation() {
               <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-sm">UD</span>
               </div>
-              <span className="font-serif text-xl font-bold text-foreground">
+              <span
+                className="font-serif text-xl font-bold text-white"
+                style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" }}
+              >
                 United Developers
               </span>
             </div>
