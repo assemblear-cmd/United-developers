@@ -17,7 +17,7 @@ export default function Team() {
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Our Team
+              Team
             </h1>
           </div>
         </section>
@@ -50,14 +50,51 @@ export default function Team() {
 
 
                       <div className="pt-4">
-                        <h4 className="font-semibold text-foreground mb-3">About Ma Qingyun</h4>
                         <ul className="space-y-3 text-sm text-muted-foreground">
-                          <li>• Appointed as Dean of the School of Architecture at the University of Southern California in 2007</li>
-                          <li>• Opened Los Angeles office to promote architectural practices and academic platforms in the Pacific Rim region</li>
-                          <li>• Led architectural projects across multiple Chinese cities including Beijing, Shanghai, Shenzhen, Hangzhou, Ningbo, Chengdu, Xi'an and Tianjin</li>
-                          <li>• Pioneered multi-disciplinary, multi-faceted approach to architecture and social-cultural integration</li>
-                          <li>• Developed philosophy that architecture is a path finder for collectively defined goals, emphasizing problem discovery over problem-solving</li>
-                          <li>• Champions the belief that no problem appears twice in exactly the same way, leading to unique solutions for each project</li>
+                          <li>
+                            <p>
+                              <div>
+                                <p>
+                                  <span style={{ fontSize: "14px" }}>• </span>
+                                  China's most influential architect, according to the
+                                </p>
+                              </div>
+                              <a
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                href="https://www.ft.com/content/235b924e-8e7f-11dc-8591-0000779fd2ac"
+                              >
+                                <p>
+                                  <div style={{ display: "inline", fontWeight: "700" }}>
+                                    <p>
+                                      <u style={{ fontWeight: "normal" }}>
+                                        Financial Times
+                                      </u>
+                                    </p>
+                                  </div>
+                                </p>
+                              </a>
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <p>
+                                <div style={{ display: "inline", fontWeight: "400" }}>
+                                  •
+                                </div>
+                                <u>Appointed</u>
+                                &nbsp;as Dean of the School of Architecture at the University of Southern California in 2007
+                              </p>
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <div style={{ display: "inline", fontWeight: "400" }}>
+                                •
+                              </div>
+                              Led urban planning projects in Beijing, Shanghai, Shenzhen, Hangzhou, Ningbo, Chengdu, Xi'an and Tianjin
+                            </p>
+                          </li>
                         </ul>
                       </div>
 
@@ -84,28 +121,27 @@ export default function Team() {
               <Card className="overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   {/* Image Section */}
-                  <div className="relative">
-                    <img 
+                  <div className="relative aspect-square">
+                    <img
                       src={artemImage}
                       alt="Artem Golestian"
-                      className="w-full h-full object-cover min-h-[400px]"
+                      className="w-full h-full object-cover"
                       data-testid="img-artem-portrait"
                     />
                   </div>
 
                   {/* Content Section */}
-                  <CardContent className="p-8 lg:p-12">
+                  <CardContent className="p-6 lg:p-8">
                     <div className="space-y-6">
                       <div>
                         <h3 className="font-serif text-3xl font-bold text-foreground mb-2" data-testid="text-artem-name">
                           Artem Golestian
                         </h3>
                         <p className="text-muted-foreground mb-3" data-testid="text-artem-role">
-                          Design Director
+                          Architect
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          Leading creative vision and design strategy across our portfolio, specializing in 
-                          urban planning and conceptual design with international experience.
+                          Partner
                         </p>
                       </div>
                     </div>
@@ -116,73 +152,82 @@ export default function Team() {
           </div>
         </section>
 
-        {/* Team Members Section */}
+        {/* Diego Baloian Section */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Sergei Stepanov */}
-              <Card className="overflow-hidden hover-elevate transition-all duration-300">
-                <div className="aspect-square">
-                  <img 
-                    src={sergeiImage}
-                    alt="Sergei Stepanov"
-                    className="w-full h-full object-cover"
-                    data-testid="img-sergei-portrait"
-                  />
+            <div className="max-w-4xl mx-auto">
+              <Card className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  {/* Image Section */}
+                  <div className="relative aspect-square">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F80804d17aa734b21ad197be78d43330d?format=webp&width=800"
+                      alt="Diego Baloian"
+                      className="w-full h-full object-cover"
+                      data-testid="img-diego-portrait"
+                    />
+                  </div>
+
+                  {/* Content Section */}
+                  <CardContent className="p-6 lg:p-8">
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="font-serif text-3xl font-bold text-foreground mb-2" data-testid="text-diego-name">
+                          Diego Baloian
+                        </h3>
+                        <p className="text-muted-foreground mb-3" data-testid="text-diego-role">
+                          Architect
+                        </p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          Partner
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="font-serif text-xl font-bold text-foreground mb-2" data-testid="text-sergei-name">
-                    Sergei Stepanov
-                  </h3>
-                  <p className="text-muted-foreground mb-3" data-testid="text-sergei-role">
-                    Senior Architect
-                  </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Bringing innovative design solutions and technical expertise to our architectural projects, 
-                    with a focus on sustainable design and modern construction methodologies.
-                  </p>
-                </CardContent>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* Services */}
+        {/* Sergei Stepanov Section */}
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
-                Our Expertise
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Our comprehensive services span multiple disciplines, reflecting our holistic approach to design and development.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card className="text-center hover-elevate transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Building className="h-6 w-6 text-primary" />
+            <div className="max-w-4xl mx-auto">
+              <Card className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  {/* Image Section */}
+                  <div className="relative aspect-square">
+                    <img
+                      src={sergeiImage}
+                      alt="Sergei Stepanov"
+                      className="w-full h-full object-cover"
+                      data-testid="img-sergei-portrait"
+                    />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-2">Urban Planning</h3>
-                  <p className="text-sm text-muted-foreground">Comprehensive master planning and strategic urban development</p>
-                </CardContent>
-              </Card>
 
-              <Card className="text-center hover-elevate transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Building className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">Architecture</h3>
-                  <p className="text-sm text-muted-foreground">Innovative architectural design bridging cultures and contexts</p>
-                </CardContent>
+                  {/* Content Section */}
+                  <CardContent className="p-6 lg:p-8">
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="font-serif text-3xl font-bold text-foreground mb-2" data-testid="text-sergei-name">
+                          Sergei Stepanov
+                        </h3>
+                        <p className="text-muted-foreground mb-3" data-testid="text-sergei-role">
+                          System Architect
+                        </p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          Partner
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </div>
               </Card>
-
             </div>
           </div>
         </section>
+
       </main>
       <Footer />
     </div>

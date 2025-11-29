@@ -35,13 +35,12 @@ export default function Navigation() {
     { href: "/", label: "Home" },
     { href: "/portfolio", label: "Projects" },
     { href: "/team", label: "Team" },
-    { href: "/xixian", label: "Xixian CBD" },
     { href: "/contact", label: "Contact" }
   ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-background/95 backdrop-blur-md border-b" : "bg-transparent"
+      isScrolled && isDark ? "bg-background/95 backdrop-blur-md border-b" : "bg-transparent backdrop-blur-sm"
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -51,7 +50,10 @@ export default function Navigation() {
               <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-sm">UD</span>
               </div>
-              <span className="font-serif text-xl font-bold text-foreground">
+              <span
+                className="font-serif text-xl font-bold text-white"
+                style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" }}
+              >
                 United Developers
               </span>
             </div>
@@ -61,11 +63,14 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href} data-testid={`link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}>
-                <span className={`text-sm font-medium transition-colors hover:text-primary ${
-                  location === item.href ? "text-primary" : "text-muted-foreground"
-                }`}>
-                  {item.label}
-                </span>
+                <p>
+                  <span
+                    className={`text-sm font-medium transition-colors hover:text-primary text-white`}
+                    style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" }}
+                  >
+                    {item.label}
+                  </span>
+                </p>
               </Link>
             ))}
           </div>

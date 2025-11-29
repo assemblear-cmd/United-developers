@@ -1,15 +1,38 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Award } from "lucide-react";
-import heroImage from "@assets/IMG-20250926-WA0010_1758934077255.jpg";
 import { Link } from "wouter";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const isDarkMode = document.documentElement.classList.contains("dark");
+    setIsDark(isDarkMode);
+
+    const observer = new MutationObserver(() => {
+      const isDarkNow = document.documentElement.classList.contains("dark");
+      setIsDark(isDarkNow);
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const backgroundImage = isDark
+    ? 'https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fe937e330364c428ea58d72af6814a2cd'
+    : 'https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F9bc73f76cce94e1e99ad8571b672300f';
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url('${backgroundImage}')` }}
       />
       
       {/* Dark Overlay */}
@@ -17,14 +40,7 @@ export default function Hero() {
       
       {/* Hero Content */}
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          United Developers
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-          International Architecture Studio crafting exceptional spaces across continents
-        </p>
-        
-        {/* New Casablanca Button */}
+        {/* Vinopolis Button */}
         <div className="mt-12">
           <Link href="/casablanca">
             <Button 
@@ -33,7 +49,7 @@ export default function Hero() {
               className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm px-8 py-4 text-lg font-medium"
               data-testid="button-new-casablanca"
             >
-              New Casablanca
+              <p>Vinopolis</p>
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
@@ -41,11 +57,7 @@ export default function Hero() {
       </div>
       
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
-        </div>
-      </div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" />
     </section>
   );
 }

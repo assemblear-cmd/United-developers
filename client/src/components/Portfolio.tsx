@@ -2,8 +2,14 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Square, ArrowRight, Building, Home } from "lucide-react";
+import { MapPin, Calendar, Square, ArrowRight, Building, Home, ChevronDown } from "lucide-react";
 import { useLocation } from "wouter";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import villaImage from "@assets/stock_images/luxury_residential_v_fcfa0e39.jpg";
 import industrialImage from "@assets/stock_images/contemporary_office__a4a1a738.jpg";
 import heroImage from "@assets/stock_images/modern_architectural_53e85b78.jpg";
@@ -27,12 +33,11 @@ interface ProjectCardProps {
   title: string;
   location: string;
   year: string;
-  type: "Urban Planning" | "Architecture";
+  type: "Urban Planning" | "Commercial";
   image: string;
   area?: string;
   status: "Completed" | "In Progress" | "Award Winner";
   description: string;
-  features: string[];
 }
 
 function ProjectCard({
@@ -44,8 +49,7 @@ function ProjectCard({
   image,
   area,
   status,
-  description,
-  features
+  description
 }: ProjectCardProps) {
   const [, setLocation] = useLocation();
   
@@ -62,7 +66,7 @@ function ProjectCard({
   const getTypeIcon = (type: string) => {
     switch (type) {
       case "Urban Planning": return Building;
-      case "Architecture": return Home;
+      case "Commercial": return Home;
       default: return Building;
     }
   };
@@ -70,18 +74,18 @@ function ProjectCard({
   const TypeIcon = getTypeIcon(type);
 
   return (
-    <Card className="group overflow-hidden hover-elevate transition-all duration-300" data-testid={`card-project-${id}`}>
+    <Card className="group overflow-hidden hover-elevate transition-all duration-300 flex flex-col h-full" data-testid={`card-project-${id}`}>
       <div className="relative overflow-hidden">
-        <img 
+        <img
           src={image}
           alt={title}
           className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
           data-testid={`img-project-${id}`}
         />
-        
+
         {/* Overlay badges */}
         <div className="absolute top-4 left-4 flex space-x-2">
-          <Badge 
+          <Badge
             variant="default"
             className="text-xs font-medium flex items-center space-x-1"
             data-testid={`badge-type-${id}`}
@@ -89,38 +93,42 @@ function ProjectCard({
             <TypeIcon className="h-3 w-3" />
             <span>{type}</span>
           </Badge>
-          <Badge 
-            variant={status === "Completed" ? "secondary" : status === "In Progress" ? "outline" : "default"}
-            className="text-xs font-medium"
+          <Badge
+            variant={status === "Completed" ? "secondary" : status === "In Progress" ? "default" : "default"}
+            className={`text-xs font-medium ${status === "In Progress" ? "bg-black/70 text-white" : ""}`}
             data-testid={`badge-status-${id}`}
           >
             {status}
           </Badge>
         </div>
-        
+
         {/* Year overlay */}
         <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-md">
           <span className="font-semibold text-sm" data-testid={`text-year-${id}`}>{year}</span>
         </div>
       </div>
-      
-      <CardContent className="p-6">
-        <div className="flex items-start justify-between mb-3">
-          <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary transition-colors" data-testid={`text-title-${id}`}>
-            {title}
-          </h3>
+
+      <CardContent className="p-6 flex flex-col h-full">
+        <div className="flex-grow">
+          <div className="h-14 mb-3">
+            <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2" data-testid={`text-title-${id}`}>
+              {title}
+            </h3>
+          </div>
+
+          <div className="flex items-center text-muted-foreground mb-3">
+            <MapPin className="h-4 w-4 mr-1" />
+            <span className="text-sm" data-testid={`text-location-${id}`}>{location}</span>
+          </div>
+
+          <div className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-description-${id}`}>
+            <p>
+              {description}
+            </p>
+          </div>
         </div>
-        
-        <div className="flex items-center text-muted-foreground mb-3">
-          <MapPin className="h-4 w-4 mr-1" />
-          <span className="text-sm" data-testid={`text-location-${id}`}>{location}</span>
-        </div>
-        
-        <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-description-${id}`}>
-          {description}
-        </p>
-        
-        {/* Project details */}
+
+        {/* Project details - aligned at bottom before button */}
         <div className="flex items-center space-x-4 mb-4 text-sm text-muted-foreground">
           <div className="flex items-center space-x-1">
             <Calendar className="h-4 w-4" />
@@ -133,36 +141,15 @@ function ProjectCard({
             </div>
           )}
         </div>
-        
-        {/* Features */}
-        <div className="mb-6">
-          <div className="flex flex-wrap gap-2">
-            {features.slice(0, 3).map((feature, index) => (
-              <Badge 
-                key={index}
-                variant="outline" 
-                className="text-xs"
-                data-testid={`badge-feature-${id}-${index}`}
-              >
-                {feature}
-              </Badge>
-            ))}
-            {features.length > 3 && (
-              <Badge variant="outline" className="text-xs">
-                +{features.length - 3} more
-              </Badge>
-            )}
-          </div>
-        </div>
-        
+
         {/* Action button */}
-        <Button 
-          variant="outline" 
+        <Button
+          variant="outline"
           className="w-full"
           onClick={handleViewDetails}
           data-testid={`button-view-details-${id}`}
         >
-          View Project Details
+          View Project
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardContent>
@@ -174,15 +161,15 @@ function ProjectCard({
 const unitedDevelopersProjects = [
   {
     id: "casablanca-planning",
-    title: "Casablanca Area Planning",
-    location: "Casablanca Valley, Morocco",
+    title: "Vinopolis",
+    location: "Casablanca, Chile",
     year: "2024",
     type: "Urban Planning" as const,
     image: casablancaImage,
     area: "500 hectares",
-    status: "Award Winner" as const,
-    description: "A visionary development where contemporary architecture meets centuries-old viticultural traditions. Elevated pavilions punctuate vineyard rows while the village core weaves contemporary sensibilities through traditional morphology.",
-    features: ["Vineyard Urbanism", "Agricultural Integration", "Contemporary Architecture", "Cultural Continuity"]
+    status: "In Progress" as const,
+    description: "International wine and lifestyle project that combines the best Chilean terroir, Chinese winemaking heritage, and contemporary architecture. On the plateau between Santiago and Viña del Mar, we are creating a vibrant space for living, relaxing, and meeting—from tastings and gastronomic events to sports and cultural activities.",
+    features: []
   },
   {
     id: "xixian-cbd",
@@ -194,31 +181,30 @@ const unitedDevelopersProjects = [
     area: "3.82 million m²",
     status: "Completed" as const,
     description: "Comprehensive master plan for sustainable urban development that balances conservation with modern urbanization. The design preserves 47% farmland and 5% wetlands while creating efficient urban districts connected by innovative green infrastructure including a signature 'Green Bridge' over existing rail lines.",
-    features: ["Master Planning", "Sustainable Development", "Green Infrastructure", "Mixed-Use Districts"]
+    features: []
   },
   {
     id: "jinqiao-guopei-1851",
     title: "Jinqiao Guopei 1851",
     location: "Shanghai, China",
     year: "2019",
-    type: "Architecture" as const,
+    type: "Commercial" as const,
     image: jinqiaoGuopeiImage,
     area: "140,000 m²",
     status: "Completed" as const,
     description: "Mixed-use commercial complex that maximizes land, public, and commercial resources. The design creates a visual symbol of an international metropolis through high-complexity function configuration and multi-dimensional spatial interleaving. Features integration with elevated infrastructure and Jiangnan garden elements.",
-    features: ["Mixed-Use Commercial", "Urban Integration", "Elevated Infrastructure", "Cultural Landscape"]
+    features: []
   },
   {
     id: "huyao-office-building",
     title: "Huyao Office Building",
     location: "Shanghai, China",
     year: "2021",
-    type: "Architecture" as const,
+    type: "Commercial" as const,
     image: huyaoOfficeImage,
-    area: "Not specified",
     status: "Completed" as const,
     description: "Combines functionality, economy and artistry with rational and harmonious layout concepts to meet sustainable development requirements. Features integration of 'integrity, integration, openness' characteristics with compound functions and shared facilities. Design based on unit office settlements, outdoor platforms, roof gardens and central garden corridors, forming an enclosed building integrated with surrounding environment.",
-    features: ["Sustainable Design", "Functional Integration", "Garden Integration", "Environmental Harmony"]
+    features: []
   },
   {
     id: "shenshan-central-area",
@@ -227,28 +213,27 @@ const unitedDevelopersProjects = [
     year: "2022",
     type: "Urban Planning" as const,
     image: shenshanZoneImage,
-    area: "Central Area",
     status: "In Progress" as const,
     description: "Pioneering new urban development paradigms that balance countryside preservation, ecological sustainability, and industry innovation. As chief urban and rural planner, the project aims to create a new urban development model that protects pastoral areas, maintains ecology, and promotes cross-industry innovation through integrated design approaches.",
-    features: ["Urban Planning", "Ecological Sustainability", "Rural-Urban Integration", "Cross-Industry Innovation"]
+    features: []
   },
   {
     id: "xian-tv-broadcast-center",
     title: "Xi'an TV Broadcast Center",
     location: "Xi'an, China",
     year: "2009",
-    type: "Architecture" as const,
+    type: "Commercial" as const,
     image: xianTvImage2,
     area: "81,117 m²",
     status: "Completed" as const,
     description: "This project inherits the generosity, concise and stately characteristics of Han Tang culture of Xi'an, integrated as a whole and enhances the scale perception. Diversified programs are enclosed by a symbolic wall, suggesting the Land Art temperament of Xi'an Wall while metaphorically representing a Media City.",
-    features: ["Cultural Integration", "Media Center", "Exhibition Spaces", "Han Tang Architecture"]
+    features: []
   }
 ];
 
 export default function Portfolio() {
-  const [filter, setFilter] = useState<"all" | "Urban Planning" | "Architecture">("all");
-  const [statusFilter, setStatusFilter] = useState<"all" | "Completed" | "In Progress" | "Award Winner">("all");
+  const [filter, setFilter] = useState<"all" | "Urban Planning" | "Commercial">("all");
+  const [statusFilter, setStatusFilter] = useState<"all" | "Completed" | "In Progress">("all");
 
   const filteredProjects = unitedDevelopersProjects.filter(project => {
     const typeMatch = filter === "all" || project.type === filter;
@@ -270,70 +255,87 @@ export default function Portfolio() {
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
           <div className="flex items-center space-x-2">
             <span className="text-sm font-medium text-muted-foreground">Type:</span>
-            <div className="flex space-x-2 flex-wrap">
-              <Button
-                variant={filter === "all" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setFilter("all")}
-                data-testid="button-filter-all"
-              >
-                All
-              </Button>
-              <Button
-                variant={filter === "Architecture" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setFilter("Architecture")}
-                data-testid="button-filter-architecture"
-              >
-                Architecture
-              </Button>
-              <Button
-                variant={filter === "Urban Planning" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setFilter("Urban Planning")}
-                data-testid="button-filter-planning"
-              >
-                Urban Planning
-              </Button>
-            </div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  data-testid="button-filter-all"
+                  className="flex items-center gap-2"
+                >
+                  {filter === "all" ? "All" : filter}
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem
+                  onClick={() => setFilter("all")}
+                  data-testid="filter-option-all"
+                  className={filter === "all" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  All
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setFilter("Commercial")}
+                  data-testid="filter-option-commercial"
+                  className={filter === "Commercial" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  Commercial
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setFilter("Urban Planning")}
+                  data-testid="filter-option-planning"
+                  className={filter === "Urban Planning" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  Urban Planning
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           <div className="flex items-center space-x-2">
             <span className="text-sm font-medium text-muted-foreground">Status:</span>
-            <div className="flex space-x-2">
-              <Button
-                variant={statusFilter === "all" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setStatusFilter("all")}
-                data-testid="button-status-all"
-              >
-                All
-              </Button>
-              <Button
-                variant={statusFilter === "Award Winner" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setStatusFilter("Award Winner")}
-                data-testid="button-status-awards"
-              >
-                Awards
-              </Button>
-              <Button
-                variant={statusFilter === "Completed" ? "default" : "outline"}
-                size="sm"
-                onClick={() => setStatusFilter("Completed")}
-                data-testid="button-status-completed"
-              >
-                Completed
-              </Button>
-            </div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  data-testid="button-status-all"
+                  className="flex items-center gap-2"
+                >
+                  {statusFilter === "all" ? "All" : statusFilter}
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem
+                  onClick={() => setStatusFilter("all")}
+                  data-testid="status-option-all"
+                  className={statusFilter === "all" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  All
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setStatusFilter("Completed")}
+                  data-testid="status-option-completed"
+                  className={statusFilter === "Completed" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  Completed
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setStatusFilter("In Progress")}
+                  data-testid="status-option-in-progress"
+                  className={statusFilter === "In Progress" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  In progress
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
 
         {/* Results count */}
         <div className="mb-8">
-          <p className="text-center text-muted-foreground">
-            Showing <span className="font-semibold" data-testid="text-results-count">{filteredProjects.length}</span> {filteredProjects.length === 1 ? 'project' : 'projects'}
-          </p>
         </div>
 
         {/* Projects Grid */}

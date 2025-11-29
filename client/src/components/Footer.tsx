@@ -11,9 +11,8 @@ export default function Footer() {
   const footerLinks = {
     company: [
       { name: "About Us", href: "/about" },
-      { name: "Our Team", href: "/team" },
-      { name: "History", href: "/history" },
-      { name: "Ma Qingyun", href: "/ma-qingyun" }
+      { name: "Team", href: "/team" },
+      { name: "History", href: "/history" }
     ],
     legal: [
       { name: "Privacy Policy", href: "/privacy" },
@@ -35,7 +34,7 @@ export default function Footer() {
               <div className="space-y-3 text-sm">
                 <div className="flex items-center space-x-3 text-muted-foreground">
                   <Phone className="h-4 w-4" />
-                  <span data-testid="footer-phone">+86 21 6466 0618</span>
+                  <span data-testid="footer-phone">+56 9721393752</span>
                 </div>
                 <div className="flex items-center space-x-3 text-muted-foreground">
                   <Mail className="h-4 w-4" />
@@ -43,7 +42,7 @@ export default function Footer() {
                 </div>
                 <div className="flex items-start space-x-3 text-muted-foreground">
                   <MapPin className="h-4 w-4 mt-0.5" />
-                  <span data-testid="footer-address">Shanghai, China</span>
+                  <span data-testid="footer-address"><p>Chile, Santiago</p></span>
                 </div>
               </div>
             </div>
@@ -73,7 +72,7 @@ export default function Footer() {
         <div className="py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2024. All rights reserved.
+              <p>© 2025. All rights reserved.</p>
             </div>
             
             <div className="flex items-center space-x-6">
