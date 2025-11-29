@@ -145,7 +145,7 @@ export default function CasablancaPlanning() {
         </section>
 
         {/* Project Description */}
-        <section className="py-20 bg-muted/10">
+        <section className="bg-muted/10" style={{ padding: "80px 0 6px" }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8">
