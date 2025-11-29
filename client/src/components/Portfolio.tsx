@@ -121,9 +121,11 @@ function ProjectCard({
             <span className="text-sm" data-testid={`text-location-${id}`}>{location}</span>
           </div>
 
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-description-${id}`}>
-            {description}
-          </p>
+          <div className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-description-${id}`}>
+            <p>
+              {description}
+            </p>
+          </div>
         </div>
 
         {/* Project details - aligned at bottom before button */}
