@@ -54,7 +54,7 @@ export default function Team() {
                         <ul className="space-y-3 text-sm text-muted-foreground">
                           <li>
                             <p>
-                              • China's most influential architect, according to the{" "}
+                              �� China's most influential architect, according to the{" "}
                               <a
                                 href="http://ft.com/content/82412506-3cf8-11df-bbcf-00144feabdc0"
                                 rel="noopener noreferrer"
@@ -122,6 +122,44 @@ export default function Team() {
                           Artem Golestian
                         </h3>
                         <p className="text-muted-foreground mb-3" data-testid="text-artem-role">
+                          Architect
+                        </p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          Partner
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Diego Baloian Section */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <Card className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  {/* Image Section */}
+                  <div className="relative">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F80804d17aa734b21ad197be78d43330d?format=webp&width=800"
+                      alt="Diego Baloian"
+                      className="w-full h-full object-cover min-h-[400px]"
+                      data-testid="img-diego-portrait"
+                    />
+                  </div>
+
+                  {/* Content Section */}
+                  <CardContent className="p-8 lg:p-12">
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="font-serif text-3xl font-bold text-foreground mb-2" data-testid="text-diego-name">
+                          Diego Baloian
+                        </h3>
+                        <p className="text-muted-foreground mb-3" data-testid="text-diego-role">
                           Architect
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed">
