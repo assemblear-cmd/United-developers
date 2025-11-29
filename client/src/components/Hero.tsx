@@ -49,7 +49,7 @@ export default function Hero() {
               className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm px-8 py-4 text-lg font-medium"
               data-testid="button-new-casablanca"
             >
-              New Casablanca
+              <p>Vinopolis</p>
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
