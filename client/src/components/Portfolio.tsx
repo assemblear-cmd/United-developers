@@ -159,7 +159,7 @@ function ProjectCard({
 const unitedDevelopersProjects = [
   {
     id: "casablanca-planning",
-    title: "Casablanca Valley",
+    title: "Vinopolis",
     location: "Casablanca, Chile",
     year: "2024",
     type: "Urban Planning" as const,
