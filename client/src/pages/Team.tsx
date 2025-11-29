@@ -106,16 +106,16 @@ export default function Team() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   {/* Image Section */}
                   <div className="relative">
-                    <img 
+                    <img
                       src={artemImage}
                       alt="Artem Golestian"
-                      className="w-full h-full object-cover min-h-[400px]"
+                      className="w-full h-full object-cover min-h-[300px]"
                       data-testid="img-artem-portrait"
                     />
                   </div>
 
                   {/* Content Section */}
-                  <CardContent className="p-8 lg:p-12">
+                  <CardContent className="p-6 lg:p-8">
                     <div className="space-y-6">
                       <div>
                         <h3 className="font-serif text-3xl font-bold text-foreground mb-2" data-testid="text-artem-name">
