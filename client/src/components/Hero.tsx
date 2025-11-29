@@ -40,7 +40,7 @@ export default function Hero() {
       
       {/* Hero Content */}
       <div className="relative z-10 text-center text-white max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* New Casablanca Button */}
+        {/* Vinopolis Button */}
         <div className="mt-12">
           <Link href="/casablanca">
             <Button 
