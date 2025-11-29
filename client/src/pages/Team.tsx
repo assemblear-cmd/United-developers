@@ -53,15 +53,22 @@ export default function Team() {
                         <ul className="space-y-3 text-sm text-muted-foreground">
                           <li>
                             <p>
-                              <p>
-                                China's most influential architect, according to the
-                              </p>
+                              <div>
+                                <p>
+                                  <span style={{ fontSize: "14px" }}>• </span>
+                                  China's most influential architect, according to the
+                                </p>
+                              </div>
                               <a
                                 rel="noopener noreferrer"
                                 target="_blank"
                                 href="https://www.ft.com/content/235b924e-8e7f-11dc-8591-0000779fd2ac"
                               >
-                                <p><strong>Financial Times</strong></p>
+                                <p>
+                                  <div style={{ display: "inline", fontWeight: "700" }}>
+                                    Financial Times
+                                  </div>
+                                </p>
                               </a>
                             </p>
                           </li>
