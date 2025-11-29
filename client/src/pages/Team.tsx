@@ -105,11 +105,11 @@ export default function Team() {
               <Card className="overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   {/* Image Section */}
-                  <div className="relative">
+                  <div className="relative aspect-square">
                     <img
                       src={artemImage}
                       alt="Artem Golestian"
-                      className="w-full h-full object-cover min-h-[300px]"
+                      className="w-full h-full object-cover"
                       data-testid="img-artem-portrait"
                     />
                   </div>
