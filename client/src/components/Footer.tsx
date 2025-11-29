@@ -72,7 +72,7 @@ export default function Footer() {
         <div className="py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2024. All rights reserved.
+              <p>© 2025. All rights reserved.</p>
             </div>
             
             <div className="flex items-center space-x-6">
