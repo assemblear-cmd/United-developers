@@ -66,7 +66,11 @@ export default function Team() {
                               >
                                 <p>
                                   <div style={{ display: "inline", fontWeight: "700" }}>
-                                    Financial Times
+                                    <p>
+                                      <u style={{ fontWeight: "normal" }}>
+                                        Financial Times
+                                      </u>
+                                    </p>
                                   </div>
                                 </p>
                               </a>
