@@ -122,14 +122,22 @@ export default function CasablancaPlanning() {
       <Navigation />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-b from-background to-muted/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section
+          className="py-20 bg-cover bg-center bg-no-repeat relative"
+          style={{
+            backgroundImage: isDark
+              ? `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F21313099df214c3f8ef4d6321607aa24?format=webp&width=1920')`
+              : `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F10eb005d041148f4b80d1d1125c78fb7?format=webp&width=1920')`,
+          }}
+        >
+          <div className="absolute inset-0 bg-black/40 dark:bg-black/50"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6" data-testid="text-page-title">
+              <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
                 <p>Vinopolis</p>
               </h1>
-              <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
+              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
                 Where contemporary architecture meets viticultural traditions
               </p>
             </div>
