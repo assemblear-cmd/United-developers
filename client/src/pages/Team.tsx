@@ -54,8 +54,10 @@ export default function Team() {
                           <li>
                             <p>
                               �� <p>
-                                <span style={{ fontSize: "14px" }}>• </span>
-                                China's most influential architect, according to the{" "}
+                                <div style={{ display: "inline", fontWeight: "400" }}>
+                                  •{" "}
+                                </div>
+                                China's most influential architect, according to the
                               </p>
                               <a
                                 href="http://ft.com/content/82412506-3cf8-11df-bbcf-00144feabdc0"
