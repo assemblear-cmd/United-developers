@@ -180,22 +180,22 @@ export default function Team() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {/* Sergei Stepanov */}
               <Card className="overflow-hidden hover-elevate transition-all duration-300">
-                <div className="aspect-square">
-                  <img 
+                <div className="relative">
+                  <img
                     src={sergeiImage}
                     alt="Sergei Stepanov"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover min-h-[300px]"
                     data-testid="img-sergei-portrait"
                   />
                 </div>
-                <CardContent className="p-4">
-                  <h3 className="font-serif text-lg font-bold text-foreground mb-1" data-testid="text-sergei-name">
+                <CardContent className="p-6">
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-2" data-testid="text-sergei-name">
                     Sergei Stepanov
                   </h3>
-                  <p className="text-muted-foreground mb-2 text-sm" data-testid="text-sergei-role">
+                  <p className="text-muted-foreground mb-3" data-testid="text-sergei-role">
                     System Architect
                   </p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     Partner
                   </p>
                 </CardContent>
