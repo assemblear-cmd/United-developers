@@ -61,7 +61,10 @@ export default function Navigation() {
             {navItems.map((item) => (
               <Link key={item.href} href={item.href} data-testid={`link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}>
                 <p>
-                  <span className={`text-sm font-medium transition-colors hover:text-primary text-white`}>
+                  <span
+                    className={`text-sm font-medium transition-colors hover:text-primary text-white`}
+                    style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" }}
+                  >
                     {item.label}
                   </span>
                 </p>
