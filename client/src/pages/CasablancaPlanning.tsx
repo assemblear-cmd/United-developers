@@ -236,26 +236,26 @@ export default function CasablancaPlanning() {
                   <div className="grid md:grid-cols-3 gap-12 text-center">
                     <div>
                       <div className="text-3xl font-bold text-primary mb-2" data-testid="text-commercial-area">
-                        102,240 m²
+                        <p>12,400 m²</p>
                       </div>
                       <div className="text-sm text-muted-foreground uppercase tracking-wider">
-                        Commercial Street
+                        <p>Vacation Villas</p>
                       </div>
                     </div>
                     <div>
                       <div className="text-3xl font-bold text-primary mb-2" data-testid="text-community-area">
-                        35,699 m²
+                        <p>9,900 m²</p>
                       </div>
                       <div className="text-sm text-muted-foreground uppercase tracking-wider">
-                        Community Cluster
+                        <p>Condo / Hotel</p>
                       </div>
                     </div>
                     <div>
                       <div className="text-3xl font-bold text-primary mb-2" data-testid="text-vineyard-area">
-                        39,571 m²
+                        <p>5,200 m²</p>
                       </div>
                       <div className="text-sm text-muted-foreground uppercase tracking-wider">
-                        Vineyard Integration
+                        <p>Retail Commercial</p>
                       </div>
                     </div>
                   </div>
