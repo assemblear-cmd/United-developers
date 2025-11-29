@@ -82,7 +82,7 @@ export default function Team() {
                           <li>
                             <p>
                               <div style={{ display: "inline", fontWeight: "400" }}>
-                                •{" "}
+                                •
                               </div>
                               Led urban planning projects in Beijing, Shanghai, Shenzhen, Hangzhou, Ningbo, Chengdu, Xi'an and Tianjin
                             </p>
