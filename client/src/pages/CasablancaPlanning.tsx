@@ -259,6 +259,15 @@ export default function CasablancaPlanning() {
                       </div>
                     </div>
                   </div>
+
+                  <div className="mt-12 pt-12 border-t border-primary/20 text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">
+                      <p>1,195,000 m²</p>
+                    </div>
+                    <div className="text-sm text-muted-foreground uppercase tracking-wider">
+                      <p>Total Area</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>
