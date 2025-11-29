@@ -63,8 +63,6 @@ export default function Team() {
                                 rel="noopener noreferrer"
                                 target="_blank"
                                 href="http://ft.com/content/82412506-3cf8-11df-bbcf-00144feabdc0"
-                                rel="noopener noreferrer"
-                                target="_blank"
                               >
                                 <p><u>Financial Times</u></p>
                               </a>
