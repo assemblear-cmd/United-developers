@@ -125,7 +125,7 @@ export default function Team() {
                           Architect
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          Partner, Architect,
+                          Partner
                         </p>
                       </div>
                     </div>
@@ -158,7 +158,7 @@ export default function Team() {
                     System Architect
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Partner, Data Master, Project Manager
+                    <p>Partner</p>
                   </p>
                 </CardContent>
               </Card>
