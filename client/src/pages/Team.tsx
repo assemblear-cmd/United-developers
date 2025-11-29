@@ -73,7 +73,12 @@ export default function Team() {
                               </p>
                             </p>
                           </li>
-                          <li>• Led urban planning projects in Beijing, Shanghai, Shenzhen, Hangzhou, Ningbo, Chengdu, Xi'an and Tianjin</li>
+                          <li>
+                            <p>
+                              <span style={{ fontSize: "14px" }}>• </span>
+                              Led urban planning projects in Beijing, Shanghai, Shenzhen, Hangzhou, Ningbo, Chengdu, Xi'an and Tianjin
+                            </p>
+                          </li>
                         </ul>
                       </div>
 
