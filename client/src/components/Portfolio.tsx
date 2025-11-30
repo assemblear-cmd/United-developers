@@ -104,7 +104,7 @@ function ProjectCard({
 
         {/* Year overlay */}
         <div className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-md">
-          <span className="font-semibold text-sm" data-testid={`text-year-${id}`}>{year}</span>
+          <p className="font-semibold text-sm" data-testid={`text-year-${id}`}>{year}</p>
         </div>
       </div>
 
@@ -163,7 +163,7 @@ const unitedDevelopersProjects = [
     id: "casablanca-planning",
     title: "Vinopolis",
     location: "Casablanca, Chile",
-    year: "2024",
+    year: "2025",
     type: "Urban Planning" as const,
     image: casablancaImage,
     area: "500 hectares",
@@ -210,7 +210,7 @@ const unitedDevelopersProjects = [
     id: "shenshan-central-area",
     title: "Shenzhen-Shantou Special Cooperation Zone Central Area Planning",
     location: "Shenzhen, China",
-    year: "2022",
+    year: "2025",
     type: "Urban Planning" as const,
     image: shenshanZoneImage,
     status: "In Progress" as const,
