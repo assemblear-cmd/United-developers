@@ -154,11 +154,11 @@ export default function Team() {
               <Card className="overflow-hidden">
                 <div className="flex flex-col h-full">
                   {/* Image Section */}
-                  <div className="relative aspect-square">
+                  <div className="relative aspect-square overflow-hidden">
                     <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F80804d17aa734b21ad197be78d43330d?format=webp&width=800"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F80804d17aa734b21ad197be78d43330d"
                       alt="Diego Baloian"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                       data-testid="img-diego-portrait"
                     />
                   </div>
