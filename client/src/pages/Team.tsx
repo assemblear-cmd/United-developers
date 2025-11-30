@@ -114,12 +114,13 @@ export default function Team() {
           </div>
         </section>
 
-        {/* Artem Golestian Section */}
+        {/* Team Members Grid Section */}
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Artem Golestian Card */}
               <Card className="overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                <div className="flex flex-col h-full">
                   {/* Image Section */}
                   <div className="relative aspect-square">
                     <img
@@ -131,16 +132,16 @@ export default function Team() {
                   </div>
 
                   {/* Content Section */}
-                  <CardContent className="p-6 lg:p-8">
-                    <div className="space-y-6">
+                  <CardContent className="p-6 flex flex-col flex-grow">
+                    <div className="space-y-3">
                       <div>
-                        <h3 className="font-serif text-3xl font-bold text-foreground mb-2" data-testid="text-artem-name">
+                        <h3 className="font-serif text-2xl font-bold text-foreground mb-1" data-testid="text-artem-name">
                           Artem Golestian
                         </h3>
-                        <p className="text-muted-foreground mb-3" data-testid="text-artem-role">
+                        <p className="text-muted-foreground text-sm mb-2" data-testid="text-artem-role">
                           Architect
                         </p>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-xs text-muted-foreground">
                           Partner
                         </p>
                       </div>
@@ -148,16 +149,10 @@ export default function Team() {
                   </CardContent>
                 </div>
               </Card>
-            </div>
-          </div>
-        </section>
 
-        {/* Diego Baloian Section */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
+              {/* Diego Baloian Card */}
               <Card className="overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                <div className="flex flex-col h-full">
                   {/* Image Section */}
                   <div className="relative aspect-square">
                     <img
@@ -169,16 +164,16 @@ export default function Team() {
                   </div>
 
                   {/* Content Section */}
-                  <CardContent className="p-6 lg:p-8">
-                    <div className="space-y-6">
+                  <CardContent className="p-6 flex flex-col flex-grow">
+                    <div className="space-y-3">
                       <div>
-                        <h3 className="font-serif text-3xl font-bold text-foreground mb-2" data-testid="text-diego-name">
+                        <h3 className="font-serif text-2xl font-bold text-foreground mb-1" data-testid="text-diego-name">
                           Diego Baloian
                         </h3>
-                        <p className="text-muted-foreground mb-3" data-testid="text-diego-role">
+                        <p className="text-muted-foreground text-sm mb-2" data-testid="text-diego-role">
                           Architect
                         </p>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-xs text-muted-foreground">
                           Partner
                         </p>
                       </div>
@@ -186,16 +181,10 @@ export default function Team() {
                   </CardContent>
                 </div>
               </Card>
-            </div>
-          </div>
-        </section>
 
-        {/* Sergei Stepanov Section */}
-        <section className="py-16 bg-muted/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
+              {/* Sergei Stepanov Card */}
               <Card className="overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                <div className="flex flex-col h-full">
                   {/* Image Section */}
                   <div className="relative aspect-square">
                     <img
@@ -207,16 +196,16 @@ export default function Team() {
                   </div>
 
                   {/* Content Section */}
-                  <CardContent className="p-6 lg:p-8">
-                    <div className="space-y-6">
+                  <CardContent className="p-6 flex flex-col flex-grow">
+                    <div className="space-y-3">
                       <div>
-                        <h3 className="font-serif text-3xl font-bold text-foreground mb-2" data-testid="text-sergei-name">
+                        <h3 className="font-serif text-2xl font-bold text-foreground mb-1" data-testid="text-sergei-name">
                           Sergei Stepanov
                         </h3>
-                        <p className="text-muted-foreground mb-3" data-testid="text-sergei-role">
+                        <p className="text-muted-foreground text-sm mb-2" data-testid="text-sergei-role">
                           System Architect
                         </p>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
+                        <p className="text-xs text-muted-foreground">
                           Partner
                         </p>
                       </div>
