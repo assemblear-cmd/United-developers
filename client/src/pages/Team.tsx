@@ -122,11 +122,11 @@ export default function Team() {
               <Card className="overflow-hidden">
                 <div className="flex flex-col h-full">
                   {/* Image Section */}
-                  <div className="relative aspect-square">
+                  <div className="relative aspect-square overflow-hidden">
                     <img
                       src={artemImage}
                       alt="Artem Golestian"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                       data-testid="img-artem-portrait"
                     />
                   </div>
@@ -186,11 +186,11 @@ export default function Team() {
               <Card className="overflow-hidden">
                 <div className="flex flex-col h-full">
                   {/* Image Section */}
-                  <div className="relative aspect-square">
+                  <div className="relative aspect-square overflow-hidden">
                     <img
                       src={sergeiImage}
                       alt="Sergei Stepanov"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                       data-testid="img-sergei-portrait"
                     />
                   </div>
