@@ -1,6 +1,10 @@
 export default {
   plugins: {
-    tailwindcss: {},
+    tailwindcss: {
+      content: [
+        "./client/src/**/*.{js,jsx,ts,tsx}",
+      ],
+    },
     autoprefixer: {},
   },
 }
