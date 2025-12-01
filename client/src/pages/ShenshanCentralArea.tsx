@@ -151,7 +151,7 @@ export default function ShenshanCentralArea() {
         <section
           className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center -mt-16 pt-16"
           style={{
-            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F26c4f059135b4106b79887cb03937ec3?format=webp&width=1920')`,
+            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Ff2eba63c5cf442e2b9676ed32c0f3938?format=webp&width=1920')`,
           }}
         >
           <div className="absolute inset-0 bg-black/40 dark:bg-black/50"></div>
@@ -250,17 +250,25 @@ export default function ShenshanCentralArea() {
         {/* Lightbox Modal */}
         {isLightboxOpen && (
           <div
-            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 overflow-auto"
             onClick={() => setIsLightboxOpen(false)}
           >
             <div
-              className="relative max-w-5xl w-full max-h-[90vh] md:max-h-[85vh] landscape:max-h-[95vh]"
+              className="relative flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
+              style={{
+                maxHeight: '90vh',
+                maxWidth: '90vw',
+              }}
             >
               <img
                 src={projectImages[carouselIndex].src}
                 alt={projectImages[carouselIndex].alt}
-                className="w-full h-full object-contain"
+                className="object-contain max-w-full max-h-full"
+                style={{
+                  maxHeight: '90vh',
+                  maxWidth: '90vw',
+                }}
               />
 
               {/* Navigation Buttons - Mobile */}
