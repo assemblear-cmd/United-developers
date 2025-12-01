@@ -7,11 +7,15 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOverDarkBg, setIsOverDarkBg] = useState(true);
   const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      // Detect if we're over a dark background (hero section is ~600-800px tall)
+      // When scroll is near the top, we're over dark background
+      setIsOverDarkBg(window.scrollY < 600);
     };
 
     window.addEventListener("scroll", handleScroll);
