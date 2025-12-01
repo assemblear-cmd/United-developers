@@ -134,7 +134,7 @@ export default function CasablancaPlanning() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
-                <p>Vinopolis</p>
+                Vinopolis
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
               <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
@@ -149,9 +149,7 @@ export default function CasablancaPlanning() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8">
-                <p>
-                  Vinopolis – where wine, architecture and landscape become a way of life
-                </p>
+                Vinopolis – where wine, architecture and landscape become a way of life
               </h2>
 
               <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
