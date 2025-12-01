@@ -5,11 +5,13 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Ruler, CheckCircle, Leaf, Zap, Users, Compass, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 // Import project images
 import shenshanImage from "@assets/Screenshot_2025-09-27-18-49-24-999_cn.wps.xiaomi.abroad.lite-edit_1759009870282.jpg";
 
 export default function ShenshanCentralArea() {
+  const { t } = useTranslation();
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
