@@ -116,7 +116,7 @@ export default function ShenshanCentralArea() {
     {
       icon: Calendar,
       value: "2025",
-      label: "Expected Completion"
+      label: "Project started"
     },
     {
       icon: CheckCircle,
