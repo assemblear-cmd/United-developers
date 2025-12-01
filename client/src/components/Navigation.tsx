@@ -55,13 +55,13 @@ export default function Navigation() {
             <Button
               variant="ghost"
               onClick={() => window.history.back()}
-              className={`group flex items-center gap-2 ${isDark ? 'text-white' : 'text-gray-700'} hover:text-primary`}
+              className={`group flex items-center gap-2 ${isOverDarkBg ? 'text-white' : 'text-gray-700'} hover:text-primary`}
               data-testid="button-back-to-projects-nav"
             >
               <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
               <span
                 className="font-serif text-lg font-semibold"
-                style={isDark ? { textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" } : {}}
+                style={isOverDarkBg ? { textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" } : {}}
               >
                 Back
               </span>
