@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Square, ArrowRight, Building, Home, ChevronDown } from "lucide-react";
 import { useLocation } from "wouter";
+import { useTranslation } from "react-i18next";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -52,6 +53,7 @@ function ProjectCard({
   description
 }: ProjectCardProps) {
   const [, setLocation] = useLocation();
+  const { t } = useTranslation();
   
   const handleViewDetails = () => {
     window.scrollTo(0, 0);
@@ -158,7 +160,7 @@ function ProjectCard({
           onClick={handleViewDetails}
           data-testid={`button-view-details-${id}`}
         >
-          View Project
+          {t('portfolio.viewProject')}
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardContent>
@@ -241,6 +243,7 @@ const unitedDevelopersProjects = [
 ];
 
 export default function Portfolio() {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState<"all" | "Urban Planning" | "Commercial">("all");
   const [statusFilter, setStatusFilter] = useState<"all" | "Completed" | "In Progress">("all");
 
