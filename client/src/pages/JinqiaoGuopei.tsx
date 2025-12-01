@@ -41,6 +41,16 @@ export default function JinqiaoGuopei() {
       src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F3f2e73ae29af49bfbfdd08f2b2dbca3c?format=webp&width=1200",
       alt: "Urban skyline with modern commercial towers and infrastructure",
       title: "Skyline View"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F21d5784aa5bc4584a34f87bb95abf197?format=webp&width=1200",
+      alt: "Waterfront development with modern architecture and public spaces",
+      title: "Waterfront Complex"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fdfc6fa8965704f3e84ec53d3fc69eb94?format=webp&width=1200",
+      alt: "Mixed-use development with tiered architecture and landscaping",
+      title: "Terraced Design"
     }
   ];
 
@@ -104,9 +114,6 @@ export default function JinqiaoGuopei() {
           <div className="absolute inset-0 bg-black/40"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <Badge variant="outline" className="mb-6" data-testid="badge-project-type">
-                Commercial
-              </Badge>
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
                 Jinqiao Guopei 1851
               </h1>
