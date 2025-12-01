@@ -39,11 +39,6 @@ export default function JinqiaoGuopei() {
 
   const projectImages = [
     {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F2a1afede1cc94e8798f4e4909b34323c?format=webp&width=1200",
-      alt: "Aerial view of mixed-use development with modern architecture and infrastructure",
-      title: "Aerial Complex"
-    },
-    {
       src: jinqiaoImage,
       alt: "Jinqiao Guopei 1851 mixed-use commercial complex in Shanghai",
       title: "Commercial Complex"
