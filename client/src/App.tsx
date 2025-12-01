@@ -10,6 +10,7 @@ import MaQingyun from "@/pages/MaQingyun";
 import CasablancaPlanning from "@/pages/CasablancaPlanning";
 import XixianCBD from "@/pages/XixianCBD";
 import JinqiaoGuopei from "@/pages/JinqiaoGuopei";
+import HuyaoOffice from "@/pages/HuyaoOffice";
 import Contacts from "@/pages/Contacts";
 import NotFound from "@/pages/not-found";
 
@@ -23,6 +24,7 @@ function Router() {
       <Route path="/casablanca" component={CasablancaPlanning} />
       <Route path="/xixian" component={XixianCBD} />
       <Route path="/jinqiao" component={JinqiaoGuopei} />
+      <Route path="/huyao" component={HuyaoOffice} />
       <Route path="/contact" component={Contacts} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
