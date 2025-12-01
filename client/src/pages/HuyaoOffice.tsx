@@ -120,9 +120,6 @@ export default function HuyaoOffice() {
                 <p>Huyao Office Building</p>
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
-              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                Functionality, economy and artistry unified through rational and harmonious design
-              </p>
             </div>
           </div>
         </section>
