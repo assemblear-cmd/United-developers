@@ -2,8 +2,9 @@ import Navigation from "@/components/Navigation";
 import { useState, useEffect } from "react";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Building, Compass, Mountain, ChevronLeft, ChevronRight } from "lucide-react";
+import { MapPin, Building, Compass, Mountain, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocation } from "wouter";
 
 // Import project images
 import vineyard1 from "@assets/IMG-20250918-WA0002_1759023615741.jpg";
@@ -15,6 +16,7 @@ import hillsideArchitecture from "@assets/IMG-20250926-WA0005_1759023616070.jpg"
 import modernVillage from "@assets/IMG-20250926-WA0004_1759023616106.jpg";
 
 export default function CasablancaPlanning() {
+  const [, setLocation] = useLocation();
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
@@ -121,6 +123,18 @@ export default function CasablancaPlanning() {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main>
+        {/* Back Button */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-4">
+          <Button
+            variant="ghost"
+            onClick={() => setLocation("/portfolio")}
+            className="group flex items-center gap-2 text-muted-foreground hover:text-foreground"
+            data-testid="button-back-to-portfolio"
+          >
+            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+            Back to Projects
+          </Button>
+        </div>
         {/* Hero Section */}
         <section
           className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center -mt-16 pt-16"
