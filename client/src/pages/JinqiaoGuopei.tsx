@@ -33,6 +33,11 @@ export default function JinqiaoGuopei() {
 
   const projectImages = [
     {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F2a1afede1cc94e8798f4e4909b34323c?format=webp&width=1200",
+      alt: "Aerial view of mixed-use development with modern architecture and infrastructure",
+      title: "Aerial Complex"
+    },
+    {
       src: jinqiaoImage,
       alt: "Jinqiao Guopei 1851 mixed-use commercial complex in Shanghai",
       title: "Commercial Complex"
@@ -46,11 +51,6 @@ export default function JinqiaoGuopei() {
       src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F21d5784aa5bc4584a34f87bb95abf197?format=webp&width=1200",
       alt: "Waterfront development with modern architecture and public spaces",
       title: "Waterfront Complex"
-    },
-    {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fdfc6fa8965704f3e84ec53d3fc69eb94?format=webp&width=1200",
-      alt: "Mixed-use development with tiered architecture and landscaping",
-      title: "Terraced Design"
     }
   ];
 
