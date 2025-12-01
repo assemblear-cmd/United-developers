@@ -149,7 +149,7 @@ export default function ShenshanCentralArea() {
       <main>
         {/* Hero Section */}
         <section
-          className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center -mt-16 pt-16"
+          className="bg-cover bg-center bg-no-repeat relative h-[50vh] flex items-center justify-center -mt-16 pt-16"
           style={{
             backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Ff2eba63c5cf442e2b9676ed32c0f3938?format=webp&width=1920')`,
           }}
