@@ -151,7 +151,7 @@ export default function ShenshanCentralArea() {
         <section
           className="bg-cover bg-center bg-no-repeat relative h-[50vh] flex items-center justify-center -mt-16 pt-16"
           style={{
-            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Ff2eba63c5cf442e2b9676ed32c0f3938?format=webp&width=1920')`,
+            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F2b9833ad80ad45ae968c1c5a6802c853?format=webp&width=1920')`,
           }}
         >
           <div className="absolute inset-0 bg-black/40 dark:bg-black/50"></div>
