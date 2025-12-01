@@ -2,17 +2,45 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Ruler, CheckCircle, Building2, Palette, Users, Landmark } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { MapPin, Calendar, Ruler, CheckCircle, Building2, Palette, Users, Landmark, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 // Import project images
 import xianTVImage from "@assets/IMG_20250926_212722_1758934379201.jpg";
 
 export default function XianTVBroadcast() {
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const isDarkMode = document.documentElement.classList.contains("dark");
+      setIsDark(isDarkMode);
+    };
+
+    checkDarkMode();
+
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const projectImages = [
-    { 
-      src: xianTVImage, 
+    {
+      src: xianTVImage,
       alt: "Xi'an TV Broadcast Center showing distinctive architectural design with symbolic wall and modernist forms",
       title: "Media City Icon"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F54445f0c76ec462f86628c5cf0eb2c37?format=webp&width=1200",
+      alt: "Modern broadcast center with distinctive architectural forms and landscaped plaza",
+      title: "Broadcast Facility"
     }
   ];
 
