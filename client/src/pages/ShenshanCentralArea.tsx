@@ -164,11 +164,11 @@ export default function ShenshanCentralArea() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
-                <p>Shenzhen-Shantou Special<br />Cooperation Zone</p>
+                <p>{t('projects.shenshan.title').split(' Central')[0]}<br />{t('projects.shenshan.title').includes('Central') ? 'Central ' + t('projects.shenshan.title').split('Central ')[1] : ''}</p>
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
               <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                Pioneering new urban development paradigms balancing countryside preservation and ecological sustainability
+                {t('projects.shenshan.subtitle')}
               </p>
             </div>
           </div>
@@ -180,21 +180,21 @@ export default function ShenshanCentralArea() {
             <div className="max-w-4xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8">
                 <p>
-                  Ecological Pastoral Vision
+                  {t('projects.shenshan.heading')}
                 </p>
               </h2>
 
               <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  The Shenzhen-Shantou Special Cooperation Zone Central Area Planning represents a pioneering approach to contemporary urban development in China. Located approximately 120 kilometers from Shenzhen's center, the zone encompasses 68 square kilometers with a 10 square kilometer urban core designated for intensive development.
+                  {t('projects.shenshan.content1')}
                 </p>
 
                 <p>
-                  The project's core objective integrates water resources management with regional character preservation, balancing the return to farmland and pastoral qualities with contemporary urban development. This comprehensive strategy aims to create an "ecological pastoral city" that serves as a new model for sustainable urban development across China.
+                  {t('projects.shenshan.content2')}
                 </p>
 
                 <p>
-                  As chief urban and rural planner, the design implements a comprehensive framework that protects pastoral areas, maintains ecological systems, and promotes cross-industry innovation. The planning approach prioritizes lifecycle management concepts to ensure sustainable operation and long-term viability of the entire development.
+                  {t('projects.shenshan.content3')}
                 </p>
               </div>
             </div>
@@ -206,7 +206,7 @@ export default function ShenshanCentralArea() {
           <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
             <div className="text-center mb-8 md:mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Gallery
+                {t('common.gallery')}
               </h2>
               <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-4 md:mb-8"></div>
             </div>
