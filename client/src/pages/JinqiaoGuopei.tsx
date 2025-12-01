@@ -2,17 +2,45 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Ruler, CheckCircle, Building2, Leaf, Zap, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { MapPin, Calendar, Ruler, CheckCircle, Building2, Leaf, Zap, Users, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 // Import project images
 import jinqiaoImage from "@assets/Screenshot_2025-09-27-15-36-36-976_cn.wps.xiaomi.abroad.lite-edit_1759009184273.jpg";
 
 export default function JinqiaoGuopei() {
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const isDarkMode = document.documentElement.classList.contains("dark");
+      setIsDark(isDarkMode);
+    };
+
+    checkDarkMode();
+
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const projectImages = [
-    { 
-      src: jinqiaoImage, 
+    {
+      src: jinqiaoImage,
       alt: "Jinqiao Guopei 1851 mixed-use commercial complex in Shanghai",
       title: "Commercial Complex"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F3f2e73ae29af49bfbfdd08f2b2dbca3c?format=webp&width=1200",
+      alt: "Urban skyline with modern commercial towers and infrastructure",
+      title: "Skyline View"
     }
   ];
 
