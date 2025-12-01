@@ -15,6 +15,10 @@ export default function XianTVBroadcast() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const checkDarkMode = () => {
       const isDarkMode = document.documentElement.classList.contains("dark");
       setIsDark(isDarkMode);
