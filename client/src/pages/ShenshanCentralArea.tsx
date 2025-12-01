@@ -32,8 +32,8 @@ export default function ShenshanCentralArea() {
   }, []);
 
   const projectImages = [
-    { 
-      src: shenshanImage, 
+    {
+      src: shenshanImage,
       alt: "Shenzhen-Shantou Special Cooperation Zone Central Area master plan showing geographic location and development zones",
       title: "Master Plan Overview"
     },
@@ -41,6 +41,41 @@ export default function ShenshanCentralArea() {
       src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F26c4f059135b4106b79887cb03937ec3?format=webp&width=800",
       alt: "Aerial view of Shenzhen-Shantou Cooperation Zone at night showing landscape and urban development",
       title: "Aerial Development"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F1746ead85598426d81f25712ddf64ada?format=webp&width=800",
+      alt: "Detailed master plan map showing urban layout, waterways, and development zones",
+      title: "Detailed Site Plan"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Ff90713b7733842a99af74194df8a1bae?format=webp&width=800",
+      alt: "Coastal landscape perspective showing integration with natural geography and beaches",
+      title: "Coastal Integration"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F7310ccb58a164b75b14979705661b0f6?format=webp&width=800",
+      alt: "Public plaza and waterfront pedestrian experience with architectural elements",
+      title: "Public Spaces"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F9ad7947e66ff42fd993e913de2a6fca0?format=webp&width=800",
+      alt: "Urban corridor perspective showing mixed-use development and public realm",
+      title: "Urban Corridor"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fa4d008fcb5f44ec287486bd2ea7b063b?format=webp&width=800",
+      alt: "Landscape view of central development with green spaces and urban layout",
+      title: "Central Development"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F153cdbb08d4940fca2ae967733e81f14?format=webp&width=800",
+      alt: "Nighttime aerial perspective showing full development with lighting and infrastructure",
+      title: "Night Vision"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F84242b78ee224891a6dbbee6b7ac4831?format=webp&width=800",
+      alt: "Ground-level streetscape showing pedestrian experience and architectural design",
+      title: "Street Level Experience"
     }
   ];
 
