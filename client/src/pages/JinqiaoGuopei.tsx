@@ -67,17 +67,23 @@ export default function JinqiaoGuopei() {
       <Navigation />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-b from-background to-muted/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section
+          className="py-20 bg-cover bg-center relative"
+          style={{
+            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F66c447136e434331b011ecedd4a00b05?format=webp&width=800)',
+          }}
+        >
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
               <Badge variant="outline" className="mb-6" data-testid="badge-project-type">
                 Commercial
               </Badge>
-              <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6" data-testid="text-page-title">
+              <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
                 Jinqiao Guopei 1851
               </h1>
               <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
                 International metropolis symbol through high-complexity function configuration and multi-dimensional spatial interleaving
               </p>
             </div>
