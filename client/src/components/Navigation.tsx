@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X, ArrowLeft } from "lucide-react";
 import { Link, useLocation } from "wouter";
 
 export default function Navigation() {
@@ -31,6 +31,8 @@ export default function Navigation() {
     document.documentElement.classList.toggle("dark", newDarkMode);
   };
 
+  const isProjectPage = ["/casablanca", "/xixian", "/jinqiao"].includes(location);
+
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/portfolio", label: "Projects" },
@@ -44,20 +46,37 @@ export default function Navigation() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" data-testid="link-home">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">UD</span>
-              </div>
+          {/* Logo / Back Button */}
+          {isProjectPage ? (
+            <Button
+              variant="ghost"
+              onClick={() => window.history.back()}
+              className="group flex items-center gap-2 text-white hover:text-primary"
+              data-testid="button-back-to-projects-nav"
+            >
+              <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
               <span
-                className="font-serif text-xl font-bold text-white"
+                className="font-serif text-lg font-semibold"
                 style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" }}
               >
-                United Developers
+                Back to Projects
               </span>
-            </div>
-          </Link>
+            </Button>
+          ) : (
+            <Link href="/" data-testid="link-home">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold text-sm">UD</span>
+                </div>
+                <span
+                  className="font-serif text-xl font-bold text-white"
+                  style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" }}
+                >
+                  United Developers
+                </span>
+              </div>
+            </Link>
+          )}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
