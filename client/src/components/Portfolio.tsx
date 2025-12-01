@@ -62,6 +62,8 @@ function ProjectCard({
       setLocation("/jinqiao");
     } else if (id === "huyao-office-building") {
       setLocation("/huyao");
+    } else if (id === "shenshan-central-area") {
+      setLocation("/shenshan");
     } else {
       console.log(`Viewing details for project ${id}`);
     }
