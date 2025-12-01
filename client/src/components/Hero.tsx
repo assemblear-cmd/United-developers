@@ -2,8 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Award } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
@@ -49,7 +51,7 @@ export default function Hero() {
               className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm px-8 py-4 text-lg font-medium"
               data-testid="button-new-casablanca"
             >
-              <p>Vinopolis</p>
+              <p>{t('hero.vinopolis')}</p>
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>

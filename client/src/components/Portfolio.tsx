@@ -259,14 +259,14 @@ export default function Portfolio() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Our Projects
+            {t('portfolio.title')}
           </h2>
         </div>
 
         {/* Filters */}
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
           <div className="flex items-center space-x-2">
-            <span className="text-sm font-medium text-muted-foreground">Status:</span>
+            <span className="text-sm font-medium text-muted-foreground">{t('portfolio.filters.status')}</span>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -275,7 +275,7 @@ export default function Portfolio() {
                   data-testid="button-status-all"
                   className="flex items-center gap-2"
                 >
-                  {statusFilter === "all" ? "All" : statusFilter}
+                  {statusFilter === "all" ? t('portfolio.filters.all') : statusFilter === "Completed" ? t('portfolio.filters.completed') : t('portfolio.filters.inProgress')}
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -285,28 +285,28 @@ export default function Portfolio() {
                   data-testid="status-option-all"
                   className={statusFilter === "all" ? "bg-primary text-primary-foreground" : ""}
                 >
-                  All
+                  {t('portfolio.filters.all')}
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => setStatusFilter("Completed")}
                   data-testid="status-option-completed"
                   className={statusFilter === "Completed" ? "bg-primary text-primary-foreground" : ""}
                 >
-                  Completed
+                  {t('portfolio.filters.completed')}
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => setStatusFilter("In Progress")}
                   data-testid="status-option-in-progress"
                   className={statusFilter === "In Progress" ? "bg-primary text-primary-foreground" : ""}
                 >
-                  In progress
+                  {t('portfolio.filters.inProgress')}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
 
           <div className="flex items-center space-x-2">
-            <span className="text-sm font-medium text-muted-foreground">Type:</span>
+            <span className="text-sm font-medium text-muted-foreground">{t('portfolio.filters.type')}</span>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -315,7 +315,7 @@ export default function Portfolio() {
                   data-testid="button-filter-all"
                   className="flex items-center gap-2"
                 >
-                  {filter === "all" ? "All" : filter}
+                  {filter === "all" ? t('portfolio.filters.all') : filter === "Commercial" ? t('portfolio.filters.commercial') : t('portfolio.filters.urbanPlanning')}
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -325,21 +325,21 @@ export default function Portfolio() {
                   data-testid="filter-option-all"
                   className={filter === "all" ? "bg-primary text-primary-foreground" : ""}
                 >
-                  All
+                  {t('portfolio.filters.all')}
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => setFilter("Commercial")}
                   data-testid="filter-option-commercial"
                   className={filter === "Commercial" ? "bg-primary text-primary-foreground" : ""}
                 >
-                  Commercial
+                  {t('portfolio.filters.commercial')}
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => setFilter("Urban Planning")}
                   data-testid="filter-option-planning"
                   className={filter === "Urban Planning" ? "bg-primary text-primary-foreground" : ""}
                 >
-                  Urban Planning
+                  {t('portfolio.filters.urbanPlanning')}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -364,7 +364,7 @@ export default function Portfolio() {
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
             <p className="text-muted-foreground text-lg">
-              No projects found with the selected filters.
+              {t('portfolio.noResults')}
             </p>
             <Button
               variant="outline"
@@ -375,7 +375,7 @@ export default function Portfolio() {
               }}
               data-testid="button-reset-filters"
             >
-              Clear Filters
+              {t('portfolio.clearFilters')}
             </Button>
           </div>
         )}
