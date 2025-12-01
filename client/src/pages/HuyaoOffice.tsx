@@ -5,14 +5,20 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Building2, CheckCircle, Leaf, Users, Zap, Layout, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 // Import project images
 import huyaoImage from "@assets/Screenshot_2025-09-27-18-45-22-455_cn.wps.xiaomi.abroad.lite-edit_1759009642993.jpg";
 
 export default function HuyaoOffice() {
+  const { t } = useTranslation();
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const checkDarkMode = () => {
@@ -57,23 +63,23 @@ export default function HuyaoOffice() {
   const projectFeatures = [
     {
       icon: Building2,
-      title: "Integrity & Integration",
-      description: "Unified design approach combining functionality, economy and artistry"
+      title: t('projects.huyao.integrity'),
+      description: t('projects.huyao.integrityDesc')
     },
     {
       icon: Leaf,
-      title: "Landscape Integration",
-      description: "Seamless incorporation into surrounding buildings and natural environment"
+      title: t('projects.huyao.landscape'),
+      description: t('projects.huyao.landscapeDesc')
     },
     {
       icon: Layout,
-      title: "Unit Office Settlements",
-      description: "Modular office design with outdoor platforms and roof gardens"
+      title: t('projects.huyao.unitOffice'),
+      description: t('projects.huyao.unitOfficeDesc')
     },
     {
       icon: Users,
-      title: "Shared Facilities",
-      description: "Compound functions with shared resources ensuring comfort and efficiency"
+      title: t('projects.huyao.sharedFacilities'),
+      description: t('projects.huyao.sharedFacilitiesDesc')
     }
   ];
 
@@ -117,7 +123,7 @@ export default function HuyaoOffice() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
-                <p>Huyao Office Building</p>
+                <p>{t('projects.huyao.title')}</p>
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
             </div>
@@ -130,21 +136,21 @@ export default function HuyaoOffice() {
             <div className="max-w-4xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8">
                 <p>
-                  Integrated Design Excellence
+                  {t('projects.huyao.heading')}
                 </p>
               </h2>
 
               <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  The Huyao Office Building represents a comprehensive approach to contemporary commercial architecture in Shanghai. The design combines functionality, economy, and artistry through rational and harmonious layout concepts that meet the highest standards of sustainable development.
+                  {t('projects.huyao.content1')}
                 </p>
 
                 <p>
-                  The project exemplifies the integration of "integrity, integration, and openness" characteristics. Functions are thoughtfully compounded while facilities are intelligently shared, ensuring optimal comfort of base spaces while maintaining a pleasant scale and calm atmosphere throughout the building.
+                  {t('projects.huyao.content2')}
                 </p>
 
                 <p>
-                  The design strategy incorporates unit office settlements, outdoor platforms, roof gardens, and central garden corridors. This creates an enclosed building form that respects and integrates with the overall planning of surrounding structures and the natural environment, resulting in a cohesive urban composition.
+                  {t('projects.huyao.content3')}
                 </p>
               </div>
             </div>
@@ -152,16 +158,16 @@ export default function HuyaoOffice() {
         </section>
 
         {/* Image Gallery */}
-        <section className="py-20 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+        <section className="py-12 md:py-20 bg-background">
+          <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+            <div className="text-center mb-8 md:mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Gallery
+                {t('common.gallery')}
               </h2>
-              <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-8"></div>
+              <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-4 md:mb-8"></div>
             </div>
 
-            <div className="flex items-center justify-center gap-2 sm:gap-8 w-full max-w-5xl mx-auto">
+            <div className="flex items-center justify-center gap-1 sm:gap-2 md:gap-8 w-full max-w-5xl mx-auto">
               {/* Left Navigation Button */}
               <Button
                 onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
@@ -258,11 +264,11 @@ export default function HuyaoOffice() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="font-serif text-3xl font-semibold text-foreground mb-8">
-                  Design Excellence
+                  {t('projects.huyao.designExcellence')}
                 </h2>
                 <div className="space-y-6 text-muted-foreground leading-relaxed">
                   <p className="text-lg">
-                    The Huyao Office Building demonstrates how contemporary commercial architecture can achieve both functional excellence and aesthetic quality. Each design decision serves both practical and experiential purposes.
+                    {t('projects.huyao.designExcellenceDesc')}
                   </p>
                 </div>
               </div>
@@ -293,7 +299,7 @@ export default function HuyaoOffice() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Design Principles
+                {t('projects.huyao.designPrinciples')}
               </h2>
               <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
             </div>
@@ -326,22 +332,22 @@ export default function HuyaoOffice() {
                 <CardContent className="p-12">
                   <div className="text-center mb-12">
                     <h2 className="font-serif text-3xl font-semibold text-foreground mb-6">
-                      Functional Organization Strategy
+                      {t('projects.huyao.spatialOrg')}
                     </h2>
                     <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
                   </div>
-                  
+
                   <div className="space-y-6 text-muted-foreground leading-relaxed">
                     <p className="text-lg">
-                      The Huyao Office Building is designed on the principle of unit office settlements, creating a network of interconnected workspaces with clear organizational logic. Each unit maintains independence while contributing to the cohesive whole.
+                      {t('projects.huyao.spatialOrgDesc1')}
                     </p>
-                    
+
                     <p>
-                      Outdoor platforms and roof gardens are strategically distributed throughout the structure, providing respite spaces and enhancing the connection between interior work environments and natural light. These features collectively improve workplace quality of life and environmental performance.
+                      {t('projects.huyao.spatialOrgDesc2')}
                     </p>
-                    
+
                     <p>
-                      The central garden corridor serves as the organizing spine, facilitating circulation and creating opportunities for informal interaction and community building. This design approach balances the functional requirements of a modern office building with human-centered spatial qualities.
+                      {t('projects.huyao.spatialOrgDesc3')}
                     </p>
                   </div>
                 </CardContent>

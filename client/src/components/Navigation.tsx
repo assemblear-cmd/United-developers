@@ -1,7 +1,14 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Menu, X, ArrowLeft } from "lucide-react";
+import { Moon, Sun, Menu, X, ArrowLeft, Languages } from "lucide-react";
 import { Link, useLocation } from "wouter";
+import { useTranslation } from "react-i18next";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +16,7 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOverDarkBg, setIsOverDarkBg] = useState(false);
   const [location] = useLocation();
+  const { t, i18n } = useTranslation();
 
   const isProjectPage = ["/casablanca", "/xixian", "/jinqiao", "/huyao", "/shenshan", "/xian-tv"].includes(location);
 
@@ -32,9 +40,15 @@ export default function Navigation() {
   }, [isProjectPage]);
 
   useEffect(() => {
-    const isDarkMode = localStorage.getItem("theme") === "dark";
+    const theme = localStorage.getItem("theme");
+    const isDarkMode = theme === "dark";
     setIsDark(isDarkMode);
     document.documentElement.classList.toggle("dark", isDarkMode);
+
+    // Set default theme to light if not already set
+    if (!theme) {
+      localStorage.setItem("theme", "light");
+    }
   }, []);
 
   const toggleTheme = () => {
@@ -45,10 +59,10 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/portfolio", label: "Projects" },
-    { href: "/team", label: "Team" },
-    { href: "/contact", label: "Contact" }
+    { href: "/", label: t('nav.home') },
+    { href: "/portfolio", label: t('nav.projects') },
+    { href: "/team", label: t('nav.team') },
+    { href: "/contact", label: t('nav.contact') }
   ];
 
   return (
@@ -75,7 +89,7 @@ export default function Navigation() {
                   textShadow: isOverDarkBg ? "0 2px 4px rgba(0, 0, 0, 0.5)" : "none"
                 }}
               >
-                Back
+                {t('nav.back')}
               </span>
             </Button>
           ) : (
@@ -117,7 +131,33 @@ export default function Navigation() {
           </div>
 
           {/* Right side controls */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  data-testid="button-language-toggle"
+                >
+                  <Languages className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem
+                  onClick={() => i18n.changeLanguage('en')}
+                  className={i18n.language === 'en' ? "bg-primary text-primary-foreground" : ""}
+                >
+                  English
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => i18n.changeLanguage('es')}
+                  className={i18n.language === 'es' ? "bg-primary text-primary-foreground" : ""}
+                >
+                  Español
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Button
               variant="ghost"
               size="icon"
@@ -126,7 +166,6 @@ export default function Navigation() {
             >
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
-
 
             {/* Mobile menu button */}
             <Button

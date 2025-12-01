@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Building, Compass, Mountain, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 // Import project images
 import vineyard1 from "@assets/IMG-20250918-WA0002_1759023615741.jpg";
@@ -15,9 +16,14 @@ import hillsideArchitecture from "@assets/IMG-20250926-WA0005_1759023616070.jpg"
 import modernVillage from "@assets/IMG-20250926-WA0004_1759023616106.jpg";
 
 export default function CasablancaPlanning() {
+  const { t } = useTranslation();
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const checkDarkMode = () => {
@@ -134,11 +140,11 @@ export default function CasablancaPlanning() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
-                Vinopolis
+                {t('projects.casablanca.title')}
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
               <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                Where contemporary architecture meets viticultural traditions
+                {t('projects.casablanca.subtitle')}
               </p>
             </div>
           </div>
@@ -149,42 +155,38 @@ export default function CasablancaPlanning() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8">
-                Vinopolis – where wine, architecture and landscape become a way of life
+                {t('projects.casablanca.heading')}
               </h2>
 
               <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  Vinopolis is an international wine-and-lifestyle project located on the plateau between Santiago and the Pacific Ocean, in the heart of Chile's renowned Casablanca Valley. Led by the Jade Valley wine family and architect Qingyun Ma, the project goes far beyond a classic winery: it is a place where vineyards, contemporary architecture and the Chilean landscape are woven into a cohesive environment for living, visiting and investing.
+                  {t('projects.casablanca.content1')}
                 </p>
 
                 <p>
-                  Guided by the philosophy of Vinopolis® – "the ideal city of wine", Vinopolis brings together three layers of experience:
+                  {t('projects.casablanca.content2')}
                 </p>
 
                 <ul className="space-y-3 ml-6">
                   <li>
                     <p>
-                      <span style={{ fontWeight: "400" }}>Wine </span>– premium wines shaped by the
-                      cool-climate terroir of Casablanca;
+                      <span style={{ fontWeight: "400" }}>{t('projects.casablanca.wine')} </span>– {t('projects.casablanca.wineDesc')}
                     </p>
                   </li>
                   <li>
                     <p>
-                      <span style={{ fontWeight: "400" }}>Place </span>– carefully designed spaces for
-                      tasting, culture, sports and nature;
+                      <span style={{ fontWeight: "400" }}>{t('projects.casablanca.place')} </span>– {t('projects.casablanca.placeDesc')}
                     </p>
                   </li>
                   <li>
                     <p>
-                      <span style={{ fontWeight: "400" }}>Community </span>– an international
-                      neighborhood for residents, long-stay guests and
-                      retirement-style living.
+                      <span style={{ fontWeight: "400" }}>{t('projects.casablanca.community')} </span>– {t('projects.casablanca.communityDesc')}
                     </p>
                   </li>
                 </ul>
 
                 <p>
-                  Located within easy reach of both Santiago and Viña del Mar, Vinopolis is envisioned as a new hub on Chile's wine map: a destination where people come not only to taste wine, but to build a long-term relationship with the territory – through architecture, culture and a slower, more grounded way of life.
+                  {t('projects.casablanca.content3')}
                 </p>
               </div>
             </div>
@@ -192,16 +194,16 @@ export default function CasablancaPlanning() {
         </section>
 
         {/* Image Gallery */}
-        <section className="py-20 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+        <section className="py-12 md:py-20 bg-background">
+          <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+            <div className="text-center mb-8 md:mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Gallery
+                {t('projects.casablanca.gallery')}
               </h2>
-              <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-8"></div>
+              <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-4 md:mb-8"></div>
             </div>
 
-            <div className="flex items-center justify-center gap-2 sm:gap-8 w-full max-w-5xl mx-auto">
+            <div className="flex items-center justify-center gap-1 sm:gap-2 md:gap-8 w-full max-w-5xl mx-auto">
               {/* Left Navigation Button */}
               <Button
                 onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
@@ -300,18 +302,18 @@ export default function CasablancaPlanning() {
                 <CardContent className="p-12">
                   <div className="text-center mb-12">
                     <h2 className="font-serif text-3xl font-semibold text-foreground mb-6">
-                      Project Scope
+                      {t('projects.casablanca.projectScope')}
                     </h2>
                     <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
                   </div>
-                  
+
                   <div className="grid md:grid-cols-3 gap-12 text-center">
                     <div>
                       <div className="text-3xl font-bold text-primary mb-2" data-testid="text-commercial-area">
                         <p>12,400 m²</p>
                       </div>
                       <div className="text-sm text-muted-foreground uppercase tracking-wider">
-                        <p>Vacation Villas</p>
+                        <p>{t('projects.casablanca.vacationVillas')}</p>
                       </div>
                     </div>
                     <div>
@@ -319,7 +321,7 @@ export default function CasablancaPlanning() {
                         <p>9,900 m²</p>
                       </div>
                       <div className="text-sm text-muted-foreground uppercase tracking-wider">
-                        <p>Condo / Hotel</p>
+                        <p>{t('projects.casablanca.condoHotel')}</p>
                       </div>
                     </div>
                     <div>
@@ -327,7 +329,7 @@ export default function CasablancaPlanning() {
                         <p>5,200 m²</p>
                       </div>
                       <div className="text-sm text-muted-foreground uppercase tracking-wider">
-                        <p>Retail Commercial</p>
+                        <p>{t('projects.casablanca.retailCommercial')}</p>
                       </div>
                     </div>
                   </div>
@@ -337,7 +339,7 @@ export default function CasablancaPlanning() {
                       <p>1,195,000 m²</p>
                     </div>
                     <div className="text-sm text-muted-foreground uppercase tracking-wider">
-                      <p>Total Area</p>
+                      <p>{t('projects.casablanca.totalArea')}</p>
                     </div>
                   </div>
                 </CardContent>

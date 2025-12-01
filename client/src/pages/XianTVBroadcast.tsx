@@ -5,14 +5,20 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Ruler, CheckCircle, Building2, Palette, Users, Landmark, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 // Import project images
 import xianTVImage from "@assets/IMG_20250926_212722_1758934379201.jpg";
 
 export default function XianTVBroadcast() {
+  const { t } = useTranslation();
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const checkDarkMode = () => {
@@ -117,11 +123,11 @@ export default function XianTVBroadcast() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
-                <p>Xi'an TV Broadcast Center</p>
+                <p>{t('projects.xiantv.title')}</p>
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
               <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                Media City as cultural landmark embodying Han Tang heritage and contemporary broadcast architecture
+                {t('projects.xiantv.subtitle')}
               </p>
             </div>
           </div>
@@ -133,15 +139,15 @@ export default function XianTVBroadcast() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="font-serif text-3xl font-semibold text-foreground mb-8">
-                  Cultural Media Icon
+                  {t('projects.xiantv.heading')}
                 </h2>
                 <div className="space-y-6 text-muted-foreground leading-relaxed">
                   <p className="text-lg">
-                    The Xi'an TV Broadcast Center represents a synthesis of contemporary broadcast architecture and cultural heritage. The design inherits the generosity, concise and stately characteristics of Han Tang culture of Xi'an, expressing these qualities through integrated architectural form that enhances the scale perception of the entire complex.
+                    {t('projects.xiantv.content1')}
                   </p>
-                  
+
                   <p>
-                    The project houses diversified broadcasting programs within a unified design envelope, featuring a symbolic "wall" that not only suggests the Land Art temperament of Xi'an's historic walls but also solves the practical challenge of contour differences on the site. This innovative approach creates functional continuity while establishing a powerful visual landmark.
+                    {t('projects.xiantv.content2')}
                   </p>
                   
                   <p>
@@ -172,16 +178,16 @@ export default function XianTVBroadcast() {
         </section>
 
         {/* Image Gallery */}
-        <section className="py-20 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+        <section className="py-12 md:py-20 bg-background">
+          <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+            <div className="text-center mb-8 md:mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Gallery
+                {t('common.gallery')}
               </h2>
-              <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-8"></div>
+              <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-4 md:mb-8"></div>
             </div>
 
-            <div className="flex items-center justify-center gap-2 sm:gap-8 w-full max-w-5xl mx-auto">
+            <div className="flex items-center justify-center gap-1 sm:gap-2 md:gap-8 w-full max-w-5xl mx-auto">
               {/* Left Navigation Button */}
               <Button
                 onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}

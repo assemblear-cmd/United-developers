@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Square, ArrowRight, Building, Home, ChevronDown } from "lucide-react";
 import { useLocation } from "wouter";
+import { useTranslation } from "react-i18next";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -52,8 +53,10 @@ function ProjectCard({
   description
 }: ProjectCardProps) {
   const [, setLocation] = useLocation();
+  const { t } = useTranslation();
   
   const handleViewDetails = () => {
+    window.scrollTo(0, 0);
     if (id === "casablanca-planning") {
       setLocation("/casablanca");
     } else if (id === "xixian-cbd") {
@@ -157,7 +160,7 @@ function ProjectCard({
           onClick={handleViewDetails}
           data-testid={`button-view-details-${id}`}
         >
-          View Project
+          {t('portfolio.viewProject')}
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardContent>
@@ -165,83 +168,87 @@ function ProjectCard({
   );
 }
 
-// todo: remove mock functionality - replace with real United Developers projects
-const unitedDevelopersProjects = [
+// Project key mapping for i18n
+const projectKeyMap: Record<string, string> = {
+  "casablanca-planning": "casablanca",
+  "xixian-cbd": "xixian",
+  "jinqiao-guopei-1851": "jinqiao",
+  "huyao-office-building": "huyao",
+  "shenshan-central-area": "shenshan",
+  "xian-tv-broadcast-center": "xiantv"
+};
+
+// Base project data (static parts)
+const projectsBaseData = [
   {
     id: "casablanca-planning",
-    title: "Vinopolis",
-    location: "Casablanca, Chile",
     year: "2025",
     type: "Urban Planning" as const,
     image: casablancaImage,
     area: "500 hectares",
     status: "In Progress" as const,
-    description: "International wine and lifestyle project that combines the best Chilean terroir, Chinese winemaking heritage, and contemporary architecture. On the plateau between Santiago and Viña del Mar, we are creating a vibrant space for living, relaxing, and meeting—from tastings and gastronomic events to sports and cultural activities.",
     features: []
   },
   {
     id: "xixian-cbd",
-    title: "Xixian CBD",
-    location: "Xi'an, China",
     year: "2013",
     type: "Urban Planning" as const,
     image: xixianCbdImage,
     area: "3.82 million m²",
     status: "Completed" as const,
-    description: "Comprehensive master plan for sustainable urban development that balances conservation with modern urbanization. The design preserves 47% farmland and 5% wetlands while creating efficient urban districts connected by innovative green infrastructure including a signature 'Green Bridge' over existing rail lines.",
     features: []
   },
   {
     id: "jinqiao-guopei-1851",
-    title: "Jinqiao Guopei 1851",
-    location: "Shanghai, China",
     year: "2019",
     type: "Commercial" as const,
     image: jinqiaoGuopeiImage,
     area: "140,000 m²",
     status: "Completed" as const,
-    description: "Mixed-use commercial complex that maximizes land, public, and commercial resources. The design creates a visual symbol of an international metropolis through high-complexity function configuration and multi-dimensional spatial interleaving. Features integration with elevated infrastructure and Jiangnan garden elements.",
     features: []
   },
   {
     id: "huyao-office-building",
-    title: "Huyao Office Building",
-    location: "Shanghai, China",
     year: "2021",
     type: "Commercial" as const,
     image: huyaoOfficeImage,
     status: "Completed" as const,
-    description: "Combines functionality, economy and artistry with rational and harmonious layout concepts to meet sustainable development requirements. Features integration of 'integrity, integration, openness' characteristics with compound functions and shared facilities. Design based on unit office settlements, outdoor platforms, roof gardens and central garden corridors, forming an enclosed building integrated with surrounding environment.",
     features: []
   },
   {
     id: "shenshan-central-area",
-    title: "Shenzhen-Shantou Special Cooperation Zone Central Area Planning",
-    location: "Shenzhen, China",
     year: "2025",
     type: "Urban Planning" as const,
     image: shenshanZoneImage,
     status: "In Progress" as const,
-    description: "Pioneering new urban development paradigms that balance countryside preservation, ecological sustainability, and industry innovation. As chief urban and rural planner, the project aims to create a new urban development model that protects pastoral areas, maintains ecology, and promotes cross-industry innovation through integrated design approaches.",
     features: []
   },
   {
     id: "xian-tv-broadcast-center",
-    title: "Xi'an TV Broadcast Center",
-    location: "Xi'an, China",
     year: "2009",
     type: "Commercial" as const,
     image: xianTvImage2,
     area: "81,117 m²",
     status: "Completed" as const,
-    description: "This project inherits the generosity, concise and stately characteristics of Han Tang culture of Xi'an, integrated as a whole and enhances the scale perception. Diversified programs are enclosed by a symbolic wall, suggesting the Land Art temperament of Xi'an Wall while metaphorically representing a Media City.",
     features: []
   }
 ];
 
 export default function Portfolio() {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState<"all" | "Urban Planning" | "Commercial">("all");
   const [statusFilter, setStatusFilter] = useState<"all" | "Completed" | "In Progress">("all");
+
+  // Generate translated projects
+  const unitedDevelopersProjects = projectsBaseData.map(project => {
+    const key = projectKeyMap[project.id];
+    return {
+      ...project,
+      title: t(`projects.${key}.title`),
+      location: t(`projects.${key}.location`),
+      description: t(`projects.${key}.description`)
+    };
+  });
 
   const filteredProjects = unitedDevelopersProjects.filter(project => {
     const typeMatch = filter === "all" || project.type === filter;
@@ -255,54 +262,14 @@ export default function Portfolio() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Our Projects
+            {t('portfolio.title')}
           </h2>
         </div>
 
         {/* Filters */}
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
           <div className="flex items-center space-x-2">
-            <span className="text-sm font-medium text-muted-foreground">Type:</span>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  data-testid="button-filter-all"
-                  className="flex items-center gap-2"
-                >
-                  {filter === "all" ? "All" : filter}
-                  <ChevronDown className="h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start">
-                <DropdownMenuItem
-                  onClick={() => setFilter("all")}
-                  data-testid="filter-option-all"
-                  className={filter === "all" ? "bg-primary text-primary-foreground" : ""}
-                >
-                  All
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => setFilter("Commercial")}
-                  data-testid="filter-option-commercial"
-                  className={filter === "Commercial" ? "bg-primary text-primary-foreground" : ""}
-                >
-                  Commercial
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => setFilter("Urban Planning")}
-                  data-testid="filter-option-planning"
-                  className={filter === "Urban Planning" ? "bg-primary text-primary-foreground" : ""}
-                >
-                  Urban Planning
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
-
-          <div className="flex items-center space-x-2">
-            <span className="text-sm font-medium text-muted-foreground">Status:</span>
+            <span className="text-sm font-medium text-muted-foreground">{t('portfolio.filters.status')}</span>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -311,7 +278,7 @@ export default function Portfolio() {
                   data-testid="button-status-all"
                   className="flex items-center gap-2"
                 >
-                  {statusFilter === "all" ? "All" : statusFilter}
+                  {statusFilter === "all" ? t('portfolio.filters.all') : statusFilter === "Completed" ? t('portfolio.filters.completed') : t('portfolio.filters.inProgress')}
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -321,21 +288,61 @@ export default function Portfolio() {
                   data-testid="status-option-all"
                   className={statusFilter === "all" ? "bg-primary text-primary-foreground" : ""}
                 >
-                  All
+                  {t('portfolio.filters.all')}
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => setStatusFilter("Completed")}
                   data-testid="status-option-completed"
                   className={statusFilter === "Completed" ? "bg-primary text-primary-foreground" : ""}
                 >
-                  Completed
+                  {t('portfolio.filters.completed')}
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => setStatusFilter("In Progress")}
                   data-testid="status-option-in-progress"
                   className={statusFilter === "In Progress" ? "bg-primary text-primary-foreground" : ""}
                 >
-                  In progress
+                  {t('portfolio.filters.inProgress')}
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <span className="text-sm font-medium text-muted-foreground">{t('portfolio.filters.type')}</span>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  data-testid="button-filter-all"
+                  className="flex items-center gap-2"
+                >
+                  {filter === "all" ? t('portfolio.filters.all') : filter === "Commercial" ? t('portfolio.filters.commercial') : t('portfolio.filters.urbanPlanning')}
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem
+                  onClick={() => setFilter("all")}
+                  data-testid="filter-option-all"
+                  className={filter === "all" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  {t('portfolio.filters.all')}
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setFilter("Commercial")}
+                  data-testid="filter-option-commercial"
+                  className={filter === "Commercial" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  {t('portfolio.filters.commercial')}
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setFilter("Urban Planning")}
+                  data-testid="filter-option-planning"
+                  className={filter === "Urban Planning" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  {t('portfolio.filters.urbanPlanning')}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -360,7 +367,7 @@ export default function Portfolio() {
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
             <p className="text-muted-foreground text-lg">
-              No projects found with the selected filters.
+              {t('portfolio.noResults')}
             </p>
             <Button
               variant="outline"
@@ -371,7 +378,7 @@ export default function Portfolio() {
               }}
               data-testid="button-reset-filters"
             >
-              Clear Filters
+              {t('portfolio.clearFilters')}
             </Button>
           </div>
         )}

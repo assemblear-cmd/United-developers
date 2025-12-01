@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, Ruler, CheckCircle, Building2, Leaf, Network, Users, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 // Import project images
 import cbdOverview from "@assets/IMG_20250926_225621_1759024058656.jpg";
@@ -12,9 +13,14 @@ import modernComplex from "@assets/IMG_20250926_225554_1759024058744.jpg";
 import waterFeature from "@assets/IMG_20250926_225530_1759024058808.jpg";
 
 export default function XixianCBD() {
+  const { t } = useTranslation();
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const checkDarkMode = () => {
@@ -54,23 +60,23 @@ export default function XixianCBD() {
   const projectFeatures = [
     {
       icon: Building2,
-      title: "Master Planning",
-      description: "Comprehensive urban framework integrating multiple districts"
+      title: t('projects.xixian.masterPlanning'),
+      description: t('projects.xixian.masterPlanningDesc')
     },
     {
       icon: Leaf,
-      title: "Sustainable Development", 
-      description: "47% farmland and 5% wetlands preserved within urban fabric"
+      title: t('projects.xixian.sustainableDev'),
+      description: t('projects.xixian.sustainableDevDesc')
     },
     {
       icon: Network,
-      title: "Green Infrastructure",
-      description: "Innovative Green Bridge connecting districts over rail lines"
+      title: t('projects.xixian.greenInfrastructure'),
+      description: t('projects.xixian.greenInfrastructureDesc')
     },
     {
       icon: Users,
-      title: "Mixed-Use Districts",
-      description: "Balanced integration of commercial, residential and civic zones"
+      title: t('projects.xixian.mixedUse'),
+      description: t('projects.xixian.mixedUseDesc')
     }
   ];
 
@@ -112,11 +118,11 @@ export default function XixianCBD() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
-                <p>Xixian CBD</p>
+                <p>{t('projects.xixian.title')}</p>
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
               <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                A visionary master plan that redefines sustainable urbanization through innovative green infrastructure
+                {t('projects.xixian.subtitle')}
               </p>
             </div>
           </div>
@@ -128,21 +134,21 @@ export default function XixianCBD() {
             <div className="max-w-4xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8">
                 <p>
-                  Sustainable Urban Vision
+                  {t('projects.xixian.heading')}
                 </p>
               </h2>
 
               <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  The Xixian Central Business District represents a paradigm shift in Chinese urban development—where conservation becomes the foundation for growth rather than its constraint. This comprehensive master plan demonstrates that sustainable urbanization can achieve both environmental stewardship and economic vitality.
+                  {t('projects.xixian.content1')}
                 </p>
 
                 <p>
-                  Through meticulous planning, the design preserves 47% of existing farmland and 5% of critical wetlands, weaving these natural systems into the urban fabric as both amenity and infrastructure. The signature "Green Bridge" spans existing rail lines, creating unprecedented connectivity while respecting established transportation corridors.
+                  {t('projects.xixian.content2')}
                 </p>
 
                 <p>
-                  This is urbanism as ecosystem—where each district functions as both autonomous neighborhood and integrated component of a larger metropolitan organism. The result transforms Xi'an's periphery into a model for China's sustainable urban future.
+                  {t('projects.xixian.content3')}
                 </p>
               </div>
             </div>
@@ -150,16 +156,16 @@ export default function XixianCBD() {
         </section>
 
         {/* Image Gallery */}
-        <section className="py-20 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+        <section className="py-12 md:py-20 bg-background">
+          <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+            <div className="text-center mb-8 md:mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Gallery
+                {t('common.gallery')}
               </h2>
-              <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-8"></div>
+              <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-4 md:mb-8"></div>
             </div>
 
-            <div className="flex items-center justify-center gap-2 sm:gap-8 w-full max-w-5xl mx-auto">
+            <div className="flex items-center justify-center gap-1 sm:gap-2 md:gap-8 w-full max-w-5xl mx-auto">
               {/* Left Navigation Button */}
               <Button
                 onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
@@ -173,7 +179,7 @@ export default function XixianCBD() {
               {/* Main Image */}
               <div className="flex-1 min-w-0">
                 <Card className="overflow-hidden bg-card/70 backdrop-blur-sm cursor-pointer hover:opacity-90 transition-opacity w-full" onClick={() => setIsLightboxOpen(true)}>
-                  <div className="aspect-video overflow-hidden">
+                  <div className="aspect-video md:aspect-video overflow-hidden">
                     <img
                       src={projectImages[carouselIndex].src}
                       alt={projectImages[carouselIndex].alt}
@@ -256,11 +262,11 @@ export default function XixianCBD() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="font-serif text-3xl font-semibold text-foreground mb-8">
-                  Urban Development Excellence
+                  {t('projects.xixian.urbanExcellence')}
                 </h2>
                 <div className="space-y-6 text-muted-foreground leading-relaxed">
                   <p className="text-lg">
-                    This master plan represents innovative thinking in contemporary urban development, balancing growth with conservation.
+                    {t('projects.xixian.urbanDesc')}
                   </p>
                 </div>
               </div>
@@ -291,7 +297,7 @@ export default function XixianCBD() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Planning Principles
+                {t('projects.xixian.planningPrinciples')}
               </h2>
               <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
             </div>
@@ -324,21 +330,21 @@ export default function XixianCBD() {
                 <CardContent className="p-12">
                   <div className="text-center mb-12">
                     <h2 className="font-serif text-3xl font-semibold text-foreground mb-6">
-                      Conservation Framework
+                      {t('projects.xixian.conservationFramework')}
                     </h2>
                     <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
                   </div>
-                  
+
                   <div className="grid md:grid-cols-2 gap-12 text-center">
                     <div>
                       <div className="text-4xl font-bold text-primary mb-2" data-testid="text-farmland-preservation">
                         47%
                       </div>
                       <div className="text-sm text-muted-foreground uppercase tracking-wider mb-3">
-                        Farmland Preserved
+                        {t('projects.xixian.farmlandPreserved')}
                       </div>
                       <p className="text-sm text-muted-foreground">
-                        Productive agricultural land integrated within urban development
+                        {t('projects.xixian.farmlandDesc')}
                       </p>
                     </div>
                     <div>
@@ -346,10 +352,10 @@ export default function XixianCBD() {
                         5%
                       </div>
                       <div className="text-sm text-muted-foreground uppercase tracking-wider mb-3">
-                        Wetlands Conserved
+                        {t('projects.xixian.wetlandsConserved')}
                       </div>
                       <p className="text-sm text-muted-foreground">
-                        Critical ecosystems maintained for biodiversity and water management
+                        {t('projects.xixian.wetlandsDesc')}
                       </p>
                     </div>
                   </div>
@@ -369,14 +375,10 @@ export default function XixianCBD() {
                     <Network className="h-10 w-10 text-primary" />
                   </div>
                   <h3 className="font-serif text-2xl font-semibold text-foreground mb-6">
-                    The Green Bridge Innovation
+                    {t('projects.xixian.greenBridge')}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed text-lg">
-                    A signature infrastructure intervention that transforms constraint into opportunity. 
-                    This elevated green corridor spans existing rail lines, creating seamless pedestrian 
-                    and ecological connectivity while preserving essential transportation infrastructure. 
-                    The bridge serves as both urban amenity and environmental corridor, demonstrating 
-                    how innovative design can solve complex urban challenges through integrated thinking.
+                    {t('projects.xixian.greenBridgeDesc')}
                   </p>
                 </CardContent>
               </Card>

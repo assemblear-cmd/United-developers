@@ -5,14 +5,20 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Ruler, CheckCircle, Building2, Leaf, Zap, Users, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 // Import project images
 import jinqiaoImage from "@assets/Screenshot_2025-09-27-15-36-36-976_cn.wps.xiaomi.abroad.lite-edit_1759009184273.jpg";
 
 export default function JinqiaoGuopei() {
+  const { t } = useTranslation();
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const checkDarkMode = () => {
@@ -33,11 +39,6 @@ export default function JinqiaoGuopei() {
 
   const projectImages = [
     {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F2a1afede1cc94e8798f4e4909b34323c?format=webp&width=1200",
-      alt: "Aerial view of mixed-use development with modern architecture and infrastructure",
-      title: "Aerial Complex"
-    },
-    {
       src: jinqiaoImage,
       alt: "Jinqiao Guopei 1851 mixed-use commercial complex in Shanghai",
       title: "Commercial Complex"
@@ -57,23 +58,23 @@ export default function JinqiaoGuopei() {
   const projectFeatures = [
     {
       icon: Building2,
-      title: "Multi-functional Configuration",
-      description: "Complex spatial arrangements maximizing land and commercial resources"
+      title: t('projects.jinqiao.multiFunctional'),
+      description: t('projects.jinqiao.multiFunctionalDesc')
     },
     {
       icon: Zap,
-      title: "Viaduct Integration",
-      description: "Building utilizes elevated infrastructure to enhance podium interface"
+      title: t('projects.jinqiao.viaductIntegration'),
+      description: t('projects.jinqiao.viaductIntegrationDesc')
     },
     {
       icon: Leaf,
-      title: "Jiangnan Gardens",
-      description: "Series of heritage gardens creating visual and spatial continuity"
+      title: t('projects.jinqiao.jiangnanGardens'),
+      description: t('projects.jinqiao.jiangnanGardensDesc')
     },
     {
       icon: Users,
-      title: "Cultural Exchange Hub",
-      description: "Sub-central world exchanger blending virtual and real experiences"
+      title: t('projects.jinqiao.culturalExchange'),
+      description: t('projects.jinqiao.culturalExchangeDesc')
     }
   ];
 
@@ -103,23 +104,23 @@ export default function JinqiaoGuopei() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-16">
+      <main>
         {/* Hero Section */}
         <section
-          className="py-20 bg-cover bg-center relative"
+          className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center -mt-16 pt-16"
           style={{
             backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F3f2e73ae29af49bfbfdd08f2b2dbca3c?format=webp&width=1920)',
           }}
         >
           <div className="absolute inset-0 bg-black/40"></div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div className="mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
-                Jinqiao Guopei 1851
+                {t('projects.jinqiao.title')}
               </h1>
               <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
               <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                International metropolis symbol through high-complexity function configuration and multi-dimensional spatial interleaving
+                {t('projects.jinqiao.subtitle')}
               </p>
             </div>
           </div>
@@ -131,19 +132,19 @@ export default function JinqiaoGuopei() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="font-serif text-3xl font-semibold text-foreground mb-8">
-                  Mixed-Use Innovation
+                  {t('projects.jinqiao.heading')}
                 </h2>
                 <div className="space-y-6 text-muted-foreground leading-relaxed">
                   <p className="text-lg">
-                    The Jinqiao National Training Center represents a comprehensive approach to urban mixed-use development in Shanghai. This commercial complex maximizes the use of national land resources and empowers public resources through innovative design principles.
+                    {t('projects.jinqiao.content1')}
                   </p>
-                  
+
                   <p>
-                    The design creates a visual symbol of an international metropolis through high-complexity function configuration and multi-dimensional spatial interleaving. The building strategically takes advantage of the viaduct on the west side of the site, integrating it seamlessly with the top interface of the podium to enhance both functionality and visual impact.
+                    {t('projects.jinqiao.content2')}
                   </p>
-                  
+
                   <p>
-                    A series of carefully designed Jiangnan gardens weaves historical continuity throughout the site, establishing new visual level lines and thematic elements from the elevated viaduct. The podium beneath the viaduct blends interior and exterior spaces, alternating between virtual and real experiences, creating a sub-central world exchanger and activity filter for the entire complex.
+                    {t('projects.jinqiao.content3')}
                   </p>
                 </div>
               </div>
@@ -170,16 +171,16 @@ export default function JinqiaoGuopei() {
         </section>
 
         {/* Image Gallery */}
-        <section className="py-20 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+        <section className="py-12 md:py-20 bg-background">
+          <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+            <div className="text-center mb-8 md:mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Gallery
+                {t('common.gallery')}
               </h2>
-              <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-8"></div>
+              <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-4 md:mb-8"></div>
             </div>
 
-            <div className="flex items-center justify-center gap-2 sm:gap-8 w-full max-w-5xl mx-auto">
+            <div className="flex items-center justify-center gap-1 sm:gap-2 md:gap-8 w-full max-w-5xl mx-auto">
               {/* Left Navigation Button */}
               <Button
                 onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
@@ -275,7 +276,7 @@ export default function JinqiaoGuopei() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Design Principles
+                {t('projects.jinqiao.designPrinciples')}
               </h2>
               <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
             </div>
@@ -308,22 +309,22 @@ export default function JinqiaoGuopei() {
                 <CardContent className="p-12">
                   <div className="text-center mb-12">
                     <h2 className="font-serif text-3xl font-semibold text-foreground mb-6">
-                      Viaduct Integration Strategy
+                      {t('projects.jinqiao.viaductStrategy')}
                     </h2>
                     <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
                   </div>
-                  
+
                   <div className="space-y-6 text-muted-foreground leading-relaxed">
                     <p className="text-lg">
-                      The project's defining characteristic is its innovative integration with the existing viaduct infrastructure on the western portion of the site. Rather than treating this constraint as a limitation, the design transforms it into an opportunity for spatial and functional enhancement.
+                      {t('projects.jinqiao.viaductStrategyDesc1')}
                     </p>
-                    
+
                     <p>
-                      The building's podium carefully orchestrates its interface with the viaduct, creating a seamless transition that maximizes both programmatic efficiency and visual continuity. The series of Jiangnan gardens leverages this elevated relationship to establish a new visual language—one that reads as a continuous thread from ground level to the viaduct canopy and beyond.
+                      {t('projects.jinqiao.viaductStrategyDesc2')}
                     </p>
-                    
+
                     <p>
-                      This multi-layered approach creates spaces for both commerce and contemplation, where visitors experience alternating moments of openness and enclosure, light and shadow, activity and repose. The podium functions as an urban filter, moderating the relationship between the intensive commercial development above and the public realm below.
+                      {t('projects.jinqiao.viaductStrategyDesc3')}
                     </p>
                   </div>
                 </CardContent>
