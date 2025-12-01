@@ -57,8 +57,6 @@ export default function XixianCBD() {
     }
   ];
 
-  const { t } = useTranslation();
-
   const projectFeatures = [
     {
       icon: Building2,
