@@ -55,13 +55,18 @@ export default function Navigation() {
             <Button
               variant="ghost"
               onClick={() => window.history.back()}
-              className={`group flex items-center gap-2 ${isOverDarkBg ? 'text-white' : (isDark ? 'text-gray-300' : 'text-gray-700')} hover:text-primary`}
+              className="group flex items-center gap-2 hover:text-primary"
+              style={{
+                color: isOverDarkBg ? 'white' : (isDark ? 'rgb(209, 213, 219)' : 'rgb(55, 65, 81)')
+              }}
               data-testid="button-back-to-projects-nav"
             >
               <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
               <span
                 className="font-serif text-lg font-semibold"
-                style={isOverDarkBg ? { textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" } : {}}
+                style={{
+                  textShadow: isOverDarkBg ? "0 2px 4px rgba(0, 0, 0, 0.5)" : "none"
+                }}
               >
                 Back
               </span>
@@ -73,11 +78,14 @@ export default function Navigation() {
                   <span className="text-primary-foreground font-bold text-sm">UD</span>
                 </div>
                 <span
-                  className={`font-serif text-xl font-bold ${isOverDarkBg ? 'text-white' : (isDark ? 'text-gray-300' : 'text-gray-700')}`}
-                  style={isOverDarkBg ? { textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" } : {}}
-                >
-                  United Developers
-                </span>
+                className="font-serif text-xl font-bold"
+                style={{
+                  color: isOverDarkBg ? 'white' : (isDark ? 'rgb(209, 213, 219)' : 'rgb(55, 65, 81)'),
+                  textShadow: isOverDarkBg ? "0 2px 4px rgba(0, 0, 0, 0.5)" : "none"
+                }}
+              >
+                United Developers
+              </span>
               </div>
             </Link>
           )}
@@ -88,11 +96,14 @@ export default function Navigation() {
               <Link key={item.href} href={item.href} data-testid={`link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}>
                 <p>
                   <span
-                    className={`text-sm font-medium transition-colors hover:text-primary ${isOverDarkBg ? 'text-white' : (isDark ? 'text-gray-300' : 'text-gray-700')}`}
-                    style={isOverDarkBg ? { textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" } : {}}
-                  >
-                    {item.label}
-                  </span>
+                  className={`text-sm font-medium transition-colors hover:text-primary`}
+                  style={{
+                    color: isOverDarkBg ? 'white' : (isDark ? 'rgb(209, 213, 219)' : 'rgb(55, 65, 81)'),
+                    textShadow: isOverDarkBg ? "0 2px 4px rgba(0, 0, 0, 0.5)" : "none"
+                  }}
+                >
+                  {item.label}
+                </span>
                 </p>
               </Link>
             ))}
