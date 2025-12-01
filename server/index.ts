@@ -56,16 +56,32 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on the port specified in the environment variable PORT
-  // Other ports are firewalled. Default to 5000 if not specified.
+  // Try to serve on the port specified in the environment variable PORT
+  // Default to 5000, with fallback to 3000 if unavailable
   // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = parseInt(process.env.PORT || '5000', 10);
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
-  });
+  const primaryPort = parseInt(process.env.PORT || '5000', 10);
+  const fallbackPort = 3000;
+
+  const startServer = (portToTry: number) => {
+    const server2 = server.listen({
+      port: portToTry,
+      host: "0.0.0.0",
+      reusePort: true,
+    }, () => {
+      log(`serving on port ${portToTry}`);
+    });
+
+    server2.on('error', (err: any) => {
+      if (err.code === 'EADDRINUSE' && portToTry === primaryPort) {
+        log(`Port ${primaryPort} is in use, trying fallback port ${fallbackPort}`);
+        server2.close();
+        startServer(fallbackPort);
+      } else {
+        log(`Failed to start server: ${err.message}`);
+        throw err;
+      }
+    });
+  };
+
+  startServer(primaryPort);
 })();
