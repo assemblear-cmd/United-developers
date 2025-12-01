@@ -2,17 +2,55 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Ruler, CheckCircle, Building2, Leaf, Zap, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { MapPin, Calendar, Ruler, CheckCircle, Building2, Leaf, Zap, Users, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 // Import project images
 import jinqiaoImage from "@assets/Screenshot_2025-09-27-15-36-36-976_cn.wps.xiaomi.abroad.lite-edit_1759009184273.jpg";
 
 export default function JinqiaoGuopei() {
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const isDarkMode = document.documentElement.classList.contains("dark");
+      setIsDark(isDarkMode);
+    };
+
+    checkDarkMode();
+
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const projectImages = [
-    { 
-      src: jinqiaoImage, 
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F2a1afede1cc94e8798f4e4909b34323c?format=webp&width=1200",
+      alt: "Aerial view of mixed-use development with modern architecture and infrastructure",
+      title: "Aerial Complex"
+    },
+    {
+      src: jinqiaoImage,
       alt: "Jinqiao Guopei 1851 mixed-use commercial complex in Shanghai",
       title: "Commercial Complex"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F3f2e73ae29af49bfbfdd08f2b2dbca3c?format=webp&width=1200",
+      alt: "Urban skyline with modern commercial towers and infrastructure",
+      title: "Skyline View"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F21d5784aa5bc4584a34f87bb95abf197?format=webp&width=1200",
+      alt: "Waterfront development with modern architecture and public spaces",
+      title: "Waterfront Complex"
     }
   ];
 
@@ -70,15 +108,12 @@ export default function JinqiaoGuopei() {
         <section
           className="py-20 bg-cover bg-center relative"
           style={{
-            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F66c447136e434331b011ecedd4a00b05?format=webp&width=800)',
+            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F3f2e73ae29af49bfbfdd08f2b2dbca3c?format=webp&width=1920)',
           }}
         >
           <div className="absolute inset-0 bg-black/40"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <Badge variant="outline" className="mb-6" data-testid="badge-project-type">
-                Commercial
-              </Badge>
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
                 Jinqiao Guopei 1851
               </h1>
@@ -134,42 +169,106 @@ export default function JinqiaoGuopei() {
           </div>
         </section>
 
-        {/* Project Images */}
-        <section className="py-20 bg-muted/20">
+        {/* Image Gallery */}
+        <section className="py-20 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Project Visualization
+                Gallery
               </h2>
               <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-8"></div>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Mixed-use complex showcasing contemporary commercial architecture
-              </p>
             </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {projectImages.map((image, index) => (
-                <Card key={index} className="overflow-hidden bg-card/70 backdrop-blur-sm" data-testid={`card-image-${index}`}>
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={image.src} 
-                      alt={image.alt}
+
+            <div className="flex items-center justify-center gap-2 sm:gap-8 w-full max-w-5xl mx-auto">
+              {/* Left Navigation Button */}
+              <Button
+                onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
+                variant="ghost"
+                size="icon"
+                className="flex-shrink-0 text-foreground hover:bg-muted h-10 w-10 sm:h-12 sm:w-12"
+              >
+                <ChevronLeft className="h-6 w-6 sm:h-8 sm:w-8" />
+              </Button>
+
+              {/* Main Image */}
+              <div className="flex-1 min-w-0">
+                <Card className="overflow-hidden bg-card/70 backdrop-blur-sm cursor-pointer hover:opacity-90 transition-opacity w-full" onClick={() => setIsLightboxOpen(true)}>
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={projectImages[carouselIndex].src}
+                      alt={projectImages[carouselIndex].alt}
                       className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                      data-testid={`img-project-${index}`}
-                      loading="lazy"
-                      decoding="async"
+                      data-testid={`carousel-main-${carouselIndex}`}
                     />
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="font-serif text-lg font-semibold text-foreground">
-                      {image.title}
-                    </h3>
-                  </CardContent>
                 </Card>
-              ))}
+                {/* Image Counter */}
+                <div className="text-center mt-4 text-sm text-muted-foreground">
+                  {carouselIndex + 1} / {projectImages.length}
+                </div>
+              </div>
+
+              {/* Right Navigation Button */}
+              <Button
+                onClick={() => setCarouselIndex((prev) => (prev + 1) % projectImages.length)}
+                variant="ghost"
+                size="icon"
+                className="flex-shrink-0 text-foreground hover:bg-muted h-10 w-10 sm:h-12 sm:w-12"
+              >
+                <ChevronRight className="h-6 w-6 sm:h-8 sm:w-8" />
+              </Button>
             </div>
           </div>
         </section>
+
+        {/* Lightbox Modal */}
+        {isLightboxOpen && (
+          <div
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+            onClick={() => setIsLightboxOpen(false)}
+          >
+            <div
+              className="relative max-w-5xl w-full max-h-[90vh] md:max-h-[85vh] landscape:max-h-[95vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={projectImages[carouselIndex].src}
+                alt={projectImages[carouselIndex].alt}
+                className="w-full h-full object-contain"
+              />
+
+              {/* Navigation Buttons - Mobile */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
+                className="md:hidden absolute left-1 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-1 transition-colors z-10"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev + 1) % projectImages.length)}
+                className="md:hidden absolute right-1 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-1 transition-colors z-10"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
+
+              {/* Navigation Buttons - Desktop */}
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev - 1 + projectImages.length) % projectImages.length)}
+                className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors z-10"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+
+              <button
+                onClick={() => setCarouselIndex((prev) => (prev + 1) % projectImages.length)}
+                className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors z-10"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Design Principles */}
         <section className="py-16 bg-background">
