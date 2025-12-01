@@ -98,7 +98,7 @@ export default function JinqiaoGuopei() {
         <section
           className="py-20 bg-cover bg-center relative"
           style={{
-            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F66c447136e434331b011ecedd4a00b05?format=webp&width=800)',
+            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F3f2e73ae29af49bfbfdd08f2b2dbca3c?format=webp&width=1920)',
           }}
         >
           <div className="absolute inset-0 bg-black/40"></div>
