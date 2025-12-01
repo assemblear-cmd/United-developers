@@ -58,6 +58,8 @@ function ProjectCard({
       setLocation("/casablanca");
     } else if (id === "xixian-cbd") {
       setLocation("/xixian");
+    } else if (id === "jinqiao-guopei-1851") {
+      setLocation("/jinqiao");
     } else {
       console.log(`Viewing details for project ${id}`);
     }
