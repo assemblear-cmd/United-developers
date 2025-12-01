@@ -41,6 +41,16 @@ export default function XianTVBroadcast() {
       src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F54445f0c76ec462f86628c5cf0eb2c37?format=webp&width=1200",
       alt: "Modern broadcast center with distinctive architectural forms and landscaped plaza",
       title: "Broadcast Facility"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F07d721c7fb254c3f89a0701c8221d68e?format=webp&width=1200",
+      alt: "Architectural facade with geometric window patterns and metal cladding",
+      title: "Geometric Architecture"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F1f5a5d3ed4934e1795933a776d0d3cce?format=webp&width=1200",
+      alt: "Modern triangular building facade with distinctive window elements",
+      title: "Angular Design"
     }
   ];
 
