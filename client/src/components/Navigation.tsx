@@ -3,6 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun, Menu, X, ArrowLeft, Languages } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,11 +56,6 @@ export default function Navigation() {
     setIsDark(newDarkMode);
     localStorage.setItem("theme", newDarkMode ? "dark" : "light");
     document.documentElement.classList.toggle("dark", newDarkMode);
-  };
-
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'es' : 'en';
-    i18n.changeLanguage(newLang);
   };
 
   const navItems = [
@@ -131,15 +132,31 @@ export default function Navigation() {
 
           {/* Right side controls */}
           <div className="flex items-center space-x-2">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleLanguage}
-              data-testid="button-language-toggle"
-              title={i18n.language === 'en' ? 'Español' : 'English'}
-            >
-              <Languages className="h-5 w-5" />
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  data-testid="button-language-toggle"
+                >
+                  <Languages className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem
+                  onClick={() => i18n.changeLanguage('en')}
+                  className={i18n.language === 'en' ? "bg-primary text-primary-foreground" : ""}
+                >
+                  English
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => i18n.changeLanguage('es')}
+                  className={i18n.language === 'es' ? "bg-primary text-primary-foreground" : ""}
+                >
+                  Español
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             <Button
               variant="ghost"
