@@ -73,8 +73,8 @@ export default function Navigation() {
                   <span className="text-primary-foreground font-bold text-sm">UD</span>
                 </div>
                 <span
-                  className="font-serif text-xl font-bold text-white"
-                  style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" }}
+                  className={`font-serif text-xl font-bold ${isOverDarkBg ? 'text-white' : 'text-gray-700'}`}
+                  style={isOverDarkBg ? { textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" } : {}}
                 >
                   United Developers
                 </span>
