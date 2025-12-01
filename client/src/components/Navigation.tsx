@@ -7,20 +7,29 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isOverDarkBg, setIsOverDarkBg] = useState(true);
+  const [isOverDarkBg, setIsOverDarkBg] = useState(false);
   const [location] = useLocation();
+
+  const isProjectPage = ["/casablanca", "/xixian", "/jinqiao", "/huyao", "/shenshan", "/xian-tv"].includes(location);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       // Detect if we're over a dark background (hero section is ~600-800px tall)
-      // When scroll is near the top, we're over dark background
-      setIsOverDarkBg(window.scrollY < 600);
+      // When scroll is near the top, we're over dark background - only for project pages
+      if (isProjectPage) {
+        setIsOverDarkBg(window.scrollY < 600);
+      } else {
+        setIsOverDarkBg(false);
+      }
     };
+
+    // Set initial state
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isProjectPage]);
 
   useEffect(() => {
     const isDarkMode = localStorage.getItem("theme") === "dark";
