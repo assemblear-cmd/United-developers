@@ -31,7 +31,7 @@ export default function Navigation() {
     document.documentElement.classList.toggle("dark", newDarkMode);
   };
 
-  const isProjectPage = ["/casablanca", "/xixian", "/jinqiao", "/huyao", "/shenshan"].includes(location);
+  const isProjectPage = ["/casablanca", "/xixian", "/jinqiao", "/huyao", "/shenshan", "/xian-tv"].includes(location);
 
   const navItems = [
     { href: "/", label: "Home" },
