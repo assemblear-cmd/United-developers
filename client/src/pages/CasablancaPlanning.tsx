@@ -140,11 +140,11 @@ export default function CasablancaPlanning() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
-                Vinopolis
+                {t('projects.casablanca.title')}
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
               <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                Where contemporary architecture meets viticultural traditions
+                {t('projects.casablanca.subtitle')}
               </p>
             </div>
           </div>
@@ -155,42 +155,38 @@ export default function CasablancaPlanning() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8">
-                Vinopolis – where wine, architecture and landscape become a way of life
+                {t('projects.casablanca.heading')}
               </h2>
 
               <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  Vinopolis is an international wine-and-lifestyle project located on the plateau between Santiago and the Pacific Ocean, in the heart of Chile's renowned Casablanca Valley. Led by the Jade Valley wine family and architect Qingyun Ma, the project goes far beyond a classic winery: it is a place where vineyards, contemporary architecture and the Chilean landscape are woven into a cohesive environment for living, visiting and investing.
+                  {t('projects.casablanca.content1')}
                 </p>
 
                 <p>
-                  Guided by the philosophy of Vinopolis® – "the ideal city of wine", Vinopolis brings together three layers of experience:
+                  {t('projects.casablanca.content2')}
                 </p>
 
                 <ul className="space-y-3 ml-6">
                   <li>
                     <p>
-                      <span style={{ fontWeight: "400" }}>Wine </span>– premium wines shaped by the
-                      cool-climate terroir of Casablanca;
+                      <span style={{ fontWeight: "400" }}>{t('projects.casablanca.wine')} </span>– {t('projects.casablanca.wineDesc')}
                     </p>
                   </li>
                   <li>
                     <p>
-                      <span style={{ fontWeight: "400" }}>Place </span>– carefully designed spaces for
-                      tasting, culture, sports and nature;
+                      <span style={{ fontWeight: "400" }}>{t('projects.casablanca.place')} </span>– {t('projects.casablanca.placeDesc')}
                     </p>
                   </li>
                   <li>
                     <p>
-                      <span style={{ fontWeight: "400" }}>Community </span>– an international
-                      neighborhood for residents, long-stay guests and
-                      retirement-style living.
+                      <span style={{ fontWeight: "400" }}>{t('projects.casablanca.community')} </span>– {t('projects.casablanca.communityDesc')}
                     </p>
                   </li>
                 </ul>
 
                 <p>
-                  Located within easy reach of both Santiago and Viña del Mar, Vinopolis is envisioned as a new hub on Chile's wine map: a destination where people come not only to taste wine, but to build a long-term relationship with the territory – through architecture, culture and a slower, more grounded way of life.
+                  {t('projects.casablanca.content3')}
                 </p>
               </div>
             </div>
@@ -202,7 +198,7 @@ export default function CasablancaPlanning() {
           <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
             <div className="text-center mb-8 md:mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Gallery
+                {t('projects.casablanca.gallery')}
               </h2>
               <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-4 md:mb-8"></div>
             </div>
