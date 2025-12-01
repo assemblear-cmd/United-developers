@@ -15,6 +15,7 @@ import ShenshanCentralArea from "@/pages/ShenshanCentralArea";
 import XianTVBroadcast from "@/pages/XianTVBroadcast";
 import Contacts from "@/pages/Contacts";
 import Privacy from "@/pages/Privacy";
+import Terms from "@/pages/Terms";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -32,6 +33,7 @@ function Router() {
       <Route path="/xian-tv" component={XianTVBroadcast} />
       <Route path="/contact" component={Contacts} />
       <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
