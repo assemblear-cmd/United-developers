@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Building, Compass, Mountain, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 // Import project images
 import vineyard1 from "@assets/IMG-20250918-WA0002_1759023615741.jpg";
@@ -15,6 +16,7 @@ import hillsideArchitecture from "@assets/IMG-20250926-WA0005_1759023616070.jpg"
 import modernVillage from "@assets/IMG-20250926-WA0004_1759023616106.jpg";
 
 export default function CasablancaPlanning() {
+  const { t } = useTranslation();
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
