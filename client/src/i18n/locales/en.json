@@ -132,13 +132,22 @@
       "title": "Shenzhen-Shantou Special Cooperation Zone Central Area Planning",
       "location": "Shenzhen, China",
       "description": "Pioneering new urban development paradigms that balance countryside preservation, ecological sustainability, and industry innovation. As chief urban and rural planner, the project aims to create a new urban development model that protects pastoral areas, maintains ecology, and promotes cross-industry innovation through integrated design approaches.",
-      "subtitle": "Pioneering new urban development paradigms balancing countryside preservation and ecological sustainability"
+      "subtitle": "Pioneering new urban development paradigms balancing countryside preservation and ecological sustainability",
+      "heading": "Ecological Pastoral Vision",
+      "content1": "The Shenzhen-Shantou Special Cooperation Zone Central Area Planning represents a pioneering approach to contemporary urban development in China. Located approximately 120 kilometers from Shenzhen's center, the zone encompasses 68 square kilometers with a 10 square kilometer urban core designated for intensive development.",
+      "content2": "The project's core objective integrates water resources management with regional character preservation, balancing the return to farmland and pastoral qualities with contemporary urban development. This comprehensive strategy aims to create an \"ecological pastoral city\" that serves as a new model for sustainable urban development across China.",
+      "content3": "As chief urban and rural planner, the design implements a comprehensive framework that protects pastoral areas, maintains ecological systems, and promotes cross-industry innovation. The planning approach prioritizes lifecycle management concepts to ensure sustainable operation and long-term viability of the entire development.",
+      "gallery": "Gallery"
     },
     "xiantv": {
       "title": "Xi'an TV Broadcast Center",
       "location": "Xi'an, China",
       "description": "This project inherits the generosity, concise and stately characteristics of Han Tang culture of Xi'an, integrated as a whole and enhances the scale perception. Diversified programs are enclosed by a symbolic wall, suggesting the Land Art temperament of Xi'an Wall while metaphorically representing a Media City.",
-      "subtitle": "Media City as cultural landmark embodying Han Tang heritage and contemporary broadcast architecture"
+      "subtitle": "Media City as cultural landmark embodying Han Tang heritage and contemporary broadcast architecture",
+      "heading": "Cultural Media Icon",
+      "content1": "The Xi'an TV Broadcast Center represents a synthesis of contemporary broadcast architecture and cultural heritage. The design inherits the generosity, concise and stately characteristics of Han Tang culture of Xi'an, expressing these qualities through integrated architectural form that enhances the scale perception of the entire complex.",
+      "content2": "The project houses diversified broadcasting programs within a unified design envelope, featuring a symbolic \"wall\" that not only suggests the Land Art temperament of Xi'an's historic walls but also solves the practical challenge of contour differences on the site. This innovative approach creates functional continuity while establishing a powerful visual landmark.",
+      "gallery": "Gallery"
     }
   },
   "common": {
