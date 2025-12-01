@@ -32,9 +32,15 @@ export default function Navigation() {
   }, [isProjectPage]);
 
   useEffect(() => {
-    const isDarkMode = localStorage.getItem("theme") === "dark";
+    const theme = localStorage.getItem("theme");
+    const isDarkMode = theme === "dark";
     setIsDark(isDarkMode);
     document.documentElement.classList.toggle("dark", isDarkMode);
+
+    // Set default theme to light if not already set
+    if (!theme) {
+      localStorage.setItem("theme", "light");
+    }
   }, []);
 
   const toggleTheme = () => {

@@ -54,6 +54,7 @@ function ProjectCard({
   const [, setLocation] = useLocation();
   
   const handleViewDetails = () => {
+    window.scrollTo(0, 0);
     if (id === "casablanca-planning") {
       setLocation("/casablanca");
     } else if (id === "xixian-cbd") {
@@ -262,46 +263,6 @@ export default function Portfolio() {
         {/* Filters */}
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
           <div className="flex items-center space-x-2">
-            <span className="text-sm font-medium text-muted-foreground">Type:</span>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  data-testid="button-filter-all"
-                  className="flex items-center gap-2"
-                >
-                  {filter === "all" ? "All" : filter}
-                  <ChevronDown className="h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start">
-                <DropdownMenuItem
-                  onClick={() => setFilter("all")}
-                  data-testid="filter-option-all"
-                  className={filter === "all" ? "bg-primary text-primary-foreground" : ""}
-                >
-                  All
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => setFilter("Commercial")}
-                  data-testid="filter-option-commercial"
-                  className={filter === "Commercial" ? "bg-primary text-primary-foreground" : ""}
-                >
-                  Commercial
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => setFilter("Urban Planning")}
-                  data-testid="filter-option-planning"
-                  className={filter === "Urban Planning" ? "bg-primary text-primary-foreground" : ""}
-                >
-                  Urban Planning
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
-
-          <div className="flex items-center space-x-2">
             <span className="text-sm font-medium text-muted-foreground">Status:</span>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -336,6 +297,46 @@ export default function Portfolio() {
                   className={statusFilter === "In Progress" ? "bg-primary text-primary-foreground" : ""}
                 >
                   In progress
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <span className="text-sm font-medium text-muted-foreground">Type:</span>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  data-testid="button-filter-all"
+                  className="flex items-center gap-2"
+                >
+                  {filter === "all" ? "All" : filter}
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                <DropdownMenuItem
+                  onClick={() => setFilter("all")}
+                  data-testid="filter-option-all"
+                  className={filter === "all" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  All
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setFilter("Commercial")}
+                  data-testid="filter-option-commercial"
+                  className={filter === "Commercial" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  Commercial
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => setFilter("Urban Planning")}
+                  data-testid="filter-option-planning"
+                  className={filter === "Urban Planning" ? "bg-primary text-primary-foreground" : ""}
+                >
+                  Urban Planning
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
