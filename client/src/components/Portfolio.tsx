@@ -64,6 +64,8 @@ function ProjectCard({
       setLocation("/huyao");
     } else if (id === "shenshan-central-area") {
       setLocation("/shenshan");
+    } else if (id === "xian-tv-broadcast-center") {
+      setLocation("/xian-tv");
     } else {
       console.log(`Viewing details for project ${id}`);
     }
