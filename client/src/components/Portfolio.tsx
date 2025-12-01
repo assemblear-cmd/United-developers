@@ -60,6 +60,8 @@ function ProjectCard({
       setLocation("/xixian");
     } else if (id === "jinqiao-guopei-1851") {
       setLocation("/jinqiao");
+    } else if (id === "huyao-office-building") {
+      setLocation("/huyao");
     } else {
       console.log(`Viewing details for project ${id}`);
     }
