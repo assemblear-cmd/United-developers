@@ -302,18 +302,18 @@ export default function CasablancaPlanning() {
                 <CardContent className="p-12">
                   <div className="text-center mb-12">
                     <h2 className="font-serif text-3xl font-semibold text-foreground mb-6">
-                      Project Scope
+                      {t('projects.casablanca.projectScope')}
                     </h2>
                     <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
                   </div>
-                  
+
                   <div className="grid md:grid-cols-3 gap-12 text-center">
                     <div>
                       <div className="text-3xl font-bold text-primary mb-2" data-testid="text-commercial-area">
                         <p>12,400 m²</p>
                       </div>
                       <div className="text-sm text-muted-foreground uppercase tracking-wider">
-                        <p>Vacation Villas</p>
+                        <p>{t('projects.casablanca.vacationVillas')}</p>
                       </div>
                     </div>
                     <div>
@@ -321,7 +321,7 @@ export default function CasablancaPlanning() {
                         <p>9,900 m²</p>
                       </div>
                       <div className="text-sm text-muted-foreground uppercase tracking-wider">
-                        <p>Condo / Hotel</p>
+                        <p>{t('projects.casablanca.condoHotel')}</p>
                       </div>
                     </div>
                     <div>
@@ -329,7 +329,7 @@ export default function CasablancaPlanning() {
                         <p>5,200 m²</p>
                       </div>
                       <div className="text-sm text-muted-foreground uppercase tracking-wider">
-                        <p>Retail Commercial</p>
+                        <p>{t('projects.casablanca.retailCommercial')}</p>
                       </div>
                     </div>
                   </div>
@@ -339,7 +339,7 @@ export default function CasablancaPlanning() {
                       <p>1,195,000 m²</p>
                     </div>
                     <div className="text-sm text-muted-foreground uppercase tracking-wider">
-                      <p>Total Area</p>
+                      <p>{t('projects.casablanca.totalArea')}</p>
                     </div>
                   </div>
                 </CardContent>
