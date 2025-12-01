@@ -2,9 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { MapPin, Calendar, Ruler, CheckCircle, Building2, Leaf, Network, Users, ArrowLeft } from "lucide-react";
-import { useLocation } from "wouter";
+import { MapPin, Calendar, Ruler, CheckCircle, Building2, Leaf, Network, Users } from "lucide-react";
 
 // Import project images
 import cbdOverview from "@assets/IMG_20250926_225621_1759024058656.jpg";
@@ -12,8 +10,6 @@ import modernComplex from "@assets/IMG_20250926_225554_1759024058744.jpg";
 import waterFeature from "@assets/IMG_20250926_225530_1759024058808.jpg";
 
 export default function XixianCBD() {
-  const [, setLocation] = useLocation();
-
   const projectImages = [
     { 
       src: cbdOverview, 
@@ -82,18 +78,6 @@ export default function XixianCBD() {
     <div className="min-h-screen bg-background">
       <Navigation />
       <main className="pt-16">
-        {/* Back Button */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-4">
-          <Button
-            variant="ghost"
-            onClick={() => setLocation("/portfolio")}
-            className="group flex items-center gap-2 text-muted-foreground hover:text-foreground"
-            data-testid="button-back-to-portfolio"
-          >
-            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-            Back to Projects
-          </Button>
-        </div>
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-b from-background to-muted/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
