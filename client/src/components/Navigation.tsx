@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Menu, X, ArrowLeft } from "lucide-react";
+import { Moon, Sun, Menu, X, ArrowLeft, Languages } from "lucide-react";
 import { Link, useLocation } from "wouter";
+import { useTranslation } from "react-i18next";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +10,7 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOverDarkBg, setIsOverDarkBg] = useState(false);
   const [location] = useLocation();
+  const { t, i18n } = useTranslation();
 
   const isProjectPage = ["/casablanca", "/xixian", "/jinqiao", "/huyao", "/shenshan", "/xian-tv"].includes(location);
 
@@ -50,11 +52,16 @@ export default function Navigation() {
     document.documentElement.classList.toggle("dark", newDarkMode);
   };
 
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'en' ? 'es' : 'en';
+    i18n.changeLanguage(newLang);
+  };
+
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/portfolio", label: "Projects" },
-    { href: "/team", label: "Team" },
-    { href: "/contact", label: "Contact" }
+    { href: "/", label: t('nav.home') },
+    { href: "/portfolio", label: t('nav.projects') },
+    { href: "/team", label: t('nav.team') },
+    { href: "/contact", label: t('nav.contact') }
   ];
 
   return (
@@ -81,7 +88,7 @@ export default function Navigation() {
                   textShadow: isOverDarkBg ? "0 2px 4px rgba(0, 0, 0, 0.5)" : "none"
                 }}
               >
-                Back
+                {t('nav.back')}
               </span>
             </Button>
           ) : (
@@ -123,7 +130,17 @@ export default function Navigation() {
           </div>
 
           {/* Right side controls */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleLanguage}
+              data-testid="button-language-toggle"
+              title={i18n.language === 'en' ? 'Español' : 'English'}
+            >
+              <Languages className="h-5 w-5" />
+            </Button>
+
             <Button
               variant="ghost"
               size="icon"
@@ -132,7 +149,6 @@ export default function Navigation() {
             >
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
-
 
             {/* Mobile menu button */}
             <Button
