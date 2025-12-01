@@ -88,8 +88,8 @@ export default function Navigation() {
               <Link key={item.href} href={item.href} data-testid={`link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}>
                 <p>
                   <span
-                    className={`text-sm font-medium transition-colors hover:text-primary ${isDark ? 'text-white' : 'text-gray-700'}`}
-                    style={isDark ? { textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" } : {}}
+                    className={`text-sm font-medium transition-colors hover:text-primary ${isOverDarkBg ? 'text-white' : 'text-gray-700'}`}
+                    style={isOverDarkBg ? { textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" } : {}}
                   >
                     {item.label}
                   </span>
