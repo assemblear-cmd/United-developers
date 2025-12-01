@@ -9,7 +9,14 @@ import Portfolio from "@/pages/Portfolio";
 import MaQingyun from "@/pages/MaQingyun";
 import CasablancaPlanning from "@/pages/CasablancaPlanning";
 import XixianCBD from "@/pages/XixianCBD";
+import JinqiaoGuopei from "@/pages/JinqiaoGuopei";
+import HuyaoOffice from "@/pages/HuyaoOffice";
+import ShenshanCentralArea from "@/pages/ShenshanCentralArea";
+import XianTVBroadcast from "@/pages/XianTVBroadcast";
 import Contacts from "@/pages/Contacts";
+import Privacy from "@/pages/Privacy";
+import Terms from "@/pages/Terms";
+import Cookies from "@/pages/Cookies";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -21,7 +28,14 @@ function Router() {
       <Route path="/ma-qingyun" component={MaQingyun} />
       <Route path="/casablanca" component={CasablancaPlanning} />
       <Route path="/xixian" component={XixianCBD} />
+      <Route path="/jinqiao" component={JinqiaoGuopei} />
+      <Route path="/huyao" component={HuyaoOffice} />
+      <Route path="/shenshan" component={ShenshanCentralArea} />
+      <Route path="/xian-tv" component={XianTVBroadcast} />
       <Route path="/contact" component={Contacts} />
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
+      <Route path="/cookies" component={Cookies} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

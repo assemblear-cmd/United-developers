@@ -2,16 +2,14 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Ruler, CheckCircle, Building2, Leaf, Network, Users, ChevronLeft, ChevronRight } from "lucide-react";
+import { MapPin, Calendar, Ruler, CheckCircle, Leaf, Zap, Users, Compass, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
 // Import project images
-import cbdOverview from "@assets/IMG_20250926_225621_1759024058656.jpg";
-import modernComplex from "@assets/IMG_20250926_225554_1759024058744.jpg";
-import waterFeature from "@assets/IMG_20250926_225530_1759024058808.jpg";
+import shenshanImage from "@assets/Screenshot_2025-09-27-18-49-24-999_cn.wps.xiaomi.abroad.lite-edit_1759009870282.jpg";
 
-export default function XixianCBD() {
+export default function ShenshanCentralArea() {
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
@@ -34,66 +32,114 @@ export default function XixianCBD() {
   }, []);
 
   const projectImages = [
-    { 
-      src: cbdOverview, 
-      alt: "Xixian CBD overview showing modern office towers and integrated green spaces",
-      title: "Urban Integration"
+    {
+      src: shenshanImage,
+      alt: "Shenzhen-Shantou Special Cooperation Zone Central Area master plan showing geographic location and development zones",
+      title: "Master Plan Overview"
     },
-    { 
-      src: modernComplex, 
-      alt: "Contemporary commercial complex with landscaped courtyards and public spaces",
-      title: "Commercial Hub"
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F26c4f059135b4106b79887cb03937ec3?format=webp&width=800",
+      alt: "Aerial view of Shenzhen-Shantou Cooperation Zone at night showing landscape and urban development",
+      title: "Aerial Development"
     },
-    { 
-      src: waterFeature, 
-      alt: "Central water feature with colorful facade commercial buildings and urban landscape",
-      title: "Civic Center"
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F1746ead85598426d81f25712ddf64ada?format=webp&width=800",
+      alt: "Detailed master plan map showing urban layout, waterways, and development zones",
+      title: "Detailed Site Plan"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Ff90713b7733842a99af74194df8a1bae?format=webp&width=800",
+      alt: "Coastal landscape perspective showing integration with natural geography and beaches",
+      title: "Coastal Integration"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F7310ccb58a164b75b14979705661b0f6?format=webp&width=800",
+      alt: "Public plaza and waterfront pedestrian experience with architectural elements",
+      title: "Public Spaces"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F9ad7947e66ff42fd993e913de2a6fca0?format=webp&width=800",
+      alt: "Urban corridor perspective showing mixed-use development and public realm",
+      title: "Urban Corridor"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fa4d008fcb5f44ec287486bd2ea7b063b?format=webp&width=800",
+      alt: "Landscape view of central development with green spaces and urban layout",
+      title: "Central Development"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F153cdbb08d4940fca2ae967733e81f14?format=webp&width=800",
+      alt: "Nighttime aerial perspective showing full development with lighting and infrastructure",
+      title: "Night Vision"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F84242b78ee224891a6dbbee6b7ac4831?format=webp&width=800",
+      alt: "Ground-level streetscape showing pedestrian experience and architectural design",
+      title: "Street Level Experience"
     }
   ];
 
   const projectFeatures = [
     {
-      icon: Building2,
-      title: "Master Planning",
-      description: "Comprehensive urban framework integrating multiple districts"
-    },
-    {
       icon: Leaf,
-      title: "Sustainable Development", 
-      description: "47% farmland and 5% wetlands preserved within urban fabric"
-    },
-    {
-      icon: Network,
-      title: "Green Infrastructure",
-      description: "Innovative Green Bridge connecting districts over rail lines"
+      title: "Ecological Balance",
+      description: "Integration of natural systems with urban development, preserving ecological integrity"
     },
     {
       icon: Users,
-      title: "Mixed-Use Districts",
-      description: "Balanced integration of commercial, residential and civic zones"
+      title: "Pastoral City Model",
+      description: "Creating 'ecological pastoral city' through landscape and countryside preservation"
+    },
+    {
+      icon: Compass,
+      title: "Regional Identity",
+      description: "Highlighting local characteristics and regional distinctiveness in urban design"
+    },
+    {
+      icon: Zap,
+      title: "Cross-Industry Innovation",
+      description: "Promoting innovation hubs and industry collaboration through integrated planning"
     }
   ];
 
   const projectSpecs = [
     {
       icon: Ruler,
-      value: "3.82 million m²",
+      value: "68 km²",
       label: "Total Development Area"
     },
     {
-      icon: Calendar,
-      value: "2013",
-      label: "Project Completion"
+      icon: Ruler,
+      value: "10 km²",
+      label: "Urban Core Area"
     },
     {
-      icon: MapPin,
-      value: "Xi'an, China",
-      label: "Location"
+      icon: Calendar,
+      value: "2025",
+      label: "Project started"
     },
     {
       icon: CheckCircle,
-      value: "Completed",
+      value: "In Progress",
       label: "Project Status"
+    }
+  ];
+
+  const planningStrategies = [
+    {
+      number: "I",
+      title: "Eternal Clear-Cut Urban Space Framework",
+      description: "Constructing a permanent and clear-cut visual framework for the ideal city in space"
+    },
+    {
+      number: "II",
+      title: "Ecological Pastoral Urban Space Management",
+      description: "Forming distinct and systematic pastoral urban space skeleton management"
+    },
+    {
+      number: "III",
+      title: "Mountainous Urban Space Composition",
+      description: "Creating diverse and dynamic urban spatial composition in mountainous terrain"
     }
   ];
 
@@ -103,20 +149,20 @@ export default function XixianCBD() {
       <main>
         {/* Hero Section */}
         <section
-          className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center -mt-16 pt-16"
+          className="bg-cover bg-center bg-no-repeat relative h-[75vh] flex items-center justify-center -mt-16 pt-16"
           style={{
-            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F15c3da6a8db9442f8dda1f0d04e1219f?format=webp&width=1920')`,
+            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F2b9833ad80ad45ae968c1c5a6802c853?format=webp&width=1920')`,
           }}
         >
           <div className="absolute inset-0 bg-black/40 dark:bg-black/50"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
-                <p>Xixian CBD</p>
+                <p>Shenzhen-Shantou Special<br />Cooperation Zone</p>
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
               <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                A visionary master plan that redefines sustainable urbanization through innovative green infrastructure
+                Pioneering new urban development paradigms balancing countryside preservation and ecological sustainability
               </p>
             </div>
           </div>
@@ -128,21 +174,21 @@ export default function XixianCBD() {
             <div className="max-w-4xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8">
                 <p>
-                  Sustainable Urban Vision
+                  Ecological Pastoral Vision
                 </p>
               </h2>
 
               <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  The Xixian Central Business District represents a paradigm shift in Chinese urban development—where conservation becomes the foundation for growth rather than its constraint. This comprehensive master plan demonstrates that sustainable urbanization can achieve both environmental stewardship and economic vitality.
+                  The Shenzhen-Shantou Special Cooperation Zone Central Area Planning represents a pioneering approach to contemporary urban development in China. Located approximately 120 kilometers from Shenzhen's center, the zone encompasses 68 square kilometers with a 10 square kilometer urban core designated for intensive development.
                 </p>
 
                 <p>
-                  Through meticulous planning, the design preserves 47% of existing farmland and 5% of critical wetlands, weaving these natural systems into the urban fabric as both amenity and infrastructure. The signature "Green Bridge" spans existing rail lines, creating unprecedented connectivity while respecting established transportation corridors.
+                  The project's core objective integrates water resources management with regional character preservation, balancing the return to farmland and pastoral qualities with contemporary urban development. This comprehensive strategy aims to create an "ecological pastoral city" that serves as a new model for sustainable urban development across China.
                 </p>
 
                 <p>
-                  This is urbanism as ecosystem—where each district functions as both autonomous neighborhood and integrated component of a larger metropolitan organism. The result transforms Xi'an's periphery into a model for China's sustainable urban future.
+                  As chief urban and rural planner, the design implements a comprehensive framework that protects pastoral areas, maintains ecological systems, and promotes cross-industry innovation. The planning approach prioritizes lifecycle management concepts to ensure sustainable operation and long-term viability of the entire development.
                 </p>
               </div>
             </div>
@@ -204,17 +250,25 @@ export default function XixianCBD() {
         {/* Lightbox Modal */}
         {isLightboxOpen && (
           <div
-            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 overflow-auto"
             onClick={() => setIsLightboxOpen(false)}
           >
             <div
-              className="relative max-w-5xl w-full max-h-[90vh] md:max-h-[85vh] landscape:max-h-[95vh]"
+              className="relative flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
+              style={{
+                maxHeight: '90vh',
+                maxWidth: '90vw',
+              }}
             >
               <img
                 src={projectImages[carouselIndex].src}
                 alt={projectImages[carouselIndex].alt}
-                className="w-full h-full object-contain"
+                className="object-contain max-w-full max-h-full"
+                style={{
+                  maxHeight: '90vh',
+                  maxWidth: '90vw',
+                }}
               />
 
               {/* Navigation Buttons - Mobile */}
@@ -256,11 +310,11 @@ export default function XixianCBD() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="font-serif text-3xl font-semibold text-foreground mb-8">
-                  Urban Development Excellence
+                  Sustainable Development Framework
                 </h2>
                 <div className="space-y-6 text-muted-foreground leading-relaxed">
                   <p className="text-lg">
-                    This master plan represents innovative thinking in contemporary urban development, balancing growth with conservation.
+                    This pioneering zone demonstrates how contemporary urban planning can balance growth with ecological preservation.
                   </p>
                 </div>
               </div>
@@ -286,12 +340,42 @@ export default function XixianCBD() {
           </div>
         </section>
 
-        {/* Design Principles */}
+        {/* Planning Strategies */}
         <section className="py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Planning Principles
+                Three-Pillar Planning Strategy
+              </h2>
+              <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {planningStrategies.map((strategy, index) => (
+                <Card key={index} className="text-center bg-card/70 backdrop-blur-sm hover-elevate">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <span className="text-2xl font-bold text-primary">{strategy.number}</span>
+                    </div>
+                    <h3 className="font-serif text-xl font-semibold text-foreground mb-4">
+                      {strategy.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed text-sm">
+                      {strategy.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Design Principles */}
+        <section className="py-16 bg-muted/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
+                Core Design Principles
               </h2>
               <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
             </div>
@@ -316,68 +400,32 @@ export default function XixianCBD() {
           </div>
         </section>
 
-        {/* Environmental Impact */}
-        <section className="py-16 bg-muted/20">
+        {/* Lifecycle Management */}
+        <section className="py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
               <Card className="bg-card/70 backdrop-blur-sm">
                 <CardContent className="p-12">
                   <div className="text-center mb-12">
                     <h2 className="font-serif text-3xl font-semibold text-foreground mb-6">
-                      Conservation Framework
+                      Lifecycle Management Framework
                     </h2>
                     <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
                   </div>
                   
-                  <div className="grid md:grid-cols-2 gap-12 text-center">
-                    <div>
-                      <div className="text-4xl font-bold text-primary mb-2" data-testid="text-farmland-preservation">
-                        47%
-                      </div>
-                      <div className="text-sm text-muted-foreground uppercase tracking-wider mb-3">
-                        Farmland Preserved
-                      </div>
-                      <p className="text-sm text-muted-foreground">
-                        Productive agricultural land integrated within urban development
-                      </p>
-                    </div>
-                    <div>
-                      <div className="text-4xl font-bold text-primary mb-2" data-testid="text-wetland-conservation">
-                        5%
-                      </div>
-                      <div className="text-sm text-muted-foreground uppercase tracking-wider mb-3">
-                        Wetlands Conserved
-                      </div>
-                      <p className="text-sm text-muted-foreground">
-                        Critical ecosystems maintained for biodiversity and water management
-                      </p>
-                    </div>
+                  <div className="space-y-6 text-muted-foreground leading-relaxed">
+                    <p className="text-lg">
+                      The development plan incorporates comprehensive lifecycle management concepts to ensure sustainable operation and long-term viability. This approach governs all aspects of the zone's development, from initial planning through construction and ongoing management.
+                    </p>
+                    
+                    <p>
+                      A "blue print management" system provides oversight of the entire planning vision, ensuring that implementation remains faithful to the original ecological and economic objectives. This systematic approach to governance and stewardship creates a framework for successful long-term development.
+                    </p>
+                    
+                    <p>
+                      By integrating these management principles throughout the planning process, the zone can maintain its commitment to ecological preservation, regional character, and economic innovation while adapting to changing conditions and emerging opportunities over time.
+                    </p>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Innovation Highlight */}
-        <section className="py-16 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center">
-              <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
-                <CardContent className="p-12">
-                  <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-8">
-                    <Network className="h-10 w-10 text-primary" />
-                  </div>
-                  <h3 className="font-serif text-2xl font-semibold text-foreground mb-6">
-                    The Green Bridge Innovation
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed text-lg">
-                    A signature infrastructure intervention that transforms constraint into opportunity. 
-                    This elevated green corridor spans existing rail lines, creating seamless pedestrian 
-                    and ecological connectivity while preserving essential transportation infrastructure. 
-                    The bridge serves as both urban amenity and environmental corridor, demonstrating 
-                    how innovative design can solve complex urban challenges through integrated thinking.
-                  </p>
                 </CardContent>
               </Card>
             </div>

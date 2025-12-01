@@ -1,0 +1,233 @@
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { MapPin, Calendar, Ruler, CheckCircle, Building2, Palette, Users, Landmark } from "lucide-react";
+
+// Import project images
+import xianTVImage from "@assets/IMG_20250926_212722_1758934379201.jpg";
+
+export default function XianTVBroadcast() {
+  const projectImages = [
+    { 
+      src: xianTVImage, 
+      alt: "Xi'an TV Broadcast Center showing distinctive architectural design with symbolic wall and modernist forms",
+      title: "Media City Icon"
+    }
+  ];
+
+  const projectFeatures = [
+    {
+      icon: Building2,
+      title: "Han Tang Heritage",
+      description: "Generosity, concise and stately characteristics of Han Tang culture of Xi'an integrated throughout"
+    },
+    {
+      icon: Palette,
+      title: "Land Art Aesthetic",
+      description: "Symbolic wall suggests Land Art temperament of Xi'an Wall, creating cultural continuity"
+    },
+    {
+      icon: Landmark,
+      title: "Site Integration",
+      description: "Solves contour difference problem on site while enhancing overall design composition"
+    },
+    {
+      icon: Users,
+      title: "Diverse Programming",
+      description: "Varied program functions enclosed within unified symbolic architectural expression"
+    }
+  ];
+
+  const projectSpecs = [
+    {
+      icon: Ruler,
+      value: "81,117 m²",
+      label: "Total Building Area"
+    },
+    {
+      icon: Calendar,
+      value: "2009",
+      label: "Project Completion"
+    },
+    {
+      icon: MapPin,
+      value: "Xi'an, China",
+      label: "Location"
+    },
+    {
+      icon: CheckCircle,
+      value: "Completed",
+      label: "Project Status"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <main className="pt-16">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-b from-background to-muted/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="mb-6" data-testid="badge-project-type">
+                Commercial
+              </Badge>
+              <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6" data-testid="text-page-title">
+                Xi'an TV Broadcast Center
+              </h1>
+              <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Media City as cultural landmark embodying Han Tang heritage and contemporary broadcast architecture
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Project Overview */}
+        <section className="py-16 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="font-serif text-3xl font-semibold text-foreground mb-8">
+                  Cultural Media Icon
+                </h2>
+                <div className="space-y-6 text-muted-foreground leading-relaxed">
+                  <p className="text-lg">
+                    The Xi'an TV Broadcast Center represents a synthesis of contemporary broadcast architecture and cultural heritage. The design inherits the generosity, concise and stately characteristics of Han Tang culture of Xi'an, expressing these qualities through integrated architectural form that enhances the scale perception of the entire complex.
+                  </p>
+                  
+                  <p>
+                    The project houses diversified broadcasting programs within a unified design envelope, featuring a symbolic "wall" that not only suggests the Land Art temperament of Xi'an's historic walls but also solves the practical challenge of contour differences on the site. This innovative approach creates functional continuity while establishing a powerful visual landmark.
+                  </p>
+                  
+                  <p>
+                    The building metaphorically presents Xi'an TV as a "Media City"—a vibrant center for broadcasting and cultural expression. Through its distinctive architectural vocabulary, the center becomes a symbol of Xi'an's role in China's media landscape while honoring the city's profound cultural traditions.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-4">
+                {projectSpecs.map((spec, index) => (
+                  <Card key={index} className="text-center bg-card/70 backdrop-blur-sm hover-elevate">
+                    <CardContent className="p-6">
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <spec.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div className="text-2xl font-bold text-foreground mb-2" data-testid={`text-spec-${index}`}>
+                        {spec.value}
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        {spec.label}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Project Images */}
+        <section className="py-20 bg-muted/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
+                Architectural Expression
+              </h2>
+              <div className="w-16 h-0.5 bg-primary/60 mx-auto mb-8"></div>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Contemporary broadcast facility with cultural heritage integration
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {projectImages.map((image, index) => (
+                <Card key={index} className="overflow-hidden bg-card/70 backdrop-blur-sm" data-testid={`card-image-${index}`}>
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img 
+                      src={image.src} 
+                      alt={image.alt}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      data-testid={`img-project-${index}`}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <h3 className="font-serif text-lg font-semibold text-foreground">
+                      {image.title}
+                    </h3>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Design Principles */}
+        <section className="py-16 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
+                Design Principles
+              </h2>
+              <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {projectFeatures.map((feature, index) => (
+                <Card key={index} className="text-center bg-card/70 backdrop-blur-sm hover-elevate">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <feature.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="font-serif text-xl font-semibold text-foreground mb-4">
+                      {feature.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Symbolic Wall Strategy */}
+        <section className="py-16 bg-muted/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <Card className="bg-card/70 backdrop-blur-sm">
+                <CardContent className="p-12">
+                  <div className="text-center mb-12">
+                    <h2 className="font-serif text-3xl font-semibold text-foreground mb-6">
+                      The Symbolic Wall Concept
+                    </h2>
+                    <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
+                  </div>
+                  
+                  <div className="space-y-6 text-muted-foreground leading-relaxed">
+                    <p className="text-lg">
+                      At the heart of the design lies the innovative concept of the symbolic wall—an architectural element that references Xi'an's historic city walls while serving contemporary functional needs. This wall enclosure creates a unified expression for the diverse broadcast programming within the center.
+                    </p>
+                    
+                    <p>
+                      Beyond its cultural significance, the wall solves the practical challenge of contour differences across the site, transforming a potential constraint into an opportunity for creative architectural expression. The wall's presence metaphorically connects Xi'an TV to the city's profound heritage while establishing its role as a modern "Media City."
+                    </p>
+                    
+                    <p>
+                      This design approach demonstrates how contemporary architecture can honor cultural traditions while meeting the functional requirements of a modern broadcast facility. The result is a building that serves both practical and symbolic purposes, creating a landmark that strengthens Xi'an's identity as a vibrant media and cultural center.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}

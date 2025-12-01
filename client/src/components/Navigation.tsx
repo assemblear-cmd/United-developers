@@ -1,22 +1,35 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X, ArrowLeft } from "lucide-react";
 import { Link, useLocation } from "wouter";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOverDarkBg, setIsOverDarkBg] = useState(false);
   const [location] = useLocation();
+
+  const isProjectPage = ["/casablanca", "/xixian", "/jinqiao", "/huyao", "/shenshan", "/xian-tv"].includes(location);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      // Detect if we're over a dark background (hero section is ~600-800px tall)
+      // When scroll is near the top, we're over dark background - only for project pages
+      if (isProjectPage) {
+        setIsOverDarkBg(window.scrollY < 600);
+      } else {
+        setIsOverDarkBg(false);
+      }
     };
+
+    // Set initial state
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isProjectPage]);
 
   useEffect(() => {
     const isDarkMode = localStorage.getItem("theme") === "dark";
@@ -44,20 +57,45 @@ export default function Navigation() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" data-testid="link-home">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">UD</span>
-              </div>
+          {/* Logo / Back Button */}
+          {isProjectPage ? (
+            <Button
+              variant="ghost"
+              onClick={() => window.history.back()}
+              className="group flex items-center gap-2 hover:text-primary"
+              style={{
+                color: isOverDarkBg ? 'white' : (isDark ? 'rgb(209, 213, 219)' : 'rgb(55, 65, 81)')
+              }}
+              data-testid="button-back-to-projects-nav"
+            >
+              <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
               <span
-                className="font-serif text-xl font-bold text-white"
-                style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" }}
+                className="font-serif text-lg font-semibold"
+                style={{
+                  textShadow: isOverDarkBg ? "0 2px 4px rgba(0, 0, 0, 0.5)" : "none"
+                }}
+              >
+                Back
+              </span>
+            </Button>
+          ) : (
+            <Link href="/" data-testid="link-home">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold text-sm">UD</span>
+                </div>
+                <span
+                className="font-serif text-xl font-bold"
+                style={{
+                  color: isOverDarkBg ? 'white' : (isDark ? 'rgb(209, 213, 219)' : 'rgb(55, 65, 81)'),
+                  textShadow: isOverDarkBg ? "0 2px 4px rgba(0, 0, 0, 0.5)" : "none"
+                }}
               >
                 United Developers
               </span>
-            </div>
-          </Link>
+              </div>
+            </Link>
+          )}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -65,11 +103,14 @@ export default function Navigation() {
               <Link key={item.href} href={item.href} data-testid={`link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}>
                 <p>
                   <span
-                    className={`text-sm font-medium transition-colors hover:text-primary text-white`}
-                    style={{ textShadow: "0 2px 4px rgba(0, 0, 0, 0.5)" }}
-                  >
-                    {item.label}
-                  </span>
+                  className={`text-sm font-medium transition-colors hover:text-primary`}
+                  style={{
+                    color: isOverDarkBg ? 'white' : (isDark ? 'rgb(209, 213, 219)' : 'rgb(55, 65, 81)'),
+                    textShadow: isOverDarkBg ? "0 2px 4px rgba(0, 0, 0, 0.5)" : "none"
+                  }}
+                >
+                  {item.label}
+                </span>
                 </p>
               </Link>
             ))}

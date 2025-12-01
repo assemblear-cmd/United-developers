@@ -58,6 +58,14 @@ function ProjectCard({
       setLocation("/casablanca");
     } else if (id === "xixian-cbd") {
       setLocation("/xixian");
+    } else if (id === "jinqiao-guopei-1851") {
+      setLocation("/jinqiao");
+    } else if (id === "huyao-office-building") {
+      setLocation("/huyao");
+    } else if (id === "shenshan-central-area") {
+      setLocation("/shenshan");
+    } else if (id === "xian-tv-broadcast-center") {
+      setLocation("/xian-tv");
     } else {
       console.log(`Viewing details for project ${id}`);
     }

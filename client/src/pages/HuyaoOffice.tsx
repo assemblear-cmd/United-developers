@@ -2,16 +2,14 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Ruler, CheckCircle, Building2, Leaf, Network, Users, ChevronLeft, ChevronRight } from "lucide-react";
+import { MapPin, Calendar, Building2, CheckCircle, Leaf, Users, Zap, Layout, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
 // Import project images
-import cbdOverview from "@assets/IMG_20250926_225621_1759024058656.jpg";
-import modernComplex from "@assets/IMG_20250926_225554_1759024058744.jpg";
-import waterFeature from "@assets/IMG_20250926_225530_1759024058808.jpg";
+import huyaoImage from "@assets/Screenshot_2025-09-27-18-45-22-455_cn.wps.xiaomi.abroad.lite-edit_1759009642993.jpg";
 
-export default function XixianCBD() {
+export default function HuyaoOffice() {
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
@@ -34,66 +32,71 @@ export default function XixianCBD() {
   }, []);
 
   const projectImages = [
-    { 
-      src: cbdOverview, 
-      alt: "Xixian CBD overview showing modern office towers and integrated green spaces",
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F0d643c4ee8574f4683ee4855c7e1591d?format=webp&width=800",
+      alt: "Huyao Office Building - Aerial view showing integrated courtyard design and building layout",
+      title: "Aerial Overview"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fd65f375df0be4dd5957895eda7d4c370?format=webp&width=800",
+      alt: "Huyao Office Building - Urban context showing integration with Shanghai skyline",
       title: "Urban Integration"
     },
-    { 
-      src: modernComplex, 
-      alt: "Contemporary commercial complex with landscaped courtyards and public spaces",
-      title: "Commercial Hub"
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F7548c13324324b1ba7982165a03260e9?format=webp&width=800",
+      alt: "Huyao Office Building - Interior courtyard with central sculptural feature and green spaces",
+      title: "Central Courtyard"
     },
-    { 
-      src: waterFeature, 
-      alt: "Central water feature with colorful facade commercial buildings and urban landscape",
-      title: "Civic Center"
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F86b386d842f14c1ba8d8d409cb9b411c?format=webp&width=800",
+      alt: "Huyao Office Building - Ground level view showing integrated landscape and pedestrian experience",
+      title: "Ground Level Design"
     }
   ];
 
   const projectFeatures = [
     {
       icon: Building2,
-      title: "Master Planning",
-      description: "Comprehensive urban framework integrating multiple districts"
+      title: "Integrity & Integration",
+      description: "Unified design approach combining functionality, economy and artistry"
     },
     {
       icon: Leaf,
-      title: "Sustainable Development", 
-      description: "47% farmland and 5% wetlands preserved within urban fabric"
+      title: "Landscape Integration",
+      description: "Seamless incorporation into surrounding buildings and natural environment"
     },
     {
-      icon: Network,
-      title: "Green Infrastructure",
-      description: "Innovative Green Bridge connecting districts over rail lines"
+      icon: Layout,
+      title: "Unit Office Settlements",
+      description: "Modular office design with outdoor platforms and roof gardens"
     },
     {
       icon: Users,
-      title: "Mixed-Use Districts",
-      description: "Balanced integration of commercial, residential and civic zones"
+      title: "Shared Facilities",
+      description: "Compound functions with shared resources ensuring comfort and efficiency"
     }
   ];
 
   const projectSpecs = [
     {
-      icon: Ruler,
-      value: "3.82 million m²",
-      label: "Total Development Area"
-    },
-    {
       icon: Calendar,
-      value: "2013",
+      value: "2021",
       label: "Project Completion"
     },
     {
       icon: MapPin,
-      value: "Xi'an, China",
+      value: "Shanghai, China",
       label: "Location"
     },
     {
       icon: CheckCircle,
       value: "Completed",
       label: "Project Status"
+    },
+    {
+      icon: Zap,
+      value: "Commercial",
+      label: "Project Type"
     }
   ];
 
@@ -105,19 +108,18 @@ export default function XixianCBD() {
         <section
           className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center -mt-16 pt-16"
           style={{
-            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F15c3da6a8db9442f8dda1f0d04e1219f?format=webp&width=1920')`,
+            backgroundImage: isDark
+              ? `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F5f051672e11e4af6bf351c34e9c83963?format=webp&width=1920')`
+              : `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F5f051672e11e4af6bf351c34e9c83963?format=webp&width=1920')`,
           }}
         >
           <div className="absolute inset-0 bg-black/40 dark:bg-black/50"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
-                <p>Xixian CBD</p>
+                <p>Huyao Office Building</p>
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
-              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                A visionary master plan that redefines sustainable urbanization through innovative green infrastructure
-              </p>
             </div>
           </div>
         </section>
@@ -128,21 +130,21 @@ export default function XixianCBD() {
             <div className="max-w-4xl mx-auto">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8">
                 <p>
-                  Sustainable Urban Vision
+                  Integrated Design Excellence
                 </p>
               </h2>
 
               <div className="prose prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  The Xixian Central Business District represents a paradigm shift in Chinese urban development—where conservation becomes the foundation for growth rather than its constraint. This comprehensive master plan demonstrates that sustainable urbanization can achieve both environmental stewardship and economic vitality.
+                  The Huyao Office Building represents a comprehensive approach to contemporary commercial architecture in Shanghai. The design combines functionality, economy, and artistry through rational and harmonious layout concepts that meet the highest standards of sustainable development.
                 </p>
 
                 <p>
-                  Through meticulous planning, the design preserves 47% of existing farmland and 5% of critical wetlands, weaving these natural systems into the urban fabric as both amenity and infrastructure. The signature "Green Bridge" spans existing rail lines, creating unprecedented connectivity while respecting established transportation corridors.
+                  The project exemplifies the integration of "integrity, integration, and openness" characteristics. Functions are thoughtfully compounded while facilities are intelligently shared, ensuring optimal comfort of base spaces while maintaining a pleasant scale and calm atmosphere throughout the building.
                 </p>
 
                 <p>
-                  This is urbanism as ecosystem—where each district functions as both autonomous neighborhood and integrated component of a larger metropolitan organism. The result transforms Xi'an's periphery into a model for China's sustainable urban future.
+                  The design strategy incorporates unit office settlements, outdoor platforms, roof gardens, and central garden corridors. This creates an enclosed building form that respects and integrates with the overall planning of surrounding structures and the natural environment, resulting in a cohesive urban composition.
                 </p>
               </div>
             </div>
@@ -256,11 +258,11 @@ export default function XixianCBD() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="font-serif text-3xl font-semibold text-foreground mb-8">
-                  Urban Development Excellence
+                  Design Excellence
                 </h2>
                 <div className="space-y-6 text-muted-foreground leading-relaxed">
                   <p className="text-lg">
-                    This master plan represents innovative thinking in contemporary urban development, balancing growth with conservation.
+                    The Huyao Office Building demonstrates how contemporary commercial architecture can achieve both functional excellence and aesthetic quality. Each design decision serves both practical and experiential purposes.
                   </p>
                 </div>
               </div>
@@ -291,7 +293,7 @@ export default function XixianCBD() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-serif text-3xl font-semibold text-foreground mb-4">
-                Planning Principles
+                Design Principles
               </h2>
               <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
             </div>
@@ -316,7 +318,7 @@ export default function XixianCBD() {
           </div>
         </section>
 
-        {/* Environmental Impact */}
+        {/* Spatial Organization */}
         <section className="py-16 bg-muted/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
@@ -324,60 +326,24 @@ export default function XixianCBD() {
                 <CardContent className="p-12">
                   <div className="text-center mb-12">
                     <h2 className="font-serif text-3xl font-semibold text-foreground mb-6">
-                      Conservation Framework
+                      Functional Organization Strategy
                     </h2>
                     <div className="w-16 h-0.5 bg-primary/60 mx-auto"></div>
                   </div>
                   
-                  <div className="grid md:grid-cols-2 gap-12 text-center">
-                    <div>
-                      <div className="text-4xl font-bold text-primary mb-2" data-testid="text-farmland-preservation">
-                        47%
-                      </div>
-                      <div className="text-sm text-muted-foreground uppercase tracking-wider mb-3">
-                        Farmland Preserved
-                      </div>
-                      <p className="text-sm text-muted-foreground">
-                        Productive agricultural land integrated within urban development
-                      </p>
-                    </div>
-                    <div>
-                      <div className="text-4xl font-bold text-primary mb-2" data-testid="text-wetland-conservation">
-                        5%
-                      </div>
-                      <div className="text-sm text-muted-foreground uppercase tracking-wider mb-3">
-                        Wetlands Conserved
-                      </div>
-                      <p className="text-sm text-muted-foreground">
-                        Critical ecosystems maintained for biodiversity and water management
-                      </p>
-                    </div>
+                  <div className="space-y-6 text-muted-foreground leading-relaxed">
+                    <p className="text-lg">
+                      The Huyao Office Building is designed on the principle of unit office settlements, creating a network of interconnected workspaces with clear organizational logic. Each unit maintains independence while contributing to the cohesive whole.
+                    </p>
+                    
+                    <p>
+                      Outdoor platforms and roof gardens are strategically distributed throughout the structure, providing respite spaces and enhancing the connection between interior work environments and natural light. These features collectively improve workplace quality of life and environmental performance.
+                    </p>
+                    
+                    <p>
+                      The central garden corridor serves as the organizing spine, facilitating circulation and creating opportunities for informal interaction and community building. This design approach balances the functional requirements of a modern office building with human-centered spatial qualities.
+                    </p>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Innovation Highlight */}
-        <section className="py-16 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center">
-              <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
-                <CardContent className="p-12">
-                  <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-8">
-                    <Network className="h-10 w-10 text-primary" />
-                  </div>
-                  <h3 className="font-serif text-2xl font-semibold text-foreground mb-6">
-                    The Green Bridge Innovation
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed text-lg">
-                    A signature infrastructure intervention that transforms constraint into opportunity. 
-                    This elevated green corridor spans existing rail lines, creating seamless pedestrian 
-                    and ecological connectivity while preserving essential transportation infrastructure. 
-                    The bridge serves as both urban amenity and environmental corridor, demonstrating 
-                    how innovative design can solve complex urban challenges through integrated thinking.
-                  </p>
                 </CardContent>
               </Card>
             </div>
