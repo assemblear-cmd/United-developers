@@ -168,76 +168,68 @@ function ProjectCard({
   );
 }
 
-// todo: remove mock functionality - replace with real United Developers projects
-const unitedDevelopersProjects = [
+// Project key mapping for i18n
+const projectKeyMap: Record<string, string> = {
+  "casablanca-planning": "casablanca",
+  "xixian-cbd": "xixian",
+  "jinqiao-guopei-1851": "jinqiao",
+  "huyao-office-building": "huyao",
+  "shenshan-central-area": "shenshan",
+  "xian-tv-broadcast-center": "xiantv"
+};
+
+// Base project data (static parts)
+const projectsBaseData = [
   {
     id: "casablanca-planning",
-    title: "Vinopolis",
-    location: "Casablanca, Chile",
     year: "2025",
     type: "Urban Planning" as const,
     image: casablancaImage,
     area: "500 hectares",
     status: "In Progress" as const,
-    description: "International wine and lifestyle project that combines the best Chilean terroir, Chinese winemaking heritage, and contemporary architecture. On the plateau between Santiago and Viña del Mar, we are creating a vibrant space for living, relaxing, and meeting—from tastings and gastronomic events to sports and cultural activities.",
     features: []
   },
   {
     id: "xixian-cbd",
-    title: "Xixian CBD",
-    location: "Xi'an, China",
     year: "2013",
     type: "Urban Planning" as const,
     image: xixianCbdImage,
     area: "3.82 million m²",
     status: "Completed" as const,
-    description: "Comprehensive master plan for sustainable urban development that balances conservation with modern urbanization. The design preserves 47% farmland and 5% wetlands while creating efficient urban districts connected by innovative green infrastructure including a signature 'Green Bridge' over existing rail lines.",
     features: []
   },
   {
     id: "jinqiao-guopei-1851",
-    title: "Jinqiao Guopei 1851",
-    location: "Shanghai, China",
     year: "2019",
     type: "Commercial" as const,
     image: jinqiaoGuopeiImage,
     area: "140,000 m²",
     status: "Completed" as const,
-    description: "Mixed-use commercial complex that maximizes land, public, and commercial resources. The design creates a visual symbol of an international metropolis through high-complexity function configuration and multi-dimensional spatial interleaving. Features integration with elevated infrastructure and Jiangnan garden elements.",
     features: []
   },
   {
     id: "huyao-office-building",
-    title: "Huyao Office Building",
-    location: "Shanghai, China",
     year: "2021",
     type: "Commercial" as const,
     image: huyaoOfficeImage,
     status: "Completed" as const,
-    description: "Combines functionality, economy and artistry with rational and harmonious layout concepts to meet sustainable development requirements. Features integration of 'integrity, integration, openness' characteristics with compound functions and shared facilities. Design based on unit office settlements, outdoor platforms, roof gardens and central garden corridors, forming an enclosed building integrated with surrounding environment.",
     features: []
   },
   {
     id: "shenshan-central-area",
-    title: "Shenzhen-Shantou Special Cooperation Zone Central Area Planning",
-    location: "Shenzhen, China",
     year: "2025",
     type: "Urban Planning" as const,
     image: shenshanZoneImage,
     status: "In Progress" as const,
-    description: "Pioneering new urban development paradigms that balance countryside preservation, ecological sustainability, and industry innovation. As chief urban and rural planner, the project aims to create a new urban development model that protects pastoral areas, maintains ecology, and promotes cross-industry innovation through integrated design approaches.",
     features: []
   },
   {
     id: "xian-tv-broadcast-center",
-    title: "Xi'an TV Broadcast Center",
-    location: "Xi'an, China",
     year: "2009",
     type: "Commercial" as const,
     image: xianTvImage2,
     area: "81,117 m²",
     status: "Completed" as const,
-    description: "This project inherits the generosity, concise and stately characteristics of Han Tang culture of Xi'an, integrated as a whole and enhances the scale perception. Diversified programs are enclosed by a symbolic wall, suggesting the Land Art temperament of Xi'an Wall while metaphorically representing a Media City.",
     features: []
   }
 ];
@@ -246,6 +238,17 @@ export default function Portfolio() {
   const { t } = useTranslation();
   const [filter, setFilter] = useState<"all" | "Urban Planning" | "Commercial">("all");
   const [statusFilter, setStatusFilter] = useState<"all" | "Completed" | "In Progress">("all");
+
+  // Generate translated projects
+  const unitedDevelopersProjects = projectsBaseData.map(project => {
+    const key = projectKeyMap[project.id];
+    return {
+      ...project,
+      title: t(`projects.${key}.title`),
+      location: t(`projects.${key}.location`),
+      description: t(`projects.${key}.description`)
+    };
+  });
 
   const filteredProjects = unitedDevelopersProjects.filter(project => {
     const typeMatch = filter === "all" || project.type === filter;
