@@ -267,7 +267,7 @@ export default function Portfolio() {
         </div>
 
         {/* Filters */}
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
+        <div className="flex flex-row items-center justify-center space-y-0 space-x-4 sm:space-x-6 mb-12">
           <div className="flex items-center space-x-2">
             <span className="text-sm font-medium text-muted-foreground">{t('portfolio.filters.status')}</span>
             <DropdownMenu>
