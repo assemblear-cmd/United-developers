@@ -115,8 +115,8 @@ export default function XianTVBroadcast() {
           className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center -mt-16 pt-16"
           style={{
             backgroundImage: isDark
-              ? `url('https://images.unsplash.com/photo-1486325212027-8081e485255e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8ZW58MHx8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')`
-              : `url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8ZW58MHx8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')`,
+              ? `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F0a4c23a37acc483ca585dd02d6851096?format=webp&width=1920')`
+              : `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F0a4c23a37acc483ca585dd02d6851096?format=webp&width=1920')`,
           }}
         >
           <div className="absolute inset-0 bg-black/40 dark:bg-black/50"></div>
