@@ -111,7 +111,9 @@ export default function XixianCBD() {
         <section
           className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center -mt-16 pt-16"
           style={{
-            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F15c3da6a8db9442f8dda1f0d04e1219f?format=webp&width=1920')`,
+            backgroundImage: isDark
+              ? `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fa64527a3b0084faa9fa20030ed58a808?format=webp&width=1920')`
+              : `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F15c3da6a8db9442f8dda1f0d04e1219f?format=webp&width=1920')`,
           }}
         >
           <div className="absolute inset-0 bg-black/40 dark:bg-black/50"></div>

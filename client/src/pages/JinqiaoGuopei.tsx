@@ -109,7 +109,9 @@ export default function JinqiaoGuopei() {
         <section
           className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center -mt-16 pt-16"
           style={{
-            backgroundImage: 'url(https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F3f2e73ae29af49bfbfdd08f2b2dbca3c?format=webp&width=1920)',
+            backgroundImage: isDark
+              ? `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F1dfa601c7e034e2aa6ec896f1e96abf3?format=webp&width=1920')`
+              : `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F3f2e73ae29af49bfbfdd08f2b2dbca3c?format=webp&width=1920')`,
           }}
         >
           <div className="absolute inset-0 bg-black/40"></div>

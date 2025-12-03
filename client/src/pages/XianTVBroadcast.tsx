@@ -115,19 +115,26 @@ export default function XianTVBroadcast() {
           className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center -mt-16 pt-16"
           style={{
             backgroundImage: isDark
-              ? `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F54445f0c76ec462f86628c5cf0eb2c37?format=webp&width=1920')`
-              : `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F54445f0c76ec462f86628c5cf0eb2c37?format=webp&width=1920')`,
+              ? `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F0a4c23a37acc483ca585dd02d6851096?format=webp&width=1920')`
+              : `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fbe2fa3b85c4a4eba97cb2499fe0b241c?format=webp&width=1920')`,
+            filter: isDark ? 'brightness(0.6) contrast(1.1)' : 'brightness(1) contrast(1)',
           }}
         >
-          <div className="absolute inset-0 bg-black/40 dark:bg-black/50"></div>
+          <div className={`absolute inset-0 ${isDark ? 'bg-black/30' : 'bg-black/40'}`}></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
-                <p>{t('projects.xiantv.title')}</p>
+                <p>
+                  <span style={{color: 'rgb(255, 255, 255)'}}>
+                    {t('projects.xiantv.title')}
+                  </span>
+                </p>
               </h1>
-              <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
-              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-                {t('projects.xiantv.subtitle')}
+              <div className="w-24 h-1 bg-white mx-auto mb-8"></div>
+              <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+                <span style={{color: 'rgb(255, 255, 255)'}}>
+                  {t('projects.xiantv.subtitle')}
+                </span>
               </p>
             </div>
           </div>
