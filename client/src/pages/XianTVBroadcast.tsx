@@ -123,7 +123,7 @@ export default function XianTVBroadcast() {
           <div className={`absolute inset-0 ${isDark ? 'bg-black/30' : 'bg-black/40'}`}></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
-              <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
+              <h1 className="font-serif text-4xl md:text-6xl font-bold !text-white mb-6" style={{color: '#ffffff'}} data-testid="text-page-title">
                 <p>{t('projects.xiantv.title')}</p>
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
