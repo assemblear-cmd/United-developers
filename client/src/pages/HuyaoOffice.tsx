@@ -115,7 +115,7 @@ export default function HuyaoOffice() {
           className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center -mt-16 pt-16"
           style={{
             backgroundImage: isDark
-              ? `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F5f051672e11e4af6bf351c34e9c83963?format=webp&width=1920')`
+              ? `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F79fe83f755a34a218f348eefa7bbba2a?format=webp&width=1920')`
               : `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F5f051672e11e4af6bf351c34e9c83963?format=webp&width=1920')`,
           }}
         >
