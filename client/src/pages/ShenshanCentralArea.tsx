@@ -167,7 +167,7 @@ export default function ShenshanCentralArea() {
                 <p>{t('projects.shenshan.title').replace(' Central Area Planning', '')}<br />Central Area Planning</p>
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
-              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
                 {t('projects.shenshan.subtitle')}
               </p>
             </div>
