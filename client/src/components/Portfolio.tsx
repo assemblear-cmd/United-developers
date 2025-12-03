@@ -85,7 +85,7 @@ function ProjectCard({
   const TypeIcon = getTypeIcon(type);
 
   return (
-    <Card className="group overflow-hidden hover-elevate transition-all duration-300 flex flex-col h-full" data-testid={`card-project-${id}`}>
+    <Card className="group overflow-hidden hover-elevate transition-all duration-300 flex flex-col h-full cursor-pointer" data-testid={`card-project-${id}`} onClick={handleViewDetails}>
       <div className="relative overflow-hidden">
         <img
           src={image}
@@ -267,9 +267,9 @@ export default function Portfolio() {
         </div>
 
         {/* Filters */}
-        <div className="flex flex-row items-center justify-center space-y-0 space-x-4 sm:space-x-6 mb-12">
+        <div className="flex flex-row items-center justify-center gap-4 flex-wrap mb-12">
           <div className="flex items-center space-x-2">
-            <span className="text-sm font-medium text-muted-foreground">{t('portfolio.filters.status')}</span>
+            <span className="text-sm font-medium text-muted-foreground hidden sm:inline">{t('portfolio.filters.status')}</span>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -309,7 +309,7 @@ export default function Portfolio() {
           </div>
 
           <div className="flex items-center space-x-2">
-            <span className="text-sm font-medium text-muted-foreground">{t('portfolio.filters.type')}</span>
+            <span className="text-sm font-medium text-muted-foreground hidden sm:inline">{t('portfolio.filters.type')}</span>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button

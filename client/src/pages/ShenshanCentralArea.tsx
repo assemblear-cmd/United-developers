@@ -163,11 +163,11 @@ export default function ShenshanCentralArea() {
           <div className="absolute inset-0 bg-black/40 dark:bg-black/50"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
-              <h1 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6" data-testid="text-page-title">
+              <h1 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6" data-testid="text-page-title">
                 <p>{t('projects.shenshan.title').replace(' Central Area Planning', '')}<br />Central Area Planning</p>
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
-              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
                 {t('projects.shenshan.subtitle')}
               </p>
             </div>
