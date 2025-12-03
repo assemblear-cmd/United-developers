@@ -114,7 +114,9 @@ export default function XianTVBroadcast() {
         <section
           className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center -mt-16 pt-16"
           style={{
-            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F0a4c23a37acc483ca585dd02d6851096?format=webp&width=1920')`,
+            backgroundImage: isDark
+              ? `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F0a4c23a37acc483ca585dd02d6851096?format=webp&width=1920')`
+              : `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2Fbe2fa3b85c4a4eba97cb2499fe0b241c?format=webp&width=1920')`,
             filter: isDark ? 'brightness(0.6) contrast(1.1)' : 'brightness(1) contrast(1)',
           }}
         >
