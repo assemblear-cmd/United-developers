@@ -126,8 +126,8 @@ export default function XianTVBroadcast() {
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
                 {t('projects.xiantv.title')}
               </h1>
-              <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
-              <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
+              <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+              <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
                 {t('projects.xiantv.subtitle')}
               </p>
             </div>
