@@ -124,7 +124,7 @@ export default function XianTVBroadcast() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6 !text-white" style={{color: '#ffffff !important'}} data-testid="text-page-title">
-                <p>{t('projects.xiantv.title')}</p>
+                <p style={{color: '#ffffff !important'}}>{t('projects.xiantv.title')}</p>
               </h1>
               <div className="w-24 h-1 bg-white/80 mx-auto mb-8"></div>
               <p className="text-xl !text-white/90 max-w-3xl mx-auto leading-relaxed" style={{color: 'rgba(255, 255, 255, 0.9) !important'}}>
