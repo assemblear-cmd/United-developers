@@ -242,6 +242,11 @@
  * need to be distinguished from eachother visually.
  */
 @layer utilities {
+  /* Force white heading text in hero sections */
+  [data-testid="text-page-title"],
+  [data-testid="text-page-title"] * {
+    color: #ffffff !important;
+  }
 
   /* Hide ugly search cancel button in Chrome until we can style it properly */
   input[type="search"]::-webkit-search-cancel-button {
