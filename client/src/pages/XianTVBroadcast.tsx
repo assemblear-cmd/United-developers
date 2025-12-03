@@ -114,12 +114,11 @@ export default function XianTVBroadcast() {
         <section
           className="bg-cover bg-center bg-no-repeat relative min-h-screen flex items-center justify-center -mt-16 pt-16"
           style={{
-            backgroundImage: isDark
-              ? `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F0a4c23a37acc483ca585dd02d6851096?format=webp&width=1920')`
-              : `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F0a4c23a37acc483ca585dd02d6851096?format=webp&width=1920')`,
+            backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8cfd01bb95f84f8cb3a6ba36f2051ec6%2F0a4c23a37acc483ca585dd02d6851096?format=webp&width=1920')`,
+            filter: isDark ? 'brightness(0.6) contrast(1.1)' : 'brightness(1) contrast(1)',
           }}
         >
-          <div className="absolute inset-0 bg-black/40 dark:bg-black/50"></div>
+          <div className={`absolute inset-0 ${isDark ? 'bg-black/30' : 'bg-black/40'}`}></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="mb-16">
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6" data-testid="text-page-title">
