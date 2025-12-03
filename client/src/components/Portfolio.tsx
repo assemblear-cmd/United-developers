@@ -85,7 +85,7 @@ function ProjectCard({
   const TypeIcon = getTypeIcon(type);
 
   return (
-    <Card className="group overflow-hidden hover-elevate transition-all duration-300 flex flex-col h-full" data-testid={`card-project-${id}`}>
+    <Card className="group overflow-hidden hover-elevate transition-all duration-300 flex flex-col h-full cursor-pointer" data-testid={`card-project-${id}`} onClick={handleViewDetails}>
       <div className="relative overflow-hidden">
         <img
           src={image}
