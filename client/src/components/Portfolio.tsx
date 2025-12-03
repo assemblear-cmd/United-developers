@@ -267,9 +267,9 @@ export default function Portfolio() {
         </div>
 
         {/* Filters */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 mb-12">
-          <div className="flex items-center space-x-2 w-full sm:w-auto justify-center">
-            <span className="text-sm font-medium text-muted-foreground">{t('portfolio.filters.status')}</span>
+        <div className="flex flex-row items-center justify-center gap-4 flex-wrap mb-12">
+          <div className="flex items-center space-x-2">
+            <span className="text-sm font-medium text-muted-foreground hidden sm:inline">{t('portfolio.filters.status')}</span>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -308,8 +308,8 @@ export default function Portfolio() {
             </DropdownMenu>
           </div>
 
-          <div className="flex items-center space-x-2 w-full sm:w-auto justify-center">
-            <span className="text-sm font-medium text-muted-foreground">{t('portfolio.filters.type')}</span>
+          <div className="flex items-center space-x-2">
+            <span className="text-sm font-medium text-muted-foreground hidden sm:inline">{t('portfolio.filters.type')}</span>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
